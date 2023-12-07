@@ -31,25 +31,6 @@
               }
             }
           }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "e4e78589904bfcd6",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "276dac66c023fbb5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Database/SQL.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          }
         ]
       }
     ],
@@ -116,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/SQL.md",
+                "file": "Java/HttpSession.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database/SQL.md",
+                "file": "Java/HttpSession.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/SQL.md"
+                "file": "Java/HttpSession.md"
               }
             }
           }
@@ -188,11 +169,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "276dac66c023fbb5",
+  "active": "2b57705a07d02ce6",
   "lastOpenFiles": [
+    "Spring Boot/WebSocket.md",
+    "Database/SQL.md",
     "Database",
     "Java/HttpSession.md",
-    "Database/SQL.md",
     "Java/Java 문법.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Error/Spring Boot Error.md",
@@ -201,7 +183,6 @@
     "Git/Git 명령어 정리.md",
     "Spring Boot/깃허브 등록체크.md",
     "Intellij/인텔리제이 기본 설정.md",
-    "Spring Boot/일대일 양방향 채팅 (웹소켓).md",
     "kuilcake",
     "README.md",
     "Excalidraw/Drawing 2023-12-07 09.38.54.excalidraw.md",
@@ -214,7 +195,6 @@
     "Intellij",
     "Restful API",
     "Database",
-    "Protocol",
-    "Spring Boot"
+    "Protocol"
   ]
 }
