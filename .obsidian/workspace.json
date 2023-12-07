@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Error/Spring Boot Error.md",
+                "file": "Java/Java 문법.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Error/Spring Boot Error.md",
+                "file": "Java/Java 문법.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Error/Spring Boot Error.md",
+                "file": "Java/Java 문법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,9 +162,11 @@
   },
   "active": "2b57705a07d02ce6",
   "lastOpenFiles": [
+    "Java/HttpSession.md",
+    "Java/Java 문법.md",
+    "Error/Spring Boot Error.md",
     "Error",
     "Thymeleaf/타임리프 (Thymeleaf).md",
-    "Error/Spring Boot Error.md",
     "RabbitMq/RabbitMq 개념.md",
     "Git/Git 명령어 정리.md",
     "Spring Boot/깃허브 등록체크.md",
@@ -178,13 +180,11 @@
     "Pasted image 20231207090811.png.md",
     "Pasted image 20231207090811.png",
     "${user.username}.md",
-    "Java/HttpSession.md",
     "Thymeleaf",
     "Intellij",
     "Restful API",
     "Database",
     "Protocol",
-    "Spring Boot",
-    "Git"
+    "Spring Boot"
   ]
 }
