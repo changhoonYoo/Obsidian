@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
-                "mode": "preview",
+                "file": "Git/Git 명령어 정리.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
+                "file": "Git/Git 명령어 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
+                "file": "Git/Git 명령어 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md"
+                "file": "Git/Git 명령어 정리.md"
               }
             }
           }
@@ -148,22 +148,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fa44a04103e5f95c",
+  "active": "e9d288f5c00450b9",
   "lastOpenFiles": [
+    "Intellij/인텔리제이 기본 설정.md",
+    "Spring Boot/깃허브 등록체크.md",
+    "Spring Boot/일대일 양방향 채팅 (웹소켓).md",
+    "Git/Git 명령어 정리.md",
+    "RabbitMq/RabbitMq 개념.md",
+    "Thymeleaf/타임리프 (Thymeleaf).md",
     "kuilcake",
     "README.md",
-    "RabbitMq/RabbitMq 개념.md",
     "Excalidraw/Drawing 2023-12-07 09.38.54.excalidraw.md",
-    "Thymeleaf/타임리프 (Thymeleaf).md",
     "Excalidraw",
     "RabbitMq",
     "Pasted image 20231207090811.png.md",
     "Pasted image 20231207090811.png",
     "${user.username}.md",
-    "Spring Boot/일대일 양방향 채팅 (웹소켓).md",
     "Java/HttpSession.md",
-    "Git/Git 명령어 정리.md",
-    "Intellij/인텔리제이 기본 설정.md",
     "Thymeleaf",
     "Intellij",
     "Restful API",
