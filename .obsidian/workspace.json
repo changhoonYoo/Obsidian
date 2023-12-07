@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "dacf3a4e51f41537",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ce5e85a51d2ab9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e9d288f5c00450b9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d782437aa8c24e0c",
+    "type": "split",
+    "children": [
+      {
+        "id": "587f046ddd949565",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa44a04103e5f95c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "89f07aa7784a1507",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "10fab7e91aa82e77",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b84f1864099e04d2",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5b7706c87361020",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0cca350ec4bf6cd9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fc6e59ee6141c233",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d6dcdbbfda627bdf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "87e4926a2395d1f5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Excalidraw/Drawing 2023-12-07 09.38.54.excalidraw.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "fa44a04103e5f95c",
+  "lastOpenFiles": [
+    "RabbitMq/RabbitMq 개념.md",
+    "README.md",
+    "Excalidraw/Drawing 2023-12-07 09.38.54.excalidraw.md",
+    "Thymeleaf/타임리프 (Thymeleaf).md",
+    "Excalidraw",
+    "RabbitMq",
+    "Pasted image 20231207090811.png.md",
+    "Pasted image 20231207090811.png",
+    "${user.username}.md",
+    "Spring Boot/일대일 양방향 채팅 (웹소켓).md",
+    "Java/HttpSession.md",
+    "Git/Git 명령어 정리.md",
+    "Intellij/인텔리제이 기본 설정.md",
+    "Thymeleaf",
+    "Intellij",
+    "Restful API",
+    "Database",
+    "Protocol",
+    "Spring Boot",
+    "Git",
+    "Java"
+  ]
+}
