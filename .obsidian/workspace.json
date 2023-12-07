@@ -157,6 +157,16 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "0dd205337be1f1c0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Database/SQL.md"
+              }
+            }
           }
         ],
         "currentTab": 3
