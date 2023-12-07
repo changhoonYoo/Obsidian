@@ -11,8 +11,12 @@
             "id": "e9d288f5c00450b9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2023-12-07 09.38.54.excalidraw.md"
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md"
               }
             }
           }
@@ -144,8 +150,9 @@
   },
   "active": "fa44a04103e5f95c",
   "lastOpenFiles": [
-    "RabbitMq/RabbitMq 개념.md",
+    "kuilcake",
     "README.md",
+    "RabbitMq/RabbitMq 개념.md",
     "Excalidraw/Drawing 2023-12-07 09.38.54.excalidraw.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Excalidraw",
@@ -163,7 +170,6 @@
     "Database",
     "Protocol",
     "Spring Boot",
-    "Git",
-    "Java"
+    "Git"
   ]
 }
