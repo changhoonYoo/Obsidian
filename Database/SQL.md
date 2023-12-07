@@ -11,20 +11,19 @@
 - 4. EXPR이 있는 인수들의 자료 형태는 `CHAR, VARCHAR2, NUMBER, DATE` 형이 될 수도 있다.
 ### 예제
 
-`
-`sum(c)`` : c의 합을 구함, 그룹 함수를 사용할때는 null값이 있는 컬럼은 조회에 포함시키지 않는다.
-	select sum(comm) from emp02;
+<span style="color:#14c8df;">sum(c)</span> : c의 합을 구함, 그룹 함수를 사용할때는 null값이 있는 컬럼은 조회에 포함시키지 않는다.
+`select sum(comm) from emp02;`
 
- - avg(c): c의 평균을 구함
+`avg(c)`: c의 평균을 구함
 	select avg(sal) from emp02;
 
- - max(c): c의 최대값을 구함
+max(c): c의 최대값을 구함
 	select max(sal) from emp02;
 
- - min(c): c의 최소값을 구함
+min(c): c의 최소값을 구함
 	select min(sal) from emp02;
 
- - count(c): c의 개수를 구함
+count(c): c의 개수를 구함
 	select count(*) from emp02;
 
 1. 숫자함수
