@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "무제 파일.md",
+                "file": "Error/Spring Boot Error.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "무제 파일.md",
+                "file": "Error/Spring Boot Error.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "무제 파일.md",
+                "file": "Error/Spring Boot Error.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,8 +162,9 @@
   },
   "active": "2b57705a07d02ce6",
   "lastOpenFiles": [
+    "Error",
     "Thymeleaf/타임리프 (Thymeleaf).md",
-    "무제 파일.md",
+    "Error/Spring Boot Error.md",
     "RabbitMq/RabbitMq 개념.md",
     "Git/Git 명령어 정리.md",
     "Spring Boot/깃허브 등록체크.md",
