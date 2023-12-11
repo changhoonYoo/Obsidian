@@ -78,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#배압",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,7 +188,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b6c213d64ee6bcd1",
+  "active": "2b57705a07d02ce6",
   "lastOpenFiles": [
     "Spring Boot/WebSocket.md",
     "Spring Boot/스프링 마스터.md",
