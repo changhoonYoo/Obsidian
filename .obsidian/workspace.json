@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md",
+                "file": "Spring Boot/의존성 주입.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md",
+                "file": "Spring Boot/의존성 주입.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md",
+                "file": "Spring Boot/의존성 주입.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md"
+                "file": "Spring Boot/의존성 주입.md"
               }
             }
           }
@@ -177,8 +177,9 @@
   },
   "active": "b6c213d64ee6bcd1",
   "lastOpenFiles": [
-    "Spring Boot/WebSocket.md",
     "Spring Boot/스프링 마스터.md",
+    "Spring Boot/의존성 주입.md",
+    "Spring Boot/WebSocket.md",
     "Database/SQL.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "RabbitMq/RabbitMq 개념.md",
