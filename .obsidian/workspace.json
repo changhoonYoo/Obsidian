@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/HttpSession.md",
+                "file": "Spring Boot/WebSocket.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/HttpSession.md",
+                "file": "Spring Boot/WebSocket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/HttpSession.md",
+                "file": "Spring Boot/WebSocket.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/HttpSession.md"
+                "file": "Spring Boot/WebSocket.md"
               }
             }
           }
@@ -169,12 +169,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2b57705a07d02ce6",
+  "active": "fa44a04103e5f95c",
   "lastOpenFiles": [
+    "Java/HttpSession.md",
     "Spring Boot/WebSocket.md",
     "Database/SQL.md",
     "Database",
-    "Java/HttpSession.md",
     "Java/Java 문법.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Error/Spring Boot Error.md",
