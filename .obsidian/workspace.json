@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e35cafd5e7448cf4",
+        "id": "d5663895fa94e5f2",
         "type": "tabs",
         "children": [
           {
-            "id": "b6c213d64ee6bcd1",
+            "id": "7510d3a954a7606d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Boot/의존성 주입.md",
+                "file": "Spring Boot/스프링 마스터.md",
                 "mode": "source",
                 "source": false
               }
@@ -22,11 +22,11 @@
         ]
       },
       {
-        "id": "bc96b3dea703ed33",
+        "id": "eb8d24a0b2410688",
         "type": "tabs",
         "children": [
           {
-            "id": "e4dc7df96dc6b335",
+            "id": "da7b2a1947d5f253",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring Boot/의존성 주입.md",
+                "file": "Spring Boot/스프링 마스터.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring Boot/의존성 주입.md",
+                "file": "Spring Boot/스프링 마스터.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring Boot/의존성 주입.md"
+                "file": "Spring Boot/스프링 마스터.md"
               }
             }
           }
@@ -175,10 +175,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b6c213d64ee6bcd1",
+  "active": "7510d3a954a7606d",
   "lastOpenFiles": [
-    "Spring Boot/스프링 마스터.md",
     "Spring Boot/의존성 주입.md",
+    "Spring Boot/스프링 마스터.md",
     "Spring Boot/WebSocket.md",
     "Database/SQL.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
