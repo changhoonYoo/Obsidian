@@ -1,8 +1,8 @@
 {
   "commitMessage": "{{date}}",
   "commitDateFormat": "YYYYMMDD HH:mm",
-  "autoSaveInterval": 5,
-  "autoPushInterval": 5,
+  "autoSaveInterval": 10,
+  "autoPushInterval": 10,
   "autoPullInterval": 0,
   "autoPullOnBoot": false,
   "disablePush": false,
