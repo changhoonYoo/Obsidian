@@ -1,9 +1,12 @@
 
 ## <span style="color:orange">@NoArgsConstructor</span>
 
-`@NoArgsConstructor`는 Lombok에서 제공하는 애노테이션 중 하나로, 해당 클래스에 매개변수가 없는 기본 생성자를 자동으로 생성해주는 기능을 제공합니다. 이것은 주로 JPA 엔터티 클래스에서 많이 사용됩니다.
+`@NoArgsConstructor`는 Lombok에서 제공하는 애노테이션 중 하나로, 해당 클래스에 매개변수가 없는 기본 생성자를 자동으로 생성해주는 기능을 제공합니다. 
 
+이것은 주로 JPA 엔터티 클래스에서 많이 사용됩니다.
+JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 생성자를 필요로 하는 경우가 많기 때문에 Lombok의 `@NoArgsConstructor`를 통해 편리하게 사용할 수 있습니다.
 
+- - -
 ## <span style="color:orange">@RestResource</span>
 
 `@RestResource(exported = ...)`는 Spring Data REST에서 사용되는 애노테이션 중 하나입니다. 이 애노테이션은 리소스를 노출할지 여부를 결정하는 데 사용됩니다.
@@ -30,3 +33,24 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 즉, `@RestResource(exported = true)`를 사용하면 해당 메서드가 생성되는 RESTful 엔드포인트가 노출되고, `@RestResource`를 사용하지 않거나 `@RestResource(exported = false)`로 지정하면 해당 메서드로 생성되는 엔드포인트가 숨겨집니다.
 
+- - -
+
+
+## <span style="color:orange">@RequireArgsConstructor</span>
+
+`@RequiredArgsConstructor`는 Lombok이 제공하는 어노테이션 중 하나로, 주로 생성자를 자동으로 생성해주는 데 사용됩니다. 이 어노테이션을 사용하면 클래스의 필드들을 파라미터로 받는 생성자가 자동으로 생성되어 코드를 간결하게 만들어줍니다.
+
+1. **자동 생성자:**
+	- `@RequiredArgsConstructor`를 클래스에 적용하면, 해당 클래스의 필드를 파라미터로 받는 생성자가 자동으로 생성됩니다. 
+	- 생성자는 해당 필드들을 초기화하는 코드를 자동으로 생성해줍니다. 
+	```java
+	import lombok.RequiredArgsConstructor; 
+	
+	@RequiredArgsConstructor 
+	public class Example {
+		private final String field1; 
+		private final int field2; 
+	} 
+	```
+	위의 예제에서는 `field1`과 `field2`를 파라미터로 받는 생성자가 자동으로 생성됩니다.
+2. 
