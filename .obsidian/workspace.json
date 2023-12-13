@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "d5663895fa94e5f2",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "7510d3a954a7606d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring Boot/스프링 마스터.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "eb8d24a0b2410688",
         "type": "tabs",
         "children": [
@@ -31,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md",
+                "file": "RabbitMq/RabbitMq 개념.md",
                 "mode": "preview",
                 "source": false
               }
@@ -103,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md",
+                "file": "RabbitMq/RabbitMq 개념.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md",
+                "file": "RabbitMq/RabbitMq 개념.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring Boot/스프링 마스터.md"
+                "file": "RabbitMq/RabbitMq 개념.md"
               }
             }
           }
@@ -175,13 +157,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7510d3a954a7606d",
+  "active": "da7b2a1947d5f253",
   "lastOpenFiles": [
-    "Spring Boot/의존성 주입.md",
-    "Spring Boot/스프링 마스터.md",
-    "Spring Boot/WebSocket.md",
-    "Database/SQL.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
+    "Spring Boot/WebSocket.md",
+    "Spring Boot/스프링 마스터.md",
+    "Spring Boot/의존성 주입.md",
+    "Database/SQL.md",
     "RabbitMq/RabbitMq 개념.md",
     "Java/HttpSession.md",
     "Database",
