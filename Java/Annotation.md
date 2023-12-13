@@ -53,4 +53,39 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	} 
 	```
 	위의 예제에서는 `field1`과 `field2`를 파라미터로 받는 생성자가 자동으로 생성됩니다.
-2. 
+	
+2. **final 키워드 필요:**
+	- `@RequiredArgsConstructor`를 사용할 때는 해당 필드들에 `final` 키워드가 붙어있어야 합니다.
+	- 이는 Lombok이 생성자에서 초기화할 필드들을 결정하기 위함입니다.
+	```java
+	import lombok.RequiredArgsConstructor; 
+	
+	@RequiredArgsConstructor 
+	public class Example { 
+		private final String field1; 
+		private int field2; // 컴파일 에러! 
+		// @RequiredArgsConstructor를 사용하려면 final 필드여야 함 
+	}
+	```
+- - -
+
+## <span style="color:orange">@NoArgsConstructor</span>
+
+`@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
+
+1.  로거 필드 생성:
+	-  `@Log4j2` 어노테이션을 클래스에 적용하면, 해당 클래스에 대한 `private static final Logger log = LogManager.getLogger(ClassName.class);`와 같은 로거 필드가 자동으로 생성됩니다.
+	- 이 필드를 사용하여 로깅을 수행할 수 있습니다.
+	```java
+	import lombok.extern.log4j.Log4j2; 
+	
+	@Log4j2 
+	public class Example {
+		public void someMethod() { 
+			log.info("This is an info message."); 
+			log.error("This is an error message.", 
+				new RuntimeException("Something went wrong.")); 
+		} 
+	}
+	```
+2. 로거 이름 지정:
