@@ -89,3 +89,44 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	}
 	```
 2. 로거 이름 지정:
+	- `@Log4j2` 어노테이션을 사용할 때는 별도의 로거 이름을 지정하지 않아도 클래스 이름이 로거의 이름으로 사용됩니다. 따라서 로깅 구문에서 클래스 이름을 지정할 필요가 없어집니다.
+3. **로깅 레벨에 따른 메서드 자동 생성:**
+
+	- `@Log4j2` 어노테이션을 사용하면 다양한 로깅 레벨에 따라 다른 메서드가 자동으로 생성됩니다. 예를 들어, `log.info()`, `log.debug()`, `log.warn()` 등이 자동으로 사용 가능합니다.
+	```java
+	import lombok.extern.log4j.Log4j2;
+	
+	@Log4j2 
+	public class Example { 
+		public void someMethod() { 
+			log.info("This is an info message."); 
+			log.debug("This is a debug message."); 
+			log.warn("This is a warning message."); 
+		} 
+	}
+	```
+
+로그 레벨은 로깅 메시지의 중요도에 따라 구분되며, 각 레벨은 다른 상황에서 사용됩니다. 일반적으로 다음과 같은 로그 레벨이 있습니다:
+
+1. **DEBUG:**
+    
+    - `log.debug("This is a debug message.");`
+    - 개발 중 디버깅을 위해 사용됩니다.
+    - 상세한 디버그 정보를 기록하며, 보통 프로덕션 환경에서는 이 레벨의 로그를 최소화하는 것이 좋습니다.
+2. **INFO:**
+    
+    - `log.info("This is an info message.");`
+    - 어플리케이션의 주요 이벤트 및 상태 정보를 기록합니다.
+    - 프로덕션 환경에서 주로 사용되며, 어플리케이션이 올바르게 동작하고 있는지 추적하는 데 사용됩니다.
+3. **WARN:**
+    
+    - `log.warn("This is a warning message.");`
+    - 경고 또는 잠재적인 문제를 나타내는 메시지를 기록합니다.
+    - 어플리케이션이 예상치 못한 상황에 진입하거나 잠재적인 문제가 발생했을 때 사용됩니다.
+4. **ERROR:**
+    
+    - `log.error("An error occurred.", e);`
+    - 에러 상황을 나타내는 메시지를 기록합니다.
+    - 예외 정보를 함께 기록하여 에러의 원인을 추적하는 데 사용됩니다.
+
+로그 레벨은 로깅을 적절하게 관리하고 문제를 해결하는 데 도움이 됩니다. 개발 중에는 DEBUG 레벨을 사용하여 디버깅 정보를 확인하고, 프로덕션 환경에서는 INFO, WARN, ERROR 레벨을 조절하여 어플리케이션의 상태와 잠재적인 문제를 추적합니다. 예를 들어, INFO 레벨의 로그는 어플리케이션이 예상대로 동작하고 있는지 확인하는 데 사용되며, WARN 레벨은 잠재적인 문제를 식별하는 데 도움이 됩니다. ERROR 레벨은 심각한 에러 상황을 나타내며, 이를 통해 빠르게 문제를 진단하고 해결할 수 있습니다.

@@ -177,8 +177,9 @@
   },
   "active": "da7b2a1947d5f253",
   "lastOpenFiles": [
-    "RabbitMq/RabbitMq 개념.md",
+    "Git/Git 명령어 정리.md",
     "Java/Annotation.md",
+    "RabbitMq/RabbitMq 개념.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Spring Boot/WebSocket.md",
     "Spring Boot/스프링 마스터.md",
@@ -189,7 +190,6 @@
     "Java/Java 문법.md",
     "Error/Spring Boot Error.md",
     "Error",
-    "Git/Git 명령어 정리.md",
     "Spring Boot/깃허브 등록체크.md",
     "Intellij/인텔리제이 기본 설정.md",
     "kuilcake",
