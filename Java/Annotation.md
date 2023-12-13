@@ -1,4 +1,70 @@
 
+## <span style="color:ffdead">@ControllerAdvice</span> / <span style="color:ffdead">@RestControllerAdvice</span>
+
+1. `@ControllerAdvice`:
+	- `@ControllerAdvice` 어노테이션은 Spring MVC에서 예외 처리, 모델 속성 설정, 바인딩 및 전역 컨트롤러 설정을 담당하는 클래스에 사용됩니다.
+	- 주로 예외 처리를 위해 활용되며, 여러 컨트롤러에서 발생한 예외를 한 곳에서 처리하고자 할 때 유용합니다.
+	- `@ExceptionHandler` 메서드를 포함하는 클래스에 `@ControllerAdvice` 어노테이션을 추가하면 해당 메서드는 여러 컨트롤러에서 발생한 예외를 처리할 수 있습니다.
+	- 또한, 전역적으로 사용되는 모델 속성을 초기화하거나, 바인딩 및 포맷 설정을 전역적으로 지정할 수 있습니다.
+	```java
+	import org.springframework.web.bind.annotation.ControllerAdvice; 
+	import org.springframework.web.bind.annotation.ExceptionHandler;
+	
+	@ControllerAdvice 
+	public class GlobalExceptionHandler { 
+	
+		@ExceptionHandler(Exception.class) 
+		public String handleException(Exception ex) { 
+			// 예외 처리 로직 
+			return "error"; 
+		} 
+	}
+	```
+2. `@RestControllerAdvice`:
+	- `@RestControllerAdvice`는 `@ControllerAdvice`와 유사하지만, 주로 RESTful 웹 서비스에서 사용됩니다.
+	- `@ControllerAdvice`와 달리 `@ResponseBody`가 기본적으로 활성화되어 있어, 예외 처리 메서드의 반환값이 HTTP 응답의 본문으로 직접 전송됩니다.
+	- 주로 REST API에서 예외 처리 및 응답의 표준화에 활용됩니다.
+	```java
+	import org.springframework.web.bind.annotation.ExceptionHandler; 
+	import org.springframework.web.bind.annotation.RestControllerAdvice; 
+	
+	@RestControllerAdvice 
+	public class GlobalRestControllerExceptionHandler { 
+	
+		@ExceptionHandler(Exception.class) 
+		public ApiResponse handleException(Exception ex) { 
+			// 예외 처리 로직 및 ApiResponse 객체 반환 
+			return new ApiResponse("error", ex.getMessage()); 
+		} 
+	}
+	```
+	- 위의 예제에서 `ApiResponse`는 JSON 응답을 표현하는 사용자 정의 클래스입니다. 이렇게 구성된 `@RestControllerAdvice` 클래스는 예외가 발생하면 표준화된 JSON 응답을 반환하도록 처리할 수 있습니다.
+- - -
+
+
+## <span style="color:ffdead">@Modifying</span>
+
+`@Modifying` 어노테이션은 Spring Data JPA에서 사용되며, 주로 `@Query` 어노테이션과 함께 사용됩니다. 이 어노테이션은 UPDATE나 DELETE와 같은 변경 쿼리를 실행할 때 사용되며, 해당 메서드가 데이터베이스의 내용을 변경할 것임을 나타냅니다.
+
+간단히 말해, `@Modifying`은 데이터베이스의 상태를 변경하는 쿼리를 실행할 때 메서드에 지정됩니다.
+
+아래는 `@Modifying` 어노테이션을 사용한 Spring Data JPA의 예제입니다:
+```java
+import org.springframework.data.jpa.repository.Modifying; 
+import org.springframework.data.jpa.repository.Query; 
+import org.springframework.data.repository.CrudRepository; 
+
+public interface UserRepository extends CrudRepository<User, Long> { 
+
+	@Modifying 
+	@Query("UPDATE User u SET u.name = ?1 WHERE u.id = ?2") 
+	void updateUserNameById(String newName, Long userId); 
+}
+```
+위의 예제에서는 `@Modifying` 어노테이션이 `updateUserNameById` 메서드에 적용되었습니다. 이 메서드는 `User` 엔티티의 이름을 변경하는 JPQL(Java Persistence Query Language) 쿼리를 실행합니다. `@Modifying` 어노테이션을 사용하여 메서드가 데이터베이스의 내용을 변경함을 선언하였습니다.
+
+중요한 점은 `@Modifying` 어노테이션이 있는 메서드는 `void`나 `int`와 같은 반환 타입을 가져야 합니다. 또한, 이 어노테이션을 사용하는 메서드는 주로 `@Query` 어노테이션과 함께 사용되며, 변경 쿼리를 명시적으로 지정하는 데 활용됩니다.
+- - -
 ## <span style="color:ffdead">@NoArgsConstructor</span>
 
 `@NoArgsConstructor`는 Lombok에서 제공하는 애노테이션 중 하나로, 해당 클래스에 매개변수가 없는 기본 생성자를 자동으로 생성해주는 기능을 제공합니다. 
@@ -130,4 +196,3 @@ public interface UserRepository extends JpaRepository<User, Long> {
     - 예외 정보를 함께 기록하여 에러의 원인을 추적하는 데 사용됩니다.
 
 로그 레벨은 로깅을 적절하게 관리하고 문제를 해결하는 데 도움이 됩니다. 개발 중에는 DEBUG 레벨을 사용하여 디버깅 정보를 확인하고, 프로덕션 환경에서는 INFO, WARN, ERROR 레벨을 조절하여 어플리케이션의 상태와 잠재적인 문제를 추적합니다. 예를 들어, INFO 레벨의 로그는 어플리케이션이 예상대로 동작하고 있는지 확인하는 데 사용되며, WARN 레벨은 잠재적인 문제를 식별하는 데 도움이 됩니다. ERROR 레벨은 심각한 에러 상황을 나타내며, 이를 통해 빠르게 문제를 진단하고 해결할 수 있습니다.
-## <span style="color:ffdead">@ControllerAdvice / @RestControllerAdvice</span>
