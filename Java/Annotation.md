@@ -1,5 +1,8 @@
 
-## <span style="color:ffdead">@ControllerAdvice</span> / <span style="color:ffdead">@RestControllerAdvice</span>
+## <span style="color:darkorange">@Configuration</span>
+
+
+## <span style="color:darkorange">@ControllerAdvice</span> / <span style="color:darkorange">@RestControllerAdvice</span>
 
 1. `@ControllerAdvice`:
 	- `@ControllerAdvice` 어노테이션은 Spring MVC에서 예외 처리, 모델 속성 설정, 바인딩 및 전역 컨트롤러 설정을 담당하는 클래스에 사용됩니다.
@@ -42,7 +45,7 @@
 - - -
 
 
-## <span style="color:ffdead">@Modifying</span>
+## <span style="color:darkorange">@Modifying</span>
 
 `@Modifying` 어노테이션은 Spring Data JPA에서 사용되며, 주로 `@Query` 어노테이션과 함께 사용됩니다. 이 어노테이션은 UPDATE나 DELETE와 같은 변경 쿼리를 실행할 때 사용되며, 해당 메서드가 데이터베이스의 내용을 변경할 것임을 나타냅니다.
 
@@ -65,7 +68,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
 중요한 점은 `@Modifying` 어노테이션이 있는 메서드는 `void`나 `int`와 같은 반환 타입을 가져야 합니다. 또한, 이 어노테이션을 사용하는 메서드는 주로 `@Query` 어노테이션과 함께 사용되며, 변경 쿼리를 명시적으로 지정하는 데 활용됩니다.
 - - -
-## <span style="color:ffdead">@NoArgsConstructor</span>
+## <span style="color:darkorange">@NoArgsConstructor</span>
 
 `@NoArgsConstructor`는 Lombok에서 제공하는 애노테이션 중 하나로, 해당 클래스에 매개변수가 없는 기본 생성자를 자동으로 생성해주는 기능을 제공합니다. 
 
@@ -73,7 +76,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 생성자를 필요로 하는 경우가 많기 때문에 Lombok의 `@NoArgsConstructor`를 통해 편리하게 사용할 수 있습니다.
 
 - - -
-## <span style="color:ffdead">@RestResource</span>
+## <span style="color:darkorange">@RestResource</span>
 
 `@RestResource(exported = ...)`는 Spring Data REST에서 사용되는 애노테이션 중 하나입니다. 이 애노테이션은 리소스를 노출할지 여부를 결정하는 데 사용됩니다.
 
@@ -102,7 +105,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - - -
 
 
-## <span style="color:ffdead">@RequireArgsConstructor</span>
+## <span style="color:darkorange">@RequireArgsConstructor</span>
 
 `@RequiredArgsConstructor`는 Lombok이 제공하는 어노테이션 중 하나로, 주로 생성자를 자동으로 생성해주는 데 사용됩니다. 이 어노테이션을 사용하면 클래스의 필드들을 파라미터로 받는 생성자가 자동으로 생성되어 코드를 간결하게 만들어줍니다.
 
@@ -135,7 +138,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	```
 - - -
 
-## <span style="color:ffdead">@Log4j2</span>
+## <span style="color:darkorange">@Log4j2</span>
 
 `@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
 
