@@ -1,5 +1,5 @@
 
-## <span style="color:orange">@NoArgsConstructor</span>
+## <span style="color:ffdead">@NoArgsConstructor</span>
 
 `@NoArgsConstructor`는 Lombok에서 제공하는 애노테이션 중 하나로, 해당 클래스에 매개변수가 없는 기본 생성자를 자동으로 생성해주는 기능을 제공합니다. 
 
@@ -7,7 +7,7 @@
 JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 생성자를 필요로 하는 경우가 많기 때문에 Lombok의 `@NoArgsConstructor`를 통해 편리하게 사용할 수 있습니다.
 
 - - -
-## <span style="color:orange">@RestResource</span>
+## <span style="color:ffdead">@RestResource</span>
 
 `@RestResource(exported = ...)`는 Spring Data REST에서 사용되는 애노테이션 중 하나입니다. 이 애노테이션은 리소스를 노출할지 여부를 결정하는 데 사용됩니다.
 
@@ -36,7 +36,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - - -
 
 
-## <span style="color:orange">@RequireArgsConstructor</span>
+## <span style="color:ffdead">@RequireArgsConstructor</span>
 
 `@RequiredArgsConstructor`는 Lombok이 제공하는 어노테이션 중 하나로, 주로 생성자를 자동으로 생성해주는 데 사용됩니다. 이 어노테이션을 사용하면 클래스의 필드들을 파라미터로 받는 생성자가 자동으로 생성되어 코드를 간결하게 만들어줍니다.
 
@@ -69,7 +69,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	```
 - - -
 
-## <span style="color:orange">@Log4j2</span>
+## <span style="color:ffdead">@Log4j2</span>
 
 `@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
 
