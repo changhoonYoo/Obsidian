@@ -20,6 +20,24 @@
             }
           }
         ]
+      },
+      {
+        "id": "a242defdfb40f7ed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "967894b4bca89893",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/Annotation.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
