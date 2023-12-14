@@ -2,15 +2,45 @@
 
 `@Bean` 어노테이션은 스프링에서 빈(Bean)을 정의할 때 사용되는 어노테이션으로, 주로 `@Configuration` 어노테이션이 적용된 클래스에서 메서드에 사용됩니다. `@Bean` 어노테이션이 적용된 메서드는 해당 메서드가 반환하는 객체를 스프링 컨테이너가 빈으로 관리하도록 지정합니다.
 
-```java
-@Configuration 
-public class AppConfig { 
-	@Bean 
-	public MyBean myBean() { 
-		return new MyBean(); 
-	} 
-}
-```
+1. **빈 메서드 호출:**
+	- `@Bean` 어노테이션이 적용된 메서드가 호출됩니다.
+	- 해당 메서드는 빈으로 등록할 객체를 생성하고 반환합니다.
+		```java
+		@Configuration 
+		public class AppConfig { 
+		
+			@Bean 
+			public MyBean myBean() { 
+				return new MyBean(); 
+			} 
+		}
+		```
+2. **객체 생성 및 초기화:**
+
+	- 반환된 객체는 스프링 컨테이너에 의해 생성되고 초기화됩니다.
+	- 초기화 메서드는 `initMethod` 속성이나 `@PostConstruct` 어노테이션으로 지정된 메서드가 호출됩니다.
+		```java
+		public class MyBean { 
+			// 초기화 메서드 
+			public void initialize() { 
+				// 객체 초기화 로직 
+			} 
+			
+			// 또는 @PostConstruct 어노테이션 사용 
+			@PostConstruct 
+			public void postConstruct() { 
+				// 객체 초기화 로직 
+			} 
+		}
+		```
+3. **빈 등록 및 관리:**
+
+	- 생성된 객체는 스프링 컨테이너에 의해 빈으로 등록되고 관리됩니다.
+	- 빈 이름은 기본적으로 메서드 이름이나 `name` 속성에 지정된 이름으로 등록됩니다.
+		```java
+		MyBean myBean = applicationContext.getBean(MyBean.class);
+		```
+		
 ## <span style="color:darkorange">@Configuration</span>
 
 `@Configuration` 어노테이션은 스프링에서 자바 기반의 설정 클래스를 정의할 때 사용됩니다. 이 어노테이션을 사용하면 해당 클래스가 스프링 애플리케이션 컨텍스트에서 빈 정의를 제공하며, 스프링 컨테이너에 의해 관리되게 됩니다.
