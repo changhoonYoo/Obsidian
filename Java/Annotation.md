@@ -56,8 +56,20 @@
 	- 빈이 더 이상 필요하지 않거나 컨테이너가 종료될 때, 빈 소멸 메서드가 호출됩니다.
 	- 소멸 메서드는 `destroyMethod` 속성이나 `@PreDestroy` 어노테이션으로 지정된 메서드가 호출됩니다.
 		```java
+		public class MyBean { 
 		
+			// 소멸 메서드 
+			public void cleanup() { 
+				// 객체 소멸 로직 
+			} 
+			// 또는 @PreDestroy 어노테이션 사용 
+			@PreDestroy 
+			public void preDestroy() { 
+				// 객체 소멸 로직 
+			} 
+		}
 		```
+		이러한 단계는 스프링의 IoC (Inversion of Control) 원칙을 따르며, 빈의 생명주기와 초기화, 소멸에 대한 제어를 개발자가 할 수 있도록 합니다. 이로 인해 객체 간의 결합도를 낮추고 유연하고 확장 가능한 애플리케이션을 개발할 수 있습니다.
 ## <span style="color:darkorange">@Configuration</span>
 
 `@Configuration` 어노테이션은 스프링에서 자바 기반의 설정 클래스를 정의할 때 사용됩니다. 이 어노테이션을 사용하면 해당 클래스가 스프링 애플리케이션 컨텍스트에서 빈 정의를 제공하며, 스프링 컨테이너에 의해 관리되게 됩니다.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Spring-Boot/제어의 역전.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Spring-Boot/제어의 역전.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Spring-Boot/제어의 역전.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Annotation.md"
+                "file": "Spring-Boot/제어의 역전.md"
               }
             }
           }
@@ -175,10 +175,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fa44a04103e5f95c",
+  "active": "da7b2a1947d5f253",
   "lastOpenFiles": [
-    "Git/Git 명령어 정리.md",
     "Java/Annotation.md",
+    "Spring-Boot/제어의 역전.md",
+    "Git/Git 명령어 정리.md",
     "RabbitMq/RabbitMq 개념.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Spring-Boot/WebSocket.md",
