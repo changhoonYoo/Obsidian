@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "eb8d24a0b2410688",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "da7b2a1947d5f253",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring-Boot/제어의 역전.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "a242defdfb40f7ed",
         "type": "tabs",
         "children": [
@@ -31,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Annotation.md",
-                "mode": "preview",
+                "file": "Spring-Boot/Spring Bean.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -103,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/제어의 역전.md",
+                "file": "Spring-Boot/Spring Bean.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/제어의 역전.md",
+                "file": "Spring-Boot/Spring Bean.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/제어의 역전.md"
+                "file": "Spring-Boot/Spring Bean.md"
               }
             }
           }
@@ -175,10 +157,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "da7b2a1947d5f253",
+  "active": "967894b4bca89893",
   "lastOpenFiles": [
     "Java/Annotation.md",
-    "Spring-Boot/제어의 역전.md",
+    "Spring-Boot/Spring Bean.md",
     "Git/Git 명령어 정리.md",
     "RabbitMq/RabbitMq 개념.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
