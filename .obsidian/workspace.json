@@ -11,8 +11,12 @@
             "id": "d4ee99c8516f5454",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Java/Annotation.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Java/Annotation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Java/Annotation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Java/Annotation.md"
+              }
             }
           }
         ],
@@ -152,6 +160,7 @@
   "active": "d4ee99c8516f5454",
   "lastOpenFiles": [
     "Spring-Boot/Spring Bean.md",
+    "Spring-Boot/의존성 주입.md",
     "Pasted image 20231214155842.png",
     "Java/Annotation.md",
     "Git/Git 명령어 정리.md",
@@ -159,7 +168,6 @@
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/스프링 마스터.md",
-    "Spring-Boot/의존성 주입.md",
     "Database/SQL.md",
     "Java/HttpSession.md",
     "Database",
