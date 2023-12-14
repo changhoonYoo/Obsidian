@@ -40,7 +40,24 @@
 		```java
 		MyBean myBean = applicationContext.getBean(MyBean.class);
 		```
+4. **빈 사용:**
+
+	- 다른 빈이나 컴포넌트에서 `@Autowired` 어노테이션 등을 통해 해당 빈을 주입받아 사용할 수 있습니다.
+		```java
+		@Service 
+		public class MyService { 
 		
+			@Autowired 
+			private MyBean myBean;
+			 // ... 
+		}
+		```
+5. **빈 소멸:**
+	- 빈이 더 이상 필요하지 않거나 컨테이너가 종료될 때, 빈 소멸 메서드가 호출됩니다.
+	- 소멸 메서드는 `destroyMethod` 속성이나 `@PreDestroy` 어노테이션으로 지정된 메서드가 호출됩니다.
+		```java
+		
+		```
 ## <span style="color:darkorange">@Configuration</span>
 
 `@Configuration` 어노테이션은 스프링에서 자바 기반의 설정 클래스를 정의할 때 사용됩니다. 이 어노테이션을 사용하면 해당 클래스가 스프링 애플리케이션 컨텍스트에서 빈 정의를 제공하며, 스프링 컨테이너에 의해 관리되게 됩니다.
