@@ -1,7 +1,40 @@
+## <span style="color:darkorange">@Bean</span>
 
+`@Bean` 어노테이션은 스프링에서 빈(Bean)을 정의할 때 사용되는 어노테이션으로, 주로 `@Configuration` 어노테이션이 적용된 클래스에서 메서드에 사용됩니다. `@Bean` 어노테이션이 적용된 메서드는 해당 메서드가 반환하는 객체를 스프링 컨테이너가 빈으로 관리하도록 지정합니다.
+
+```java
+@Configuration 
+public class AppConfig { 
+	@Bean 
+	public MyBean myBean() { 
+		return new MyBean(); 
+	} 
+}
+```
 ## <span style="color:darkorange">@Configuration</span>
 
+`@Configuration` 어노테이션은 스프링에서 자바 기반의 설정 클래스를 정의할 때 사용됩니다. 이 어노테이션을 사용하면 해당 클래스가 스프링 애플리케이션 컨텍스트에서 빈 정의를 제공하며, 스프링 컨테이너에 의해 관리되게 됩니다.
 
+기본적으로 `@Configuration` 어노테이션이 붙은 클래스 내부에서는 `@Bean` 어노테이션을 사용하여 빈을 정의할 수 있습니다. 이러한 빈은 스프링 애플리케이션 컨텍스트에서 사용 가능하며, 다른 빈들과 협력하여 의존성 주입 등을 통해 작동합니다.
+
+간단한 `@Configuration` 클래스의 예시는 다음과 같습니다:
+```java
+import org.springframework.context.annotation.Bean; 
+import org.springframework.context.annotation.Configuration; 
+
+@Configuration 
+public class AppConfig { 
+
+	@Bean 
+	public MyBean myBean() {
+		return new MyBean();
+	} 
+}
+```
+
+위의 코드에서 `AppConfig` 클래스는 `@Configuration` 어노테이션이 적용되어 있습니다. 또한, `myBean` 메서드는 `@Bean` 어노테이션을 사용하여 `MyBean` 객체를 반환하고 있습니다. 따라서 이 클래스를 스프링 컨테이너에 등록하면 `MyBean`이라는 빈이 생성되고 관리됩니다.
+
+`@Configuration` 어노테이션을 사용하는 것은 XML 기반의 설정 대신 자바 기반의 설정을 선호하는 스프링의 방식 중 하나입니다. 이를 통해 코드 기반의 설정을 통해 빈들을 명시적으로 정의하고, 의존성 주입 및 다양한 스프링 기능을 활용할 수 있습니다.
 ## <span style="color:darkorange">@ControllerAdvice</span> / <span style="color:darkorange">@RestControllerAdvice</span>
 
 1. `@ControllerAdvice`:
