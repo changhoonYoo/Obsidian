@@ -12,14 +12,13 @@ Spring을 비롯해 많은 Spring Container는 자신이 관리하는 `Bean`의
 
 기본적으로 스프링 빈은 **객체 생성**->**의존관계 주입** 과 같은 라이프 사이클을 가진다.
 
-스프링컨테이너 생성 -> 스프링 빈 생성 -> 의존관계 주입 -> 초기화 콜백 -> 사용 -> 
+스프링컨테이너 생성 -> 스프링 빈 생성 -> [의존성 주입](의존성 주입) -> 초기화 콜백 -> 사용 -> 
 소멸전 콜백 -> 스프링 종료
 
 ## @Bean 어노테이션의 어트리뷰트 사용
 
-[@Bean](Annotation#@Bean)
 
-`@Bean(initMethod = "init", destroyMethod = "close")`와 같이 설정 정보에 메서드를 지정가능하다.
+[@Bean](Annotation#^7f2fcd)`(initMethod = "init", destroyMethod = "close")`와 같이 설정 정보에 메서드를 지정가능하다.
 
 ```java
 @Configuration
