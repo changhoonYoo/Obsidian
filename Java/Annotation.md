@@ -291,3 +291,13 @@ public interface UserRepository extends JpaRepository<User, Long> {
     - 예외 정보를 함께 기록하여 에러의 원인을 추적하는 데 사용됩니다.
 
 로그 레벨은 로깅을 적절하게 관리하고 문제를 해결하는 데 도움이 됩니다. 개발 중에는 DEBUG 레벨을 사용하여 디버깅 정보를 확인하고, 프로덕션 환경에서는 INFO, WARN, ERROR 레벨을 조절하여 어플리케이션의 상태와 잠재적인 문제를 추적합니다. 예를 들어, INFO 레벨의 로그는 어플리케이션이 예상대로 동작하고 있는지 확인하는 데 사용되며, WARN 레벨은 잠재적인 문제를 식별하는 데 도움이 됩니다. ERROR 레벨은 심각한 에러 상황을 나타내며, 이를 통해 빠르게 문제를 진단하고 해결할 수 있습니다.
+
+- - - 
+
+## <span style="color:darkorange">@FeignClient</span>
+
+`@FeignClient`는 Spring Cloud에서 제공하는 어노테이션 중 하나로, 서버 간 통신을 쉽게 구현할 수 있도록 도와주는 기능을 제공합니다. 주로 마이크로서비스 아키텍처에서 서비스 간 통신을 위해 사용됩니다.
+
+`@FeignClient`를 사용하면 HTTP 기반의 RESTful 서비스에 대한 클라이언트를 선언적으로 작성할 수 있습니다. 이 어노테이션은 Spring Cloud Netflix의 Feign이라는 라이브러리와 함께 사용되며, 내부적으로는 Ribbon과 함께 작동하여 로드 밸런싱 기능을 제공합니다.
+
+간단한 사용 예시는 다음과 같습니다:
