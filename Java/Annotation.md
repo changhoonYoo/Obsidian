@@ -298,6 +298,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 `@FeignClient`는 Spring Cloud에서 제공하는 어노테이션 중 하나로, 서버 간 통신을 쉽게 구현할 수 있도록 도와주는 기능을 제공합니다. 주로 마이크로서비스 아키텍처에서 서비스 간 통신을 위해 사용됩니다.
 
-`@FeignClient`를 사용하면 HTTP 기반의 RESTful 서비스에 대한 클라이언트를 선언적으로 작성할 수 있습니다. 이 어노테이션은 Spring Cloud Netflix의 Feign이라는 라이브러리와 함께 사용되며, 내부적으로는 Ribbon과 함께 작동하여 로드 밸런싱 기능을 제공합니다.
+`@FeignClient`를 사용하면 HTTP 기반의 RESTful 서비스에 대한 클라이언트를 선언적으로 작성할 수 있습니다. 이 어노테이션은 Spring Cloud Netflix의 Feign이라는 라이브러리와 함께 사용되며, 내부적으로는 Ribbon과 함께 작동하여 [[로드 밸런싱]] 기능을 제공합니다. ^6abd56
 
 간단한 사용 예시는 다음과 같습니다:
