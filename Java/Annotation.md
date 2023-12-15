@@ -302,3 +302,46 @@ public interface UserRepository extends JpaRepository<User, Long> {
 `@FeignClient`를 사용하면 HTTP 기반의 RESTful 서비스에 대한 클라이언트를 선언적으로 작성할 수 있습니다. 이 어노테이션은 Spring Cloud Netflix의 Feign이라는 라이브러리와 함께 사용되며, 내부적으로는 Ribbon과 함께 작동하여 [[로드 밸런싱]] 기능을 제공합니다. ^6abd56
 
 간단한 사용 예시는 다음과 같습니다:
+```java
+import org.springframework.cloud.openfeign.FeignClient; 
+import org.springframework.web.bind.annotation.GetMapping; 
+
+@FeignClient(name = "example-service", url = "http://example-service/api") public interface ExampleFeignClient { 
+	@GetMapping("/exampleEndpoint") 
+	String getExampleData(); 
+}
+```
+위의 코드에서:
+
+- `@FeignClient` 어노테이션은 Feign 클라이언트를 정의하며, `name`은 클라이언트의 이름, `url`은 클라이언트가 통신할 서버의 기본 URL을 나타냅니다.
+- `ExampleFeignClient` 인터페이스는 Feign 클라이언트의 메서드를 정의하며, 각 메서드는 서버의 엔드포인트와 매핑됩니다.
+
+`@FeignClient` 어노테이션은 Spring Cloud의 다양한 기능과 함께 사용될 수 있으며, 서비스 디스커버리, 로드 밸런싱, 히스트릭스와 같은 기능들을 쉽게 적용할 수 있도록 지원합니다. 이를 통해 마이크로서비스 간의 통신을 간편하게 구현할 수 있습니다.
+
+`@FeignClient` 어노테이션의 속성을 살펴보겠습니다:
+
+```java
+@FeignClient(value = "example-server", url = "${com.example.api.url}", 
+			 decode404 = true)
+```
+
+1. **value (또는 name):**
+    
+    - `value` 또는 `name` 속성은 Feign 클라이언트의 이름을 지정합니다.
+    - 이 이름은 다른 빈과 구분하기 위해 사용되며, 서비스 디스커버리에서도 사용될 수 있습니다.
+	    `@FeignClient(value = "example-server")`
+    
+2. **url:**
+    - `url` 속성은 클라이언트가 통신할 대상 서버의 기본 URL을 지정합니다.
+    - 이 URL은 문자열 형태로 제공되며, 예를 들어 `${com.example.api.url}`처럼 프로퍼티를 사용하여 동적으로 설정할 수도 있습니다.
+	    `@FeignClient(url = "${com.example.api.url}")`
+    
+3. **decode404:**
+    
+    - `decode404` 속성은 404 응답을 디코딩할지 여부를 결정합니다.
+    - `true`로 설정하면 404 응답이 디코딩되어 반환값으로 처리됩니다.
+    
+    `@FeignClient(decode404 = true)`
+    
+
+따라서 주어진 어노테이션은 "example-server"라는 이름의 Feign 클라이언트를 정의하며, 클라이언트가 통신할 서버의 기본 URL은 `${com.example.api.url}`로 설정되어 동적으로 지정됩니다. 또한, 404 응답을 디코딩하도록 설정되어 있습니다.
