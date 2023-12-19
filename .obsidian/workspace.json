@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Spring-Boot/WebSocket.md",
                 "mode": "preview",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Spring-Boot/WebSocket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Spring-Boot/WebSocket.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Annotation.md"
+                "file": "Spring-Boot/WebSocket.md"
               }
             }
           }
@@ -177,6 +177,7 @@
   },
   "active": "4ecda858ce91ded3",
   "lastOpenFiles": [
+    "Java/Annotation.md",
     "Java/Java 문법.md",
     "Java/HttpSession.md",
     "Network/로드 밸런싱.md",
@@ -188,7 +189,6 @@
     "의존성.md",
     "의존성_주입.md",
     "`의존성.md",
-    "Java/Annotation.md",
     "[[Annotation.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Network",
