@@ -13,25 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Annotation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "a23a4998a7ceaca7",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4ecda858ce91ded3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring-Boot/WebSocket.md",
+                "file": "Spring-Boot/스프링 마스터.md",
                 "mode": "preview",
                 "source": false
               }
@@ -103,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/WebSocket.md",
+                "file": "Spring-Boot/스프링 마스터.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/WebSocket.md",
+                "file": "Spring-Boot/스프링 마스터.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/WebSocket.md"
+                "file": "Spring-Boot/스프링 마스터.md"
               }
             }
           }
@@ -175,17 +157,17 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4ecda858ce91ded3",
+  "active": "895db593b15ab625",
   "lastOpenFiles": [
+    "Spring-Boot/WebSocket.md",
+    "Spring-Boot/스프링 마스터.md",
+    "Spring-Boot/Spring Bean.md",
     "Java/Annotation.md",
     "Java/Java 문법.md",
     "Java/HttpSession.md",
     "Network/로드 밸런싱.md",
     "RabbitMq/RabbitMq 개념.md",
-    "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/의존성 주입.md",
-    "Spring-Boot/WebSocket.md",
-    "Spring-Boot/Spring Bean.md",
     "의존성.md",
     "의존성_주입.md",
     "`의존성.md",
