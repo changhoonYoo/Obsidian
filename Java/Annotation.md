@@ -347,4 +347,90 @@ import org.springframework.web.bind.annotation.GetMapping;
 따라서 주어진 어노테이션은 "example-server"라는 이름의 Feign 클라이언트를 정의하며, 클라이언트가 통신할 서버의 기본 URL은 `${com.example.api.url}`로 설정되어 동적으로 지정됩니다. 또한, 404 응답을 디코딩하도록 설정되어 있습니다.
 - - - 
 
-## <span style="color:darkorange">@Values</span>
+## <span style="color:darkorange">@Value</span>
+`@Value`는 스프링 프레임워크에서 제공하는 어노테이션 중 하나로, 주로 프로퍼티 값을 주입받아 필드에 할당하고자 할 때 사용됩니다. 이 어노테이션은 `@ConfigurationProperties`와 유사하지만, 좀 더 간편한 형태로 사용할 수 있습니다.
+
+아래는 `@Value` 어노테이션의 주요 사용법에 대한 예제입니다:
+
+1. **기본 사용:**
+    
+    - 프로퍼티 값을 필드에 주입하는 가장 기본적인 형태입니다.
+    
+		```java
+		import org.springframework.beans.factory.annotation.Value; 
+		import org.springframework.stereotype.Component;  
+		
+		@Component 
+		public class MyComponent {     
+		 
+			@Value("${my.property}")     
+			private String myProperty;    
+			  
+			// getter, setter 등 생략 
+		}
+		```
+    
+    - `${my.property}`는 프로퍼티 파일에서 `my.property` 키에 해당하는 값을 가져와서 `myProperty` 필드에 주입합니다.
+    
+1. **기본값 설정:**
+    
+    - 만약 프로퍼티 값이 없는 경우 기본값을 설정할 수 있습니다.
+    
+	    ```java
+	    @Value("${my.property:default-value}") 
+	    private String myProperty;
+		```
+    
+    - `my.property`이 존재하지 않으면 `default-value`가 `myProperty` 필드에 할당됩니다.
+3. **SpEL(스프링 표현 언어) 사용:**
+    
+    - SpEL을 사용하여 복잡한 표현식을 이용할 수 있습니다.
+    
+	    ```java
+	    @Value("#{systemProperties['java.home']}") 
+	    private String javaHome;
+	    ```
+    
+    - 이 예제에서는 자바 홈 디렉토리를 시스템 프로퍼티에서 가져와서 `javaHome` 필드에 할당합니다.
+4. **리스트나 배열로 값 주입:**
+    
+    - 여러 값을 한 번에 주입받을 수도 있습니다.
+    
+	    ```java
+		@Value("${my.list.values}") 
+		private List<String> myListValues; 
+		
+		@Value("${my.array.values}") 
+		private String[] myArrayValues;
+	    ```
+    
+    - 프로퍼티에서는 쉼표(,)로 구분된 값들을 설정해야 합니다.
+
+이렇게 `@Value` 어노테이션을 사용하면 스프링 애플리케이션 컨텍스트에서 프로퍼티 값을 주입받을 수 있습니다. 주입받은 값을 필드에 할당하여 해당 빈을 사용하는데 활용할 수 있습니다.
+- - -
+`@Value` 어노테이션을 사용할 때 주입받는 프로퍼티는 주로 `application.properties` 또는 `application.yml` 등의 프로퍼티 파일에서 설정됩니다. 아래는 `application.properties` 파일의 예제와 함께 `@Value`를 사용한 코드입니다.
+
+1. **`application.properties` 파일:**
+    
+    propertiesCopy code
+    
+	    ```properties
+	    my.property=Hello, World! 
+	    my.list.values=value1,value2,value3 
+	    my.array.values=valueA,valueB,valueC
+	    ```
+    
+2. **`MyComponent` 클래스:**
+    
+    javaCopy code
+    
+    `import org.springframework.beans.factory.annotation.Value; import org.springframework.stereotype.Component;  import java.util.List;  @Component public class MyComponent {      @Value("${my.property}")     private String myProperty;      @Value("${my.list.values}")     private List<String> myListValues;      @Value("${my.array.values}")     private String[] myArrayValues;      // getter, setter 등 생략      public void printValues() {         System.out.println("myProperty: " + myProperty);         System.out.println("myListValues: " + myListValues);         System.out.println("myArrayValues: " + Arrays.toString(myArrayValues));     } }`
+    
+3. **활용하는 코드:**
+    
+    javaCopy code
+    
+    `import org.springframework.beans.factory.annotation.Autowired; import org.springframework.boot.CommandLineRunner; import org.springframework.stereotype.Component;  @Component public class AppRunner implements CommandLineRunner {      @Autowired     private MyComponent myComponent;      @Override     public void run(String... args) {         myComponent.printValues();     } }`
+    
+
+위 코드에서 `MyComponent`는 `application.properties` 파일에서 정의한 값을 주입받아서 출력하는 간단한 예제입니다. `AppRunner`는 스프링 부트 애플리케이션이 실행될 때 `MyComponent`의 `printValues` 메서드를 호출하여 값을 출력합니다. 이때 `@Value` 어노테이션을 사용하여 프로퍼티 값을 주입받습니다.
