@@ -345,3 +345,6 @@ import org.springframework.web.bind.annotation.GetMapping;
     
 
 따라서 주어진 어노테이션은 "example-server"라는 이름의 Feign 클라이언트를 정의하며, 클라이언트가 통신할 서버의 기본 URL은 `${com.example.api.url}`로 설정되어 동적으로 지정됩니다. 또한, 404 응답을 디코딩하도록 설정되어 있습니다.
+- - - 
+
+## <span style="color:darkorange">@Values</span>
