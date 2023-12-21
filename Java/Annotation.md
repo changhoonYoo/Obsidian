@@ -411,21 +411,38 @@ import org.springframework.web.bind.annotation.GetMapping;
 `@Value` 어노테이션을 사용할 때 주입받는 프로퍼티는 주로 `application.properties` 또는 `application.yml` 등의 프로퍼티 파일에서 설정됩니다. 아래는 `application.properties` 파일의 예제와 함께 `@Value`를 사용한 코드입니다.
 
 1. **`application.properties` 파일:**
-    
-    propertiesCopy code
-    
-	    ```properties
-	    my.property=Hello, World! 
-	    my.list.values=value1,value2,value3 
-	    my.array.values=valueA,valueB,valueC
-	    ```
-    
+    ```
+	my.property=Hello, World! 
+	my.list.values=value1,value2,value3
+	my.array.values=valueA,valueB,valueC
+    ```
 2. **`MyComponent` 클래스:**
-    
-    javaCopy code
-    
-    `import org.springframework.beans.factory.annotation.Value; import org.springframework.stereotype.Component;  import java.util.List;  @Component public class MyComponent {      @Value("${my.property}")     private String myProperty;      @Value("${my.list.values}")     private List<String> myListValues;      @Value("${my.array.values}")     private String[] myArrayValues;      // getter, setter 등 생략      public void printValues() {         System.out.println("myProperty: " + myProperty);         System.out.println("myListValues: " + myListValues);         System.out.println("myArrayValues: " + Arrays.toString(myArrayValues));     } }`
-    
+```java
+import org.springframework.beans.factory.annotation.Value; 
+import org.springframework.stereotype.Component;  
+import java.util.List;  
+
+@Component 
+public class MyComponent {      
+
+	@Value("${my.property}")     
+	private String myProperty;      
+	
+	@Value("${my.list.values}")     
+	private List<String> myListValues;      
+	
+	@Value("${my.array.values}")     
+	private String[] myArrayValues;      
+	
+	// getter, setter 등 생략      
+	public void printValues() {         
+		System.out.println("myProperty: " + myProperty);
+		System.out.println("myListValues: " + myListValues);
+		System.out.println("myArrayValues: " + Arrays.toString(myArrayValues));
+	} 
+}
+```
+
 3. **활용하는 코드:**
     
     javaCopy code
