@@ -411,12 +411,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 `@Value` 어노테이션을 사용할 때 주입받는 프로퍼티는 주로 `application.properties` 또는 `application.yml` 등의 프로퍼티 파일에서 설정됩니다. 아래는 `application.properties` 파일의 예제와 함께 `@Value`를 사용한 코드입니다.
 
 1. **`application.properties` 파일:**
-    ```
-	my.property=Hello, World! 
-	my.list.values=value1,value2,value3
-	my.array.values=valueA,valueB,valueC
-    ```
-2. **`MyComponent` 클래스:**
+```properties
+my.property=Hello, World! 
+my.list.values=value1,value2,value3
+my.array.values=valueA,valueB,valueC
+```
+1. **`MyComponent` 클래스:**
 ```java
 import org.springframework.beans.factory.annotation.Value; 
 import org.springframework.stereotype.Component;  
@@ -438,16 +438,32 @@ public class MyComponent {
 	public void printValues() {         
 		System.out.println("myProperty: " + myProperty);
 		System.out.println("myListValues: " + myListValues);
-		System.out.println("myArrayValues: " + Arrays.toString(myArrayValues));
+		System.out.println("myArrayValues: " + 
+							Arrays.toString(myArrayValues));
 	} 
 }
 ```
 
 3. **활용하는 코드:**
     
-    javaCopy code
-    
-    `import org.springframework.beans.factory.annotation.Autowired; import org.springframework.boot.CommandLineRunner; import org.springframework.stereotype.Component;  @Component public class AppRunner implements CommandLineRunner {      @Autowired     private MyComponent myComponent;      @Override     public void run(String... args) {         myComponent.printValues();     } }`
+```java
+import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.boot.CommandLineRunner; 
+import org.springframework.stereotype.Component; 
+
+@Component 
+public class AppRunner implements CommandLineRunner {      
+	@Autowired     
+	private MyComponent myComponent;      
+	
+	@Override     
+	public void run(String... args) {         
+		myComponent.printValues();     
+	} 
+}
+```
     
 
 위 코드에서 `MyComponent`는 `application.properties` 파일에서 정의한 값을 주입받아서 출력하는 간단한 예제입니다. `AppRunner`는 스프링 부트 애플리케이션이 실행될 때 `MyComponent`의 `printValues` 메서드를 호출하여 값을 출력합니다. 이때 `@Value` 어노테이션을 사용하여 프로퍼티 값을 주입받습니다.
+
+- - -
