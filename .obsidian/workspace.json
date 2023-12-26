@@ -18,26 +18,21 @@
                 "source": false
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "2bdfbf971b9efa65",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "14a8c62349daa992",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Annotation.md",
-                "mode": "preview",
+                "file": "Database/Redis.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Database/Redis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Database/Redis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Annotation.md"
+                "file": "Database/Redis.md"
               }
             }
           }
@@ -177,12 +172,13 @@
   },
   "active": "14a8c62349daa992",
   "lastOpenFiles": [
+    "Java/Annotation.md",
+    "Database/Redis.md",
     "Spring-Boot/JWT.md",
     "Spring-Boot/의존성 주입.md",
     "Spring-Boot/Spring Bean.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/WebSocket.md",
-    "Java/Annotation.md",
     "Java/Java 문법.md",
     "Java/HttpSession.md",
     "Network/로드 밸런싱.md",
