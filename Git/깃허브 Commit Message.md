@@ -18,7 +18,7 @@
 
 예시:
 
-```
+```text
 feat(user-auth): add registration API endpoint 
 fix(bug): resolve issue with user authentication 
 docs(readme): update project documentation 
