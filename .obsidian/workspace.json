@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "da754aef1fd5e5ee",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "895db593b15ab625",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring-Boot/properties.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "9ec9ec21a6a3cec1",
         "type": "tabs",
         "children": [
@@ -32,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Git/깃허브 Commit Message.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
