@@ -31,24 +31,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/properties.md",
-                "mode": "preview",
+                "file": "Git/깃허브 Commit Message.md",
+                "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "a75774d7dac26096",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.3"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/properties.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/properties.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/properties.md"
+                "file": "Git/깃허브 Commit Message.md"
               }
             }
           }
@@ -186,10 +175,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a75774d7dac26096",
+  "active": "1fb10370eff1f043",
   "lastOpenFiles": [
-    "Java/Annotation.md",
     "Spring-Boot/properties.md",
+    "Git/깃허브 Commit Message.md",
+    "Java/Annotation.md",
     "Database/Redis.md",
     "Spring-Boot/JWT.md",
     "Spring-Boot/의존성 주입.md",
@@ -221,7 +211,6 @@
     "RabbitMq",
     "Pasted image 20231207090811.png.md",
     "Pasted image 20231207090811.png",
-    "${user.username}.md",
     "Thymeleaf",
     "Intellij",
     "Restful API",
