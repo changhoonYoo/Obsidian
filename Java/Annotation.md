@@ -169,6 +169,23 @@ public interface UserRepository extends CrudRepository<User, Long> {
 JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 생성자를 필요로 하는 경우가 많기 때문에 Lombok의 `@NoArgsConstructor`를 통해 편리하게 사용할 수 있습니다.
 
 - - -
+
+## <span style="color:darkorange">@RestControllerAdvice</span>
+
+`@RestControllerAdvice`는 Spring MVC 애플리케이션에서 전역적으로 예외를 처리하고, 예외에 대한 응답을 일관되게 생성하는 데 사용되는 어노테이션입니다. 이 클래스는 `@ControllerAdvice`와 `@ResponseBody`를 함께 사용하는 것과 동일한 역할을 하며, JSON 또는 XML 형식의 응답을 생성합니다.
+
+`@RestControllerAdvice` 클래스를 작성하면 여러 컨트롤러에서 발생하는 예외를 일관된 방식으로 처리할 수 있습니다. 예를 들어, 특정 예외에 대해 HTTP 응답 코드를 지정하거나, 에러 메시지를 포함하거나, 로깅을 수행하거나, 추가적인 정보를 제공할 수 있습니다.
+
+일반적으로 사용되는 `@RestControllerAdvice`의 몇 가지 기능:
+
+1. **전역 예외 처리:** 애플리케이션에서 발생하는 모든 예외를 처리할 수 있습니다.
+2. **특정 예외 처리:** 특정 예외 유형에 대한 처리 로직을 정의할 수 있습니다.
+3. **응답 커스터마이징:** 예외 발생 시 클라이언트에게 전송되는 응답의 형식을 변경할 수 있습니다.
+
+간단한 예를 들어보겠습니다:
+```jav
+```
+@RestControllerAdvice public class GlobalExceptionHandler { @ExceptionHandler(Exception.class) public ResponseEntity<String> handleException(Exception e) { // 예외 처리 로직 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("서버 오류 발생: " + e.getMessage()); } @ExceptionHandler(MyCustomException.class) public ResponseEntity<String> handleCustomException(MyCustomException e) { // 특정 예외에 대한 처리 로직 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("클라이언트 요청 오류: " + e.getMessage()); } // 다른 예외 핸들러 메서드들... }
 ## <span style="color:darkorange">@RestResource</span>
 
 `@RestResource(exported = ...)`는 Spring Data REST에서 사용되는 애노테이션 중 하나입니다. 이 애노테이션은 리소스를 노출할지 여부를 결정하는 데 사용됩니다.
@@ -467,3 +484,5 @@ public class AppRunner implements CommandLineRunner {
 위 코드에서 `MyComponent`는 `application.properties` 파일에서 정의한 값을 주입받아서 출력하는 간단한 예제입니다. `AppRunner`는 스프링 부트 애플리케이션이 실행될 때 `MyComponent`의 `printValues` 메서드를 호출하여 값을 출력합니다. 이때 `@Value` 어노테이션을 사용하여 프로퍼티 값을 주입받습니다.
 
 - - -
+
+
