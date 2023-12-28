@@ -183,9 +183,27 @@ JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 �
 3. **응답 커스터마이징:** 예외 발생 시 클라이언트에게 전송되는 응답의 형식을 변경할 수 있습니다.
 
 간단한 예를 들어보겠습니다:
-```jav
+```java
+@RestControllerAdvice 
+public class GlobalExceptionHandler { 
+	@ExceptionHandler(Exception.class) 
+	public ResponseEntity<String> handleException(Exception e) { 
+		// 예외 처리 로직 
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+			.body("서버 오류 발생: " + e.getMessage()); 
+	} 
+	@ExceptionHandler(MyCustomException.class) 
+	public ResponseEntity<String> handleCustomException(MyCustomException e) {
+		// 특정 예외에 대한 처리 로직 
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+			.body("클라이언트 요청 오류: " + e.getMessage()); 
+	} 
+	// 다른 예외 핸들러 메서드들... 
+}
 ```
-@RestControllerAdvice public class GlobalExceptionHandler { @ExceptionHandler(Exception.class) public ResponseEntity<String> handleException(Exception e) { // 예외 처리 로직 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("서버 오류 발생: " + e.getMessage()); } @ExceptionHandler(MyCustomException.class) public ResponseEntity<String> handleCustomException(MyCustomException e) { // 특정 예외에 대한 처리 로직 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("클라이언트 요청 오류: " + e.getMessage()); } // 다른 예외 핸들러 메서드들... }
+
+이렇게 작성된 `GlobalExceptionHandler`는 애플리케이션 어디에서든 발생하는 `Exception` 및 `MyCustomException`에 대한 예외 처리를 정의합니다. 발생한 예외에 따라 다양한 응답을 생성할 수 있습니다.
+- - -
 ## <span style="color:darkorange">@RestResource</span>
 
 `@RestResource(exported = ...)`는 Spring Data REST에서 사용되는 애노테이션 중 하나입니다. 이 애노테이션은 리소스를 노출할지 여부를 결정하는 데 사용됩니다.
