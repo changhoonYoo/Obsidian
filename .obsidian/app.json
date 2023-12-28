@@ -2,5 +2,7 @@
   "spellcheck": true,
   "autoConvertHtml": true,
   "defaultViewMode": "preview",
-  "readableLineLength": false
+  "readableLineLength": true,
+  "showLineNumber": false,
+  "tabSize": 3
 }
