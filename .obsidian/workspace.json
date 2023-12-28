@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/Proxy.md",
-                "mode": "source",
+                "file": "Spring-Boot/Upload & Download.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/Proxy.md",
+                "file": "Spring-Boot/Upload & Download.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network/Proxy.md",
+                "file": "Spring-Boot/Upload & Download.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/Proxy.md"
+                "file": "Spring-Boot/Upload & Download.md"
               }
             }
           }
@@ -159,8 +159,9 @@
   },
   "active": "1fb10370eff1f043",
   "lastOpenFiles": [
-    "Network/로드 밸런싱.md",
     "Network/Proxy.md",
+    "Spring-Boot/Upload & Download.md",
+    "Network/로드 밸런싱.md",
     "Java/Annotation.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/의존성 주입.md",
@@ -189,7 +190,6 @@
     "Intellij/인텔리제이 기본 설정.md",
     "kuilcake",
     "README.md",
-    "Excalidraw/Drawing 2023-12-07 09.38.54.excalidraw.md",
     "Excalidraw",
     "RabbitMq",
     "Pasted image 20231207090811.png",

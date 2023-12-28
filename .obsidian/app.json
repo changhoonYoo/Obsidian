@@ -1,5 +1,6 @@
 {
   "spellcheck": true,
   "autoConvertHtml": true,
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "readableLineLength": false
 }
