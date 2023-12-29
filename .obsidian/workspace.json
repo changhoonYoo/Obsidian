@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Java/Exception.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Java/Exception.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Java/Exception.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/깃허브 Commit Message.md"
+                "file": "Java/Exception.md"
               }
             }
           }
@@ -177,6 +177,7 @@
   },
   "active": "85fa94e90fb28ab2",
   "lastOpenFiles": [
+    "Git/깃허브 Commit Message.md",
     "Git/Git 명령어 정리.md",
     "Java/Exception.md",
     "Java/Annotation.md",
@@ -188,7 +189,6 @@
     "Network/로드 밸런싱.md",
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/properties.md",
-    "Git/깃허브 Commit Message.md",
     "Database/Redis.md",
     "Spring-Boot/JWT.md",
     "Java/Java 문법.md",
