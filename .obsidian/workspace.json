@@ -13,7 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/Upload & Download.md",
+                "file": "Java/Annotation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "7b9ac8762c7448ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "85fa94e90fb28ab2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/Annotation.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/Upload & Download.md",
+                "file": "Java/Annotation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/Upload & Download.md",
+                "file": "Java/Annotation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/Upload & Download.md"
+                "file": "Java/Annotation.md"
               }
             }
           }
@@ -157,15 +175,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1fb10370eff1f043",
+  "active": "85fa94e90fb28ab2",
   "lastOpenFiles": [
-    "Spring-Boot/Spring Bean.md",
+    "Spring-Boot/스프링 마스터.md",
+    "Spring-Boot/의존성 주입.md",
     "Spring-Boot/Upload & Download.md",
+    "Spring-Boot/Spring Bean.md",
     "Network/Proxy.md",
     "Network/로드 밸런싱.md",
     "Java/Annotation.md",
-    "Spring-Boot/스프링 마스터.md",
-    "Spring-Boot/의존성 주입.md",
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/properties.md",
     "Git/깃허브 Commit Message.md",

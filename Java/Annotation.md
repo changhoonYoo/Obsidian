@@ -233,6 +233,70 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - - -
 
 
+## <span style="color:darkorange">@RequestParam</span>
+
+`@RequestParam`은 스프링 프레임워크에서 HTTP 요청의 파라미터를 메서드의 파라미터로 전달받을 때 사용하는 애너테이션입니다. 이를 통해 쿼리스트링이나 폼 데이터 등을 컨트롤러 메서드로 쉽게 전달할 수 있습니다.
+
+여러 사용 예시를 통해 자세히 살펴보겠습니다.
+
+1. **기본 사용:**
+    
+    ```java
+    @GetMapping("/example") 
+    public String exampleMethod(@RequestParam String param1, 
+									   @RequestParam int param2) {
+		// 메서드 로직 
+	}
+	```
+    
+    위의 예제에서 `param1`과 `param2`는 각각 쿼리스트링이나 폼 데이터에서 전달된 `param1`과 `param2`의 값을 받습니다.
+	<br>
+2. **기본값 설정:**
+ 
+    ```java
+    @GetMapping("/example") 
+    public String exampleMethod(@RequestParam(defaultValue = "default") 
+									    String param1) {
+		// 메서드 로직 
+	}
+    ```
+    
+    `defaultValue` 속성을 사용하여 파라미터가 전달되지 않은 경우 기본값을 설정할 수 있습니다.
+    
+3. **필수 파라미터로 지정:**
+    
+    javaCopy code
+    
+    `@GetMapping("/example") public String exampleMethod(@RequestParam(required = true) String param1) {     // 메서드 로직 }`
+    
+    `required` 속성을 사용하여 파라미터를 필수로 지정할 수 있습니다. 기본값은 `true`이며, 만약 필수 파라미터가 전달되지 않으면 400 Bad Request 오류가 발생합니다.
+    
+4. **여러 값 받기:**
+    
+    javaCopy code
+    
+    `@GetMapping("/example") public String exampleMethod(@RequestParam List<String> values) {     // 메서드 로직 }`
+    
+    여러 값을 받고자 할 때는 리스트로 받을 수 있습니다.
+    
+5. **파라미터 이름과 메서드 파라미터 명이 다를 경우:**
+    
+    javaCopy code
+    
+    `@GetMapping("/example") public String exampleMethod(@RequestParam(name = "customName") String param) {     // 메서드 로직 }`
+    
+    파라미터의 이름이 메서드 파라미터 명과 다를 경우 `name` 속성을 사용하여 매핑할 수 있습니다.
+    
+6. **모든 파라미터를 Map으로 받기:**
+    
+    javaCopy code
+    
+    `@GetMapping("/example") public String exampleMethod(@RequestParam Map<String, String> params) {     // 메서드 로직 }`
+    
+    모든 파라미터를 Map으로 받을 수 있습니다.
+    
+
+`@RequestParam`은 주로 쿼리스트링이나 폼 데이터를 받을 때 사용되며, 간단하고 편리한 방법을 제공하여 컨트롤러 메서드에서 파라미터를 처리하는 데에 도움을 줍니다.
 ## <span style="color:darkorange">@RequireArgsConstructor</span>
 
 `@RequiredArgsConstructor`는 Lombok이 제공하는 어노테이션 중 하나로, 주로 생성자를 자동으로 생성해주는 데 사용됩니다. 이 어노테이션을 사용하면 클래스의 필드들을 파라미터로 받는 생성자가 자동으로 생성되어 코드를 간결하게 만들어줍니다.
@@ -502,5 +566,6 @@ public class AppRunner implements CommandLineRunner {
 위 코드에서 `MyComponent`는 `application.properties` 파일에서 정의한 값을 주입받아서 출력하는 간단한 예제입니다. `AppRunner`는 스프링 부트 애플리케이션이 실행될 때 `MyComponent`의 `printValues` 메서드를 호출하여 값을 출력합니다. 이때 `@Value` 어노테이션을 사용하여 프로퍼티 값을 주입받습니다.
 
 - - -
+
 
 
