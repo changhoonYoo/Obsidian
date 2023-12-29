@@ -81,16 +81,13 @@
 
 > **체크 예외와 언체크 예외의 활용**
 
-**기본적으로 언체크(런타임) 예외**를 사용하고, **체크 예외는 비즈니스 로직상 의도적으로 던지는 예외**에 사용합니다.
-비즈니스 로직상 의도적으로 예외를 던져야 할 경우를 예를 들면 해당 예외를 잡아서 **반드시 처리해야 하는 문제일 경우**가 있습니다.
+**기본적으로 언체크(런타임) 예외**를 사용하고, **체크 예외는 비즈니스 로직상 의도적으로 던지는 예외**에 사용합니다. 비즈니스 로직상 의도적으로 예외를 던져야 할 경우를 예를 들면 해당 예외를 잡아서 **반드시 처리해야 하는 문제일 경우**가 있습니다.
 
 예를 들면, **계좌 이체 실패 예외, 로그인 ID, PW 불일치 예외** 등
 
-이렇게 구분하여 예외를 활용하는 이유는
-체크 예외는 예외 누락을 컴파일러가 체크해주기 때문에 무조건 처리해야하는 예외가 있다면 **체크 예외**를 활용해 개발자가 **실수로 예외를 놓치는 것을 막아**줄 수 있기 때문입니다.
+이렇게 구분하여 예외를 활용하는 이유는 체크 예외는 예외 누락을 컴파일러가 체크해주기 때문에 무조건 처리해야하는 예외가 있다면 **체크 예외**를 활용해 개발자가 **실수로 예외를 놓치는 것을 막아**줄 수 있기 때문입니다.
 
 그런데 이렇게만 보면 그냥 체크 예외 사용하면 안되나 ? 라는 생각이 들 수 있습니다.
-
 왜 **체크 예외를 기본으로 사용하는 것이 문제**가 되는지 알아 봅시다.
 
 > **체크 예외의 문제점**
@@ -98,16 +95,14 @@
 **- 복구 불가능한 예외**
 
 SQLException 을 예를 들면 데이터베이스에 무언가 문제가 있어서 발생하는 예외로,
-
 SQL 문법에 문제가 있을 수도 있고, 데이터베이스 자체에 뭔가 문제가 발생했을 수도 있고, 데이터베이스 서버가 중간에 다운 되었을 수도 있습니다.
 
 이런 문제들은 **시스템 레벨에서 발생한 문제이기 때문에 대부분 복구가 불가능**합니다.
-
 특히 서비스나 컨트롤러는 이런 문제를 해결할 수는 없습니다.
 
-따라서 이런 문제들은 일관성 있게 공통으로 처리해야 한다. 오류 로그를 남기고 개발자가 해당 오류를 빠르게 인지하는 것이 필요하다.
+따라서 이런 문제들은 일관성 있게 공통으로 처리해야 한다. 오류 로그를 남기고 개발자가 해당 오류를 빠르게 인지하는 것이 필요합니다.
 
-서블릿 필터, 스프링 인터셉터, 스프링의 ControllerAdvice 를 사용하면 이런 부분을 깔끔하게 공통으로 해결할 수 있다
+서블릿 필터, 스프링 인터셉터, 스프링의 ControllerAdvice 를 사용하면 이런 부분을 깔끔하게 공통으로 해결할 수 있습니다.
 
 **- 의존 관계에 대한 문제**
 
@@ -124,34 +119,43 @@ SQL 문법에 문제가 있을 수도 있고, 데이터베이스 자체에 뭔�
 > **런타임 예외를 상속한 RuntimeSQLException을 생성**
 
 **Throwable cause** 라는 파라미터를 갖는 생성자를 생성하였는데,
-
 이 객체가 상속 받은 RuntimeException 예외도 포함하여 전달해줍니다.
-
 이렇게 예외를 전환할 때는 **꼭 기존 예외를 포함**하도록 해야 합니다.
 
-```bash
-class RuntimeSQLException extends RuntimeException {    public RuntimeSQLException(Throwable cause) {    	super(cause);	}	}
+```java
+class RuntimeSQLException extends RuntimeException {    
+	public RuntimeSQLException(Throwable cause) {    	
+		super(cause);	
+	}	
+}
 ```
 
 > **예외 전환**
 
 예외를 전환 할 때 **발생한 예외를 잡고** **언체크(런타임) 예외로 바꾼 예외를 던지도록** 합니다.
 
-```bash
-class Repository {    public void call() {        try {        	throw new SQLException("예외 발생");        } catch (SQLException e) {        	// 예외를 전환할 때는 꼭 기존 예외 포함! 그렇지 않으면 스택 트레이스를 확인할 때 심각한 문제가 발생한다.            throw new RuntimeSQLException(e); //         }    }}
+```java
+class Repository {    
+	public void call() {        
+		try {        	
+			throw new SQLException("예외 발생");        
+		} catch (SQLException e) {        	
+			// 예외를 전환할 때는 꼭 기존 예외 포함! 
+			// 그렇지 않으면 스택 트레이스를 확인할 때 심각한 문제가 발생한다.   
+			throw new RuntimeSQLException(e);         
+		}    
+	}
+}
 ```
 
 ---
 
 ## Spring에서의 예외
 
-DB에서 오류가 발생하면 모든 Excepion을 SQLException 하나에 모두 담아 버려 버립니다.
-
+DB에서 오류가 발생하면 모든 Exception을 SQLException 하나에 모두 담아 버려 버립니다.
 근데 SQLException은 체크 예외로 복구가 불가능한 예외 입니다.
 
-따라서 예외를 처리할 수 없어도 **어쩔 수 없이 throws 를 통해 던지는 예외를 선언**해야 하게 되는데,
-
-스프링은 **DB** **벤더마다 SQL 에러코드가 다르고, 관리하기 어려워** 자바에서 다루는 **SQLException(체크 예외)**을 **DataAccessException(언체크 예외)로 변환**하여 사용합니다.
+따라서 예외를 처리할 수 없어도 **어쩔 수 없이 throws 를 통해 던지는 예외를 선언**해야 하게 되는데, 스프링은 **DB** **벤더마다 SQL 에러코드가 다르고, 관리하기 어려워** 자바에서 다루는 **SQLException(체크 예외)을 DataAccessException(언체크 예외)로 변환**하여 사용합니다.
 
 ![etc-image-1](https://blog.kakaocdn.net/dn/b54r3Y/btscPZ2xUGG/tSgPj0fC3Ek6GBhfEX46YK/img.png)
 
@@ -160,9 +164,8 @@ DataAccessException은 스프링 예외의 최상의 계층으로, RuntimeExcept
 **- NonTransient 예외 :** 일시적인 예외로, 동일한 SQL을 수행할 경우 성공할 가능성이 있다.  
 **- Transient 예외 :** 일시적이지 않은 예외, SQL 문법 오류나 제약조건 위배 등
 
-DataAccessException는 특정 기술에 **종속적이지 않게 설계**되어 JDBC를 사용하든 JPA를 사용하든 스프링이 제공하는 예외를 사용할 수 있습니다.
-
-이렇게 DB별로 발생하는 예외를 **스프링이 제공하는 DB 계층 예외로 변경해줄 수 있는 이유는 **DB에서 발생하는 예외의 ErrorCode를 읽어 스프링의 **예외 변환기 **SQLExceptionTranslator가 해결******** 해 주기 때문입니다.
+DataAccessException는 특정 기술에 **종속적이지 않게 설계**되어 JDBC를 사용하든 JPA를 사용하든 스프링이 제공하는 예외를 사용할 수 있습니다. 
+이렇게 DB별로 발생하는 예외를 스프링이 제공하는 DB 계층 예외로 변경해줄 수 있는 이유**는 DB에서 발생하는 예외의 ErrorCode를 읽어 스프링의 예외 변환기 SQLExceptionTranslator가 해결**해 주기 때문입니다.
 
 > **Spring에서 체크 예외와 언체크 예외**
 
@@ -172,7 +175,7 @@ DataAccessException는 특정 기술에 **종속적이지 않게 설계**되어 
 
 그럴 때에는 @Transactional 옵션인 **rollbackFor 옵션을 사용해 체크 예외도 롤백하도록 설정**할 수 있습니다.
 
-```bash
+```java
 @Transactional(rollbackFor = Exception.class)
 ```
 

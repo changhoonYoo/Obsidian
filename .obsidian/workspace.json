@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Java/Annotation.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Java/Annotation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Java/Annotation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Exception.md"
+                "file": "Java/Annotation.md"
               }
             }
           }
@@ -175,11 +175,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "393017f0f9af0d6a",
+  "active": "85fa94e90fb28ab2",
   "lastOpenFiles": [
+    "Java/Exception.md",
     "Git/깃허브 Commit Message.md",
     "Git/Git 명령어 정리.md",
-    "Java/Exception.md",
     "Java/Annotation.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/의존성 주입.md",

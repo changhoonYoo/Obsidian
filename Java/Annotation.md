@@ -352,7 +352,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	```
 - - -
 
-## <span style="color:darkorange">@ModelAttribute</span> TODO
+## <span style="color:darkorange">@Scheduled</span>
 ## <span style="color:darkorange">@Log4j2</span>
 
 `@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
@@ -589,6 +589,8 @@ public class AppRunner implements CommandLineRunner {
 위 코드에서 `MyComponent`는 `application.properties` 파일에서 정의한 값을 주입받아서 출력하는 간단한 예제입니다. `AppRunner`는 스프링 부트 애플리케이션이 실행될 때 `MyComponent`의 `printValues` 메서드를 호출하여 값을 출력합니다. 이때 `@Value` 어노테이션을 사용하여 프로퍼티 값을 주입받습니다.
 
 - - -
+
+
 
 
 
