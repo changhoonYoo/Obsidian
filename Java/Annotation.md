@@ -316,6 +316,9 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 `@RequestParam`은 주로 쿼리스트링이나 폼 데이터를 받을 때 사용되며, 간단하고 편리한 방법을 제공하여 컨트롤러 메서드에서 파라미터를 처리하는 데에 도움을 줍니다.
 - - -
+
+## <span style="color:darkorange">@RequestPart</span> TODO
+
 ## <span style="color:darkorange">@RequireArgsConstructor</span>
 
 `@RequiredArgsConstructor`는 Lombok이 제공하는 어노테이션 중 하나로, 주로 생성자를 자동으로 생성해주는 데 사용됩니다. 이 어노테이션을 사용하면 클래스의 필드들을 파라미터로 받는 생성자가 자동으로 생성되어 코드를 간결하게 만들어줍니다.
@@ -349,6 +352,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	```
 - - -
 
+## <span style="color:darkorange">@ModelAttribute</span> TODO
 ## <span style="color:darkorange">@Log4j2</span>
 
 `@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
