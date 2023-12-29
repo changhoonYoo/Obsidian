@@ -233,6 +233,9 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - - -
 
 
+## <span style="color:darkorange">@RequestBody</span> TODO
+
+
 ## <span style="color:darkorange">@RequestParam</span>
 
 `@RequestParam`은 스프링 프레임워크에서 HTTP 요청의 파라미터를 메서드의 파라미터로 전달받을 때 사용하는 애너테이션입니다. 이를 통해 쿼리스트링이나 폼 데이터 등을 컨트롤러 메서드로 쉽게 전달할 수 있습니다.
@@ -262,41 +265,57 @@ public interface UserRepository extends JpaRepository<User, Long> {
     ```
     
     `defaultValue` 속성을 사용하여 파라미터가 전달되지 않은 경우 기본값을 설정할 수 있습니다.
-    
+	 <br>
 3. **필수 파라미터로 지정:**
-    
-    javaCopy code
-    
-    `@GetMapping("/example") public String exampleMethod(@RequestParam(required = true) String param1) {     // 메서드 로직 }`
+       
+    ```java
+    @GetMapping("/example") 
+	public String exampleMethod(@RequestParam(required = true) String param) {
+		// 메서드 로직 
+	}
+    ```
     
     `required` 속성을 사용하여 파라미터를 필수로 지정할 수 있습니다. 기본값은 `true`이며, 만약 필수 파라미터가 전달되지 않으면 400 Bad Request 오류가 발생합니다.
-    
+	    <br>
 4. **여러 값 받기:**
     
-    javaCopy code
     
-    `@GetMapping("/example") public String exampleMethod(@RequestParam List<String> values) {     // 메서드 로직 }`
+    
+    ```java
+    @GetMapping("/example") 
+    public String exampleMethod(@RequestParam List<String> values) {    
+	     // 메서드 로직 
+  }
+	  ```
     
     여러 값을 받고자 할 때는 리스트로 받을 수 있습니다.
-    
+	    <br>
 5. **파라미터 이름과 메서드 파라미터 명이 다를 경우:**
     
-    javaCopy code
     
-    `@GetMapping("/example") public String exampleMethod(@RequestParam(name = "customName") String param) {     // 메서드 로직 }`
+    ```java
+    @GetMapping("/example") 
+    public String exampleMethod(@RequestParam(name = "customName") String param) {     
+	    // 메서드 로직 
+	}
+    ```
     
     파라미터의 이름이 메서드 파라미터 명과 다를 경우 `name` 속성을 사용하여 매핑할 수 있습니다.
-    
+    <br>
 6. **모든 파라미터를 Map으로 받기:**
     
-    javaCopy code
-    
-    `@GetMapping("/example") public String exampleMethod(@RequestParam Map<String, String> params) {     // 메서드 로직 }`
+    ```java
+	@GetMapping("/example") 
+	public String exampleMethod(@RequestParam Map<String, String> params) {     
+		// 메서드 로직 
+	}
+	```
     
     모든 파라미터를 Map으로 받을 수 있습니다.
     
 
 `@RequestParam`은 주로 쿼리스트링이나 폼 데이터를 받을 때 사용되며, 간단하고 편리한 방법을 제공하여 컨트롤러 메서드에서 파라미터를 처리하는 데에 도움을 줍니다.
+- - -
 ## <span style="color:darkorange">@RequireArgsConstructor</span>
 
 `@RequiredArgsConstructor`는 Lombok이 제공하는 어노테이션 중 하나로, 주로 생성자를 자동으로 생성해주는 데 사용됩니다. 이 어노테이션을 사용하면 클래스의 필드들을 파라미터로 받는 생성자가 자동으로 생성되어 코드를 간결하게 만들어줍니다.
