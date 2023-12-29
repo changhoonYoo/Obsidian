@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Exception.md"
+                "file": "Git/깃허브 Commit Message.md"
               }
             }
           }
@@ -177,8 +177,9 @@
   },
   "active": "85fa94e90fb28ab2",
   "lastOpenFiles": [
-    "Java/Annotation.md",
+    "Git/Git 명령어 정리.md",
     "Java/Exception.md",
+    "Java/Annotation.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/의존성 주입.md",
     "Spring-Boot/Upload & Download.md",
@@ -200,7 +201,6 @@
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Network",
     "Pasted image 20231214155842.png",
-    "Git/Git 명령어 정리.md",
     "Database/SQL.md",
     "Database",
     "Error-Log/Spring Boot Error.md",
