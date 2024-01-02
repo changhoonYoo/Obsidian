@@ -238,39 +238,54 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 1. **value**: 매핑할 JSON 속성의 이름을 지정합니다. 예를 들어, `@JsonProperty("name")`에서 "name"은 JSON 데이터의 키가 됩니다.
     
-    `@JsonProperty("name") private String fullName;`
+    ```java
+    @JsonProperty("name") 
+    private String fullName;
+	```
     
 2. **access**: 필드 또는 메소드에 대한 접근 권한을 설정합니다. 기본값은 `JsonAutoDetect.Visibility.DEFAULT`로, 이는 Jackson의 기본 가시성 규칙을 따릅니다.
     
     
-    `@JsonProperty(value = "name", access = JsonProperty.Access.READ_ONLY) private String fullName;`
+   ```java
+	@JsonProperty(value = "name", access = JsonProperty.Access.READ_ONLY)
+	private String fullName;
+	```
     
 3. **defaultValue**: 값이 없을 경우 사용할 기본값을 설정합니다.
     
-    javaCopy code
-    
-    `@JsonProperty(value = "age", defaultValue = "25") private int age;`
+   ```java
+	@JsonProperty(value = "age", defaultValue = "25") 
+	private int age;
+	```
+   
     
 4. **index**: 순서를 나타내는 정수 값을 설정합니다.
     
-    javaCopy code
     
-    `@JsonProperty(value = "address", index = 1) private String homeAddress;`
+    ```java
+    @JsonProperty(value = "address", index = 1) 
+    private String homeAddress;
+    ```
     
 5. **required**: 속성이 반드시 존재해야 하는지 여부를 나타냅니다.
     
-    javaCopy code
     
-    `@JsonProperty(value = "email", required = true) private String emailAddress;`
+    ```java
+    @JsonProperty(value = "email", required = true) 
+    private String emailAddress;
+    ```
     
 6. **valueFormat**: 날짜 등 특정 형식의 값을 변환할 때 사용되는 포맷을 설정합니다.
     
-    javaCopy code
     
-    `@JsonProperty(value = "birthdate", valueFormat = "yyyy-MM-dd") private Date birthDate;`
+    ```java
+    @JsonProperty(value = "birthdate", valueFormat = "yyyy-MM-dd") 
+    private Date birthDate;
+    ```
     
 
 이러한 속성들을 통해 `@JsonProperty` 어노테이션을 사용하여 JSON 데이터의 특정 키와 Java 객체의 필드 간의 매핑을 세밀하게 조정할 수 있습니다.
+- - -
 ## <span style="color:darkorange">@Log4j2</span>
 
 `@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
