@@ -190,6 +190,87 @@ import org.springframework.web.bind.annotation.GetMapping;
 따라서 주어진 어노테이션은 "example-server"라는 이름의 Feign 클라이언트를 정의하며, 클라이언트가 통신할 서버의 기본 URL은 `${com.example.api.url}`로 설정되어 동적으로 지정됩니다. 또한, 404 응답을 디코딩하도록 설정되어 있습니다.
 - - - 
 
+## <span style="color:darkorange">@JsonProperty</span> / <span style="color:darkorange">@JsonIgnore</span>
+
+`@JsonProperty`는 Jackson 라이브러리에서 제공하는 어노테이션 중 하나입니다. Jackson은 JSON 데이터와 Java 객체 간의 변환을 쉽게 수행할 수 있도록 도와주는 라이브러리로, `@JsonProperty` 어노테이션은 이 변환 과정에서 사용됩니다.
+
+주로 다음과 같은 경우에 사용됩니다:
+
+1. **JSON 키 이름 지정:** Java 클래스의 필드 또는 메소드의 이름과 JSON 데이터의 키 이름이 다를 경우, `@JsonProperty`를 사용하여 매핑을 정의할 수 있습니다.
+    
+    ```java
+	public class Person {    
+	
+		@JsonProperty("full_name")     
+		private String fullName;      
+		
+		// 다른 필드들과 메소드들... 
+	}     
+	```
+
+
+    위의 예제에서는 `fullName` 필드가 JSON 데이터에서 "full_name" 키와 매핑된다는 것을 나타냅니다.
+    
+2. **특정 필드를 무시:** 어떤 필드를 JSON으로 변환하거나 JSON에서 해당 필드를 읽지 않기를 원할 때, `@JsonProperty`를 사용하여 해당 필드를 무시하도록 지정할 수 있습니다.
+    
+    ```java
+    public class Person {     
+    
+	    private String firstName;     
+	    private String lastName;      
+	    
+	    @JsonIgnore     
+	    public String getFullName() {         
+		    return firstName + " " + lastName;     
+		 }      
+		 
+		 // 다른 필드들과 메소드들... 
+	 }
+	```
+    
+    위의 예제에서 `getFullName` 메소드가 `@JsonIgnore`를 사용하여 JSON 변환에서 제외됩니다.
+    
+
+이러한 방식으로 `@JsonProperty` 어노테이션을 사용하여 JSON 데이터와 Java 객체 간의 매핑을 세밀하게 제어할 수 있습니다.
+
+- - -
+`@JsonProperty` 어노테이션은 Jackson 라이브러리에서 사용되며, 다양한 속성을 설정하여 JSON 데이터와 Java 객체 간의 매핑을 세밀하게 제어할 수 있습니다. 몇 가지 주요 속성은 다음과 같습니다:
+
+1. **value**: 매핑할 JSON 속성의 이름을 지정합니다. 예를 들어, `@JsonProperty("name")`에서 "name"은 JSON 데이터의 키가 됩니다.
+    
+    `@JsonProperty("name") private String fullName;`
+    
+2. **access**: 필드 또는 메소드에 대한 접근 권한을 설정합니다. 기본값은 `JsonAutoDetect.Visibility.DEFAULT`로, 이는 Jackson의 기본 가시성 규칙을 따릅니다.
+    
+    
+    `@JsonProperty(value = "name", access = JsonProperty.Access.READ_ONLY) private String fullName;`
+    
+3. **defaultValue**: 값이 없을 경우 사용할 기본값을 설정합니다.
+    
+    javaCopy code
+    
+    `@JsonProperty(value = "age", defaultValue = "25") private int age;`
+    
+4. **index**: 순서를 나타내는 정수 값을 설정합니다.
+    
+    javaCopy code
+    
+    `@JsonProperty(value = "address", index = 1) private String homeAddress;`
+    
+5. **required**: 속성이 반드시 존재해야 하는지 여부를 나타냅니다.
+    
+    javaCopy code
+    
+    `@JsonProperty(value = "email", required = true) private String emailAddress;`
+    
+6. **valueFormat**: 날짜 등 특정 형식의 값을 변환할 때 사용되는 포맷을 설정합니다.
+    
+    javaCopy code
+    
+    `@JsonProperty(value = "birthdate", valueFormat = "yyyy-MM-dd") private Date birthDate;`
+    
+
+이러한 속성들을 통해 `@JsonProperty` 어노테이션을 사용하여 JSON 데이터의 특정 키와 Java 객체의 필드 간의 매핑을 세밀하게 조정할 수 있습니다.
 ## <span style="color:darkorange">@Log4j2</span>
 
 `@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
@@ -471,6 +552,36 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - - -
 
 ## <span style="color:darkorange">@Scheduled</span> TODO
+## <span style="color:darkorange">@Transient</span>
+
+`@Transient`는 JPA(Java Persistence API)에서 사용되는 어노테이션 중 하나입니다. 이 어노테이션은 엔티티 클래스의 특정 필드나 메소드를 영속성 컨텍스트에 저장하지 않도록 지정하는 데 사용됩니다. 즉, 데이터베이스에 해당 필드를 매핑하지 않도록 합니다.
+
+영속성 컨텍스트는 JPA 엔터티의 상태를 추적하고 데이터베이스와의 상호작용을 관리하는데 사용됩니다. `@Transient` 어노테이션이 적용된 필드는 영속성 컨텍스트에 저장되지 않으며, 따라서 데이터베이스에도 매핑되지 않습니다.
+
+예를 들어:
+
+```java
+import javax.persistence.Entity; 
+import javax.persistence.Id; 
+import javax.persistence.Transient;  
+@Entity 
+public class User {
+
+	@Id     
+	private Long id;      
+	private String username;      
+	private String password;      
+	
+	@Transient     
+	private String temporaryData; // 이 필드는 데이터베이스에 매핑되지 않음      
+	
+	// 생성자, getter, setter, 기타 메소드 
+}
+```
+
+위의 코드에서 `temporaryData` 필드에 `@Transient` 어노테이션이 적용되어 있습니다. 이 필드는 데이터베이스에 매핑되지 않으며, 따라서 해당 필드의 값은 영속성 컨텍스트에 저장되지 않습니다.
+
+`@Transient`를 사용하는 이유로는 데이터베이스에 저장할 필요가 없는 특정 정보나 계산된 값을 표현할 때, 또는 특정 필드를 무시하고 싶을 때 사용될 수 있습니다.
 ## <span style="color:darkorange">@Value</span>
 `@Value`는 스프링 프레임워크에서 제공하는 어노테이션 중 하나로, 주로 프로퍼티 값을 주입받아 필드에 할당하고자 할 때 사용됩니다. 이 어노테이션은 `@ConfigurationProperties`와 유사하지만, 좀 더 간편한 형태로 사용할 수 있습니다.
 

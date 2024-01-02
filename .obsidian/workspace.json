@@ -22,17 +22,17 @@
         ]
       },
       {
-        "id": "70b95eddc2e4a27e",
+        "id": "c10cd5ea698c3a92",
         "type": "tabs",
         "children": [
           {
-            "id": "393017f0f9af0d6a",
+            "id": "aaa2bcb2bb3d460f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Exception.md",
-                "mode": "source",
+                "file": "Java/Annotation.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -175,7 +175,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "85fa94e90fb28ab2",
+  "active": "aaa2bcb2bb3d460f",
   "lastOpenFiles": [
     "Java/Exception.md",
     "Git/깃허브 Commit Message.md",
