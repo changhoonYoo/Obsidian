@@ -138,6 +138,122 @@ public class AppConfig {
 - - -
 
 
+## <span style="color:darkorange">@FeignClient</span>
+
+`@FeignClient`는 Spring Cloud에서 제공하는 어노테이션 중 하나로, 서버 간 통신을 쉽게 구현할 수 있도록 도와주는 기능을 제공합니다. 주로 마이크로서비스 아키텍처에서 서비스 간 통신을 위해 사용됩니다.
+
+`@FeignClient`를 사용하면 HTTP 기반의 RESTful 서비스에 대한 클라이언트를 선언적으로 작성할 수 있습니다. 이 어노테이션은 Spring Cloud Netflix의 Feign이라는 라이브러리와 함께 사용되며, 내부적으로는 Ribbon과 함께 작동하여 [[로드 밸런싱]] 기능을 제공합니다. ^6abd56
+
+간단한 사용 예시는 다음과 같습니다:
+```java
+import org.springframework.cloud.openfeign.FeignClient; 
+import org.springframework.web.bind.annotation.GetMapping; 
+
+@FeignClient(name = "example-service", url = "http://example-service/api") public interface ExampleFeignClient { 
+	@GetMapping("/exampleEndpoint") 
+	String getExampleData(); 
+}
+```
+위의 코드에서:
+
+- `@FeignClient` 어노테이션은 Feign 클라이언트를 정의하며, `name`은 클라이언트의 이름, `url`은 클라이언트가 통신할 서버의 기본 URL을 나타냅니다.
+- `ExampleFeignClient` 인터페이스는 Feign 클라이언트의 메서드를 정의하며, 각 메서드는 서버의 엔드포인트와 매핑됩니다.
+
+`@FeignClient` 어노테이션은 Spring Cloud의 다양한 기능과 함께 사용될 수 있으며, 서비스 디스커버리, 로드 밸런싱, 히스트릭스와 같은 기능들을 쉽게 적용할 수 있도록 지원합니다. 이를 통해 마이크로서비스 간의 통신을 간편하게 구현할 수 있습니다.
+
+`@FeignClient` 어노테이션의 속성을 살펴보겠습니다:
+
+```java
+@FeignClient(value = "example-server", url = "${com.example.api.url}", 
+			 decode404 = true)
+```
+
+1. **value (또는 name):**
+    
+    - `value` 또는 `name` 속성은 Feign 클라이언트의 이름을 지정합니다.
+    - 이 이름은 다른 빈과 구분하기 위해 사용되며, 서비스 디스커버리에서도 사용될 수 있습니다.
+	    `@FeignClient(value = "example-server")`
+    
+2. **url:**
+    - `url` 속성은 클라이언트가 통신할 대상 서버의 기본 URL을 지정합니다.
+    - 이 URL은 문자열 형태로 제공되며, 예를 들어 `${com.example.api.url}`처럼 프로퍼티를 사용하여 동적으로 설정할 수도 있습니다.
+	    `@FeignClient(url = "${com.example.api.url}")`
+    
+3. **decode404:**
+    
+    - `decode404` 속성은 404 응답을 디코딩할지 여부를 결정합니다.
+    - `true`로 설정하면 404 응답이 디코딩되어 반환값으로 처리됩니다.
+    
+    `@FeignClient(decode404 = true)`
+    
+
+따라서 주어진 어노테이션은 "example-server"라는 이름의 Feign 클라이언트를 정의하며, 클라이언트가 통신할 서버의 기본 URL은 `${com.example.api.url}`로 설정되어 동적으로 지정됩니다. 또한, 404 응답을 디코딩하도록 설정되어 있습니다.
+- - - 
+
+## <span style="color:darkorange">@Log4j2</span>
+
+`@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
+
+1.  로거 필드 생성:
+	-  `@Log4j2` 어노테이션을 클래스에 적용하면, 해당 클래스에 대한 `private static final Logger log = LogManager.getLogger(ClassName.class);`와 같은 로거 필드가 자동으로 생성됩니다.
+	- 이 필드를 사용하여 로깅을 수행할 수 있습니다.
+	```java
+	import lombok.extern.log4j.Log4j2; 
+	
+	@Log4j2 
+	public class Example {
+		public void someMethod() { 
+			log.info("This is an info message."); 
+			log.error("This is an error message.", 
+				new RuntimeException("Something went wrong.")); 
+		} 
+	}
+	```
+2. 로거 이름 지정:
+	- `@Log4j2` 어노테이션을 사용할 때는 별도의 로거 이름을 지정하지 않아도 클래스 이름이 로거의 이름으로 사용됩니다. 따라서 로깅 구문에서 클래스 이름을 지정할 필요가 없어집니다.
+3. **로깅 레벨에 따른 메서드 자동 생성:**
+
+	- `@Log4j2` 어노테이션을 사용하면 다양한 로깅 레벨에 따라 다른 메서드가 자동으로 생성됩니다. 예를 들어, `log.info()`, `log.debug()`, `log.warn()` 등이 자동으로 사용 가능합니다.
+	```java
+	import lombok.extern.log4j.Log4j2;
+	
+	@Log4j2 
+	public class Example { 
+		public void someMethod() { 
+			log.info("This is an info message."); 
+			log.debug("This is a debug message."); 
+			log.warn("This is a warning message."); 
+		} 
+	}
+	```
+
+로그 레벨은 로깅 메시지의 중요도에 따라 구분되며, 각 레벨은 다른 상황에서 사용됩니다. 일반적으로 다음과 같은 로그 레벨이 있습니다:
+
+1. **DEBUG:**
+    
+    - `log.debug("This is a debug message.");`
+    - 개발 중 디버깅을 위해 사용됩니다.
+    - 상세한 디버그 정보를 기록하며, 보통 프로덕션 환경에서는 이 레벨의 로그를 최소화하는 것이 좋습니다.
+2. **INFO:**
+    
+    - `log.info("This is an info message.");`
+    - 어플리케이션의 주요 이벤트 및 상태 정보를 기록합니다.
+    - 프로덕션 환경에서 주로 사용되며, 어플리케이션이 올바르게 동작하고 있는지 추적하는 데 사용됩니다.
+3. **WARN:**
+    
+    - `log.warn("This is a warning message.");`
+    - 경고 또는 잠재적인 문제를 나타내는 메시지를 기록합니다.
+    - 어플리케이션이 예상치 못한 상황에 진입하거나 잠재적인 문제가 발생했을 때 사용됩니다.
+4. **ERROR:**
+    
+    - `log.error("An error occurred.", e);`
+    - 에러 상황을 나타내는 메시지를 기록합니다.
+    - 예외 정보를 함께 기록하여 에러의 원인을 추적하는 데 사용됩니다.
+
+로그 레벨은 로깅을 적절하게 관리하고 문제를 해결하는 데 도움이 됩니다. 개발 중에는 DEBUG 레벨을 사용하여 디버깅 정보를 확인하고, 프로덕션 환경에서는 INFO, WARN, ERROR 레벨을 조절하여 어플리케이션의 상태와 잠재적인 문제를 추적합니다. 예를 들어, INFO 레벨의 로그는 어플리케이션이 예상대로 동작하고 있는지 확인하는 데 사용되며, WARN 레벨은 잠재적인 문제를 식별하는 데 도움이 됩니다. ERROR 레벨은 심각한 에러 상황을 나타내며, 이를 통해 빠르게 문제를 진단하고 해결할 수 있습니다.
+
+- - - 
+
 ## <span style="color:darkorange">@Modifying</span>
 
 `@Modifying` 어노테이션은 Spring Data JPA에서 사용되며, 주로 `@Query` 어노테이션과 함께 사용됩니다. 이 어노테이션은 UPDATE나 DELETE와 같은 변경 쿼리를 실행할 때 사용되며, 해당 메서드가 데이터베이스의 내용을 변경할 것임을 나타냅니다.
@@ -161,6 +277,8 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
 중요한 점은 `@Modifying` 어노테이션이 있는 메서드는 `void`나 `int`와 같은 반환 타입을 가져야 합니다. 또한, 이 어노테이션을 사용하는 메서드는 주로 `@Query` 어노테이션과 함께 사용되며, 변경 쿼리를 명시적으로 지정하는 데 활용됩니다.
 - - -
+
+## <span style="color:darkorange">@ModelAttribute</span> TODO
 ## <span style="color:darkorange">@NoArgsConstructor</span>
 
 `@NoArgsConstructor`는 Lombok에서 제공하는 애노테이션 중 하나로, 해당 클래스에 매개변수가 없는 기본 생성자를 자동으로 생성해주는 기능을 제공합니다. 
@@ -352,123 +470,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	```
 - - -
 
-## <span style="color:darkorange">@Scheduled</span>
-## <span style="color:darkorange">@Log4j2</span>
-
-`@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
-
-1.  로거 필드 생성:
-	-  `@Log4j2` 어노테이션을 클래스에 적용하면, 해당 클래스에 대한 `private static final Logger log = LogManager.getLogger(ClassName.class);`와 같은 로거 필드가 자동으로 생성됩니다.
-	- 이 필드를 사용하여 로깅을 수행할 수 있습니다.
-	```java
-	import lombok.extern.log4j.Log4j2; 
-	
-	@Log4j2 
-	public class Example {
-		public void someMethod() { 
-			log.info("This is an info message."); 
-			log.error("This is an error message.", 
-				new RuntimeException("Something went wrong.")); 
-		} 
-	}
-	```
-2. 로거 이름 지정:
-	- `@Log4j2` 어노테이션을 사용할 때는 별도의 로거 이름을 지정하지 않아도 클래스 이름이 로거의 이름으로 사용됩니다. 따라서 로깅 구문에서 클래스 이름을 지정할 필요가 없어집니다.
-3. **로깅 레벨에 따른 메서드 자동 생성:**
-
-	- `@Log4j2` 어노테이션을 사용하면 다양한 로깅 레벨에 따라 다른 메서드가 자동으로 생성됩니다. 예를 들어, `log.info()`, `log.debug()`, `log.warn()` 등이 자동으로 사용 가능합니다.
-	```java
-	import lombok.extern.log4j.Log4j2;
-	
-	@Log4j2 
-	public class Example { 
-		public void someMethod() { 
-			log.info("This is an info message."); 
-			log.debug("This is a debug message."); 
-			log.warn("This is a warning message."); 
-		} 
-	}
-	```
-
-로그 레벨은 로깅 메시지의 중요도에 따라 구분되며, 각 레벨은 다른 상황에서 사용됩니다. 일반적으로 다음과 같은 로그 레벨이 있습니다:
-
-1. **DEBUG:**
-    
-    - `log.debug("This is a debug message.");`
-    - 개발 중 디버깅을 위해 사용됩니다.
-    - 상세한 디버그 정보를 기록하며, 보통 프로덕션 환경에서는 이 레벨의 로그를 최소화하는 것이 좋습니다.
-2. **INFO:**
-    
-    - `log.info("This is an info message.");`
-    - 어플리케이션의 주요 이벤트 및 상태 정보를 기록합니다.
-    - 프로덕션 환경에서 주로 사용되며, 어플리케이션이 올바르게 동작하고 있는지 추적하는 데 사용됩니다.
-3. **WARN:**
-    
-    - `log.warn("This is a warning message.");`
-    - 경고 또는 잠재적인 문제를 나타내는 메시지를 기록합니다.
-    - 어플리케이션이 예상치 못한 상황에 진입하거나 잠재적인 문제가 발생했을 때 사용됩니다.
-4. **ERROR:**
-    
-    - `log.error("An error occurred.", e);`
-    - 에러 상황을 나타내는 메시지를 기록합니다.
-    - 예외 정보를 함께 기록하여 에러의 원인을 추적하는 데 사용됩니다.
-
-로그 레벨은 로깅을 적절하게 관리하고 문제를 해결하는 데 도움이 됩니다. 개발 중에는 DEBUG 레벨을 사용하여 디버깅 정보를 확인하고, 프로덕션 환경에서는 INFO, WARN, ERROR 레벨을 조절하여 어플리케이션의 상태와 잠재적인 문제를 추적합니다. 예를 들어, INFO 레벨의 로그는 어플리케이션이 예상대로 동작하고 있는지 확인하는 데 사용되며, WARN 레벨은 잠재적인 문제를 식별하는 데 도움이 됩니다. ERROR 레벨은 심각한 에러 상황을 나타내며, 이를 통해 빠르게 문제를 진단하고 해결할 수 있습니다.
-
-- - - 
-
-## <span style="color:darkorange">@FeignClient</span>
-
-`@FeignClient`는 Spring Cloud에서 제공하는 어노테이션 중 하나로, 서버 간 통신을 쉽게 구현할 수 있도록 도와주는 기능을 제공합니다. 주로 마이크로서비스 아키텍처에서 서비스 간 통신을 위해 사용됩니다.
-
-`@FeignClient`를 사용하면 HTTP 기반의 RESTful 서비스에 대한 클라이언트를 선언적으로 작성할 수 있습니다. 이 어노테이션은 Spring Cloud Netflix의 Feign이라는 라이브러리와 함께 사용되며, 내부적으로는 Ribbon과 함께 작동하여 [[로드 밸런싱]] 기능을 제공합니다. ^6abd56
-
-간단한 사용 예시는 다음과 같습니다:
-```java
-import org.springframework.cloud.openfeign.FeignClient; 
-import org.springframework.web.bind.annotation.GetMapping; 
-
-@FeignClient(name = "example-service", url = "http://example-service/api") public interface ExampleFeignClient { 
-	@GetMapping("/exampleEndpoint") 
-	String getExampleData(); 
-}
-```
-위의 코드에서:
-
-- `@FeignClient` 어노테이션은 Feign 클라이언트를 정의하며, `name`은 클라이언트의 이름, `url`은 클라이언트가 통신할 서버의 기본 URL을 나타냅니다.
-- `ExampleFeignClient` 인터페이스는 Feign 클라이언트의 메서드를 정의하며, 각 메서드는 서버의 엔드포인트와 매핑됩니다.
-
-`@FeignClient` 어노테이션은 Spring Cloud의 다양한 기능과 함께 사용될 수 있으며, 서비스 디스커버리, 로드 밸런싱, 히스트릭스와 같은 기능들을 쉽게 적용할 수 있도록 지원합니다. 이를 통해 마이크로서비스 간의 통신을 간편하게 구현할 수 있습니다.
-
-`@FeignClient` 어노테이션의 속성을 살펴보겠습니다:
-
-```java
-@FeignClient(value = "example-server", url = "${com.example.api.url}", 
-			 decode404 = true)
-```
-
-1. **value (또는 name):**
-    
-    - `value` 또는 `name` 속성은 Feign 클라이언트의 이름을 지정합니다.
-    - 이 이름은 다른 빈과 구분하기 위해 사용되며, 서비스 디스커버리에서도 사용될 수 있습니다.
-	    `@FeignClient(value = "example-server")`
-    
-2. **url:**
-    - `url` 속성은 클라이언트가 통신할 대상 서버의 기본 URL을 지정합니다.
-    - 이 URL은 문자열 형태로 제공되며, 예를 들어 `${com.example.api.url}`처럼 프로퍼티를 사용하여 동적으로 설정할 수도 있습니다.
-	    `@FeignClient(url = "${com.example.api.url}")`
-    
-3. **decode404:**
-    
-    - `decode404` 속성은 404 응답을 디코딩할지 여부를 결정합니다.
-    - `true`로 설정하면 404 응답이 디코딩되어 반환값으로 처리됩니다.
-    
-    `@FeignClient(decode404 = true)`
-    
-
-따라서 주어진 어노테이션은 "example-server"라는 이름의 Feign 클라이언트를 정의하며, 클라이언트가 통신할 서버의 기본 URL은 `${com.example.api.url}`로 설정되어 동적으로 지정됩니다. 또한, 404 응답을 디코딩하도록 설정되어 있습니다.
-- - - 
-
+## <span style="color:darkorange">@Scheduled</span> TODO
 ## <span style="color:darkorange">@Value</span>
 `@Value`는 스프링 프레임워크에서 제공하는 어노테이션 중 하나로, 주로 프로퍼티 값을 주입받아 필드에 할당하고자 할 때 사용됩니다. 이 어노테이션은 `@ConfigurationProperties`와 유사하지만, 좀 더 간편한 형태로 사용할 수 있습니다.
 
