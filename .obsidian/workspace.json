@@ -31,8 +31,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Annotation.md",
-                "mode": "preview",
+                "file": "Git/깃허브 Commit Message.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Annotation.md"
+                "file": "Git/깃허브 Commit Message.md"
               }
             }
           }
@@ -177,10 +177,10 @@
   },
   "active": "aaa2bcb2bb3d460f",
   "lastOpenFiles": [
+    "Java/Annotation.md",
     "Java/Exception.md",
     "Git/깃허브 Commit Message.md",
     "Git/Git 명령어 정리.md",
-    "Java/Annotation.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/의존성 주입.md",
     "Spring-Boot/Upload & Download.md",
