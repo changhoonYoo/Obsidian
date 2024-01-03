@@ -778,14 +778,40 @@ public interface UserRepository extends JpaRepository<User, Long> {
     
     - `ThreadPoolTaskScheduler`를 사용하여 스레드 풀을 설정할 수 있습니다.
     
-    `import org.springframework.context.annotation.Bean; import org.springframework.context.annotation.Configuration; import org.springframework.scheduling.annotation.EnableScheduling; import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;  @Configuration @EnableScheduling public class SchedulingConfig {      @Bean     public ThreadPoolTaskScheduler taskScheduler() {         ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();         taskScheduler.setPoolSize(10);         return taskScheduler;     } }`
+    ```java
+    import org.springframework.context.annotation.Bean; 
+    import org.springframework.context.annotation.Configuration; 
+    import org.springframework.scheduling.annotation.EnableScheduling; 
+    import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;  
+    
+    @Configuration 
+    @EnableScheduling 
+    public class SchedulingConfig {      
+	    @Bean     
+	    public ThreadPoolTaskScheduler taskScheduler() {         
+		    ThreadPoolTaskScheduler taskScheduler = 
+										    new ThreadPoolTaskScheduler();         
+		    taskScheduler.setPoolSize(10);         
+		    return taskScheduler;     
+		 } 
+	 }
+	```
     
     - `@EnableScheduling`을 사용하여 스케줄링을 활성화하고, `ThreadPoolTaskScheduler` 빈을 설정하여 스레드 풀의 크기를 조정할 수 있습니다.
 4. **Exception 처리:**
     
     - 스케줄링된 메서드에서 발생하는 예외를 처리하려면 해당 메서드 내에서 예외를 처리해야 합니다. 스케줄링 메서드에서 예외가 발생하면 해당 작업은 중단되고 다음 주기에서 다시 시도됩니다.
     
-    `@Scheduled(fixedRate = 5000) public void myScheduledMethod() {     try {         // 예외가 발생할 수 있는 로직     } catch (Exception e) {         // 예외 처리 로직     } }`
+    ```java
+    @Scheduled(fixedRate = 5000) 
+    public void myScheduledMethod() {     
+	    try {         
+		    // 예외가 발생할 수 있는 로직     
+		 } catch (Exception e) {         
+			 // 예외 처리 로직     
+		 } 
+	 }
+	```
     
 
 `@Scheduled` 어노테이션을 사용하면 주기적으로 메서드를 실행할 수 있으며, 다양한 스케줄링 속성을 통해 실행 주기를 세밀하게 조정할 수 있습니다.
