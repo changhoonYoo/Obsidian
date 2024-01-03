@@ -22,17 +22,17 @@
         ]
       },
       {
-        "id": "c10cd5ea698c3a92",
+        "id": "60bc08959dfec891",
         "type": "tabs",
         "children": [
           {
-            "id": "aaa2bcb2bb3d460f",
+            "id": "97e4e4ae6d7531d3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
-                "mode": "source",
+                "file": "Java/Annotation.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Java/Annotation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Java/Annotation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/깃허브 Commit Message.md"
+                "file": "Java/Annotation.md"
               }
             }
           }
@@ -175,11 +175,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "aaa2bcb2bb3d460f",
+  "active": "97e4e4ae6d7531d3",
   "lastOpenFiles": [
+    "Git/깃허브 Commit Message.md",
     "Java/Annotation.md",
     "Java/Exception.md",
-    "Git/깃허브 Commit Message.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/의존성 주입.md",

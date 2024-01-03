@@ -374,7 +374,44 @@ public interface UserRepository extends CrudRepository<User, Long> {
 중요한 점은 `@Modifying` 어노테이션이 있는 메서드는 `void`나 `int`와 같은 반환 타입을 가져야 합니다. 또한, 이 어노테이션을 사용하는 메서드는 주로 `@Query` 어노테이션과 함께 사용되며, 변경 쿼리를 명시적으로 지정하는 데 활용됩니다.
 - - -
 
-## <span style="color:darkorange">@ModelAttribute</span> TODO
+## <span style="color:darkorange">@ModelAttribute</span> 
+
+`@ModelAttribute`는 스프링 MVC에서 컨트롤러 메서드의 파라미터에 사용되는 어노테이션 중 하나입니다. 이 어노테이션은 요청 매핑 메서드에서 모델에 속성을 추가하거나 수정할 때 사용되며, 주로 폼 데이터를 전달받는 데에 활용됩니다.
+
+아래는 `@ModelAttribute`의 주요 사용법과 설명입니다:
+
+1. **메서드 파라미터에 사용:**
+    
+	```java
+	@GetMapping("/example") 
+	public String example(@ModelAttribute("myModel") MyModel myModel) {
+		// 컨트롤러 로직     
+		return "viewName"; 
+	}
+	```
+    
+    - `@ModelAttribute("myModel")`는 모델에 "myModel"이라는 이름으로 속성을 추가하고, 해당 모델을 메서드의 파라미터로 전달합니다.
+    - 만약 모델 속성의 이름을 생략하면 클래스명에서 첫 글자를 소문자로 바꾼 이름이 기본적으로 사용됩니다.
+2. **리턴 값으로 사용:**
+    
+    ```java
+    @ModelAttribute("myModel") public MyModel setupModel() {     // 모델 초기화 로직     return new MyModel(); }
+    ```
+    
+    - `@ModelAttribute` 어노테이션을 메서드 레벨에 사용하면 해당 메서드는 컨트롤러 메서드가 호출되기 전에 실행되어 모델 속성을 초기화합니다.
+    - 이렇게 초기화된 모델 속성은 컨트롤러 메서드에서 사용할 수 있습니다.
+3. **리턴 값 생략:**
+    
+    `@ModelAttribute public void setupModel(Model model) {     // 모델 초기화 로직     model.addAttribute("myModel", new MyModel()); }`
+    
+    - 메서드의 리턴 타입이 `void`인 경우에는 메서드 이름이 모델 속성의 이름으로 사용됩니다.
+4. **메서드 레벨에서 사용 시 주의사항:**
+    
+    - `@ModelAttribute`를 메서드 레벨에 사용할 때는 해당 메서드의 반환 값이 모델에 자동으로 추가되기 때문에, 동일한 이름의 모델 속성을 컨트롤러 메서드에서 사용하면 충돌이 발생할 수 있습니다.
+    - 메서드 레벨에서 사용할 때는 주로 초기화 로직이나 여러 컨트롤러에서 공통으로 사용되는 모델 속성을 설정할 때 활용됩니다.
+
+`@ModelAttribute`는 주로 폼 데이터를 전달받아 객체로 바인딩하거나, 모델에 미리 설정된 속성을 추가하는 등의 용도로 활용됩니다.
+
 ## <span style="color:darkorange">@NoArgsConstructor</span>
 
 `@NoArgsConstructor`는 Lombok에서 제공하는 애노테이션 중 하나로, 해당 클래스에 매개변수가 없는 기본 생성자를 자동으로 생성해주는 기능을 제공합니다. 
