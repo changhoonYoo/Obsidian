@@ -395,14 +395,24 @@ public interface UserRepository extends CrudRepository<User, Long> {
 2. **리턴 값으로 사용:**
     
     ```java
-    @ModelAttribute("myModel") public MyModel setupModel() {     // 모델 초기화 로직     return new MyModel(); }
+    @ModelAttribute("myModel") 
+    public MyModel setupModel() {     
+	    // 모델 초기화 로직     
+	    return new MyModel(); 
+    }
     ```
     
     - `@ModelAttribute` 어노테이션을 메서드 레벨에 사용하면 해당 메서드는 컨트롤러 메서드가 호출되기 전에 실행되어 모델 속성을 초기화합니다.
     - 이렇게 초기화된 모델 속성은 컨트롤러 메서드에서 사용할 수 있습니다.
 3. **리턴 값 생략:**
     
-    `@ModelAttribute public void setupModel(Model model) {     // 모델 초기화 로직     model.addAttribute("myModel", new MyModel()); }`
+    ```java
+    @ModelAttribute 
+    public void setupModel(Model model) {     
+	    // 모델 초기화 로직     
+	    model.addAttribute("myModel", new MyModel()); 
+	 }
+	```
     
     - 메서드의 리턴 타입이 `void`인 경우에는 메서드 이름이 모델 속성의 이름으로 사용됩니다.
 4. **메서드 레벨에서 사용 시 주의사항:**
@@ -484,9 +494,66 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - - -
 
 
-## <span style="color:darkorange">@RequestBody</span> TODO
+## <span style="color:darkorange">@RequestBody</span>
 
+`@RequestBody`는 스프링 MVC에서 사용되는 어노테이션 중 하나로, HTTP 요청의 본문(body)을 메서드의 파라미터에 매핑하는 데에 사용됩니다. 주로 클라이언트가 JSON이나 XML 형식으로 데이터를 전송하고, 서버에서는 해당 데이터를 객체로 변환하는데 활용됩니다.
 
+아래는 `@RequestBody`의 주요 사용법과 설명입니다:
+
+1. **JSON 데이터 수신하기:**
+    
+    ```java
+	@PostMapping("/example") 
+	public ResponseEntity<String> handleRequest(@RequestBody MyRequestObject requestObject) {     
+		 // requestObject를 사용하여 비즈니스 로직 수행     
+		 return ResponseEntity.ok("Request handled successfully"); 
+	}
+	```
+    
+    - `@RequestBody` 어노테이션을 사용하여 클라이언트가 전송한 JSON 데이터를 `MyRequestObject` 클래스의 객체로 변환합니다.
+2. **HTTP 요청의 Content-Type 지정:**
+    
+    - `@RequestBody`를 사용할 때 클라이언트가 전송한 데이터의 형식(Content-Type)을 지정할 수 있습니다. 예를 들어, JSON 형식의 데이터를 수신하는 경우:
+    
+    ```java
+    @PostMapping(path = "/example", consumes = MediaType.APPLICATION_JSON_VALUE) 
+    public ResponseEntity<String> handleJsonRequest(@RequestBody MyRequestObject requestObject) {
+		// requestObject를 사용하여 비즈니스 로직 수행     
+		return ResponseEntity.ok("JSON Request handled successfully"); 
+	}
+    ```
+    
+3. **다양한 데이터 형식 수신:**
+    
+    - `@RequestBody`는 기본적으로는 JSON 데이터를 처리하지만, 다양한 데이터 형식에 대한 처리를 지원합니다. 예를 들어, XML 형식의 데이터를 수신하려면 `consumes` 속성을 `MediaType.APPLICATION_XML_VALUE`로 지정할 수 있습니다.
+    
+    ```java
+    @PostMapping(path = "/example", consumes = MediaType.APPLICATION_XML_VALUE) 
+    public ResponseEntity<String> handleXmlRequest(@RequestBody MyRequestObject requestObject) {     
+	    // requestObject를 사용하여 비즈니스 로직 수행     
+	    return ResponseEntity.ok("XML Request handled successfully"); 
+	 }
+	```
+    
+4. **Map으로 데이터 수신:**
+    
+    - `@RequestBody`를 사용하여 데이터를 `Map`으로 수신할 수도 있습니다.
+    
+    ```java
+    @PostMapping("/example") 
+    public ResponseEntity<String> handleMapRequest(@RequestBody Map<String, Object> requestBody) {     
+	    // requestBody를 사용하여 비즈니스 로직 수행     
+	    return ResponseEntity.ok("Map Request handled successfully"); 
+	 }
+	```
+    
+    - 이 경우, 클라이언트가 전송한 JSON 데이터는 자동으로 `Map`으로 변환됩니다.
+5. **주의사항:**
+    
+    - `@RequestBody`를 사용할 때는 HTTP 요청의 본문이 있어야 하므로, 주로 POST 또는 PUT 메서드에서 사용됩니다.
+    - `@RequestBody`를 사용하는 메서드는 주로 JSON이나 XML 형식의 데이터를 수신하는 용도로 활용됩니다.
+
+`@RequestBody`를 사용하면 클라이언트에서 전송한 데이터를 객체로 변환하여 컨트롤러 메서드에서 활용할 수 있으므로, RESTful API에서 클라이언트와 서버 간의 데이터 교환에 유용하게 활용됩니다.
 ## <span style="color:darkorange">@RequestParam</span>
 
 `@RequestParam`은 스프링 프레임워크에서 HTTP 요청의 파라미터를 메서드의 파라미터로 전달받을 때 사용하는 애너테이션입니다. 이를 통해 쿼리스트링이나 폼 데이터 등을 컨트롤러 메서드로 쉽게 전달할 수 있습니다.
