@@ -635,7 +635,70 @@ public interface UserRepository extends JpaRepository<User, Long> {
 `@RequestParam`은 주로 쿼리스트링이나 폼 데이터를 받을 때 사용되며, 간단하고 편리한 방법을 제공하여 컨트롤러 메서드에서 파라미터를 처리하는 데에 도움을 줍니다.
 - - -
 
-## <span style="color:darkorange">@RequestPart</span> TODO
+## <span style="color:darkorange">@RequestPart</span> 
+
+`@RequestPart`는 스프링 MVC에서 사용되는 어노테이션 중 하나로, 멀티파트 요청에서 파일 업로드나 바이너리 데이터를 처리하는데 사용됩니다. 주로 HTML 폼에서 파일을 업로드할 때 또는 클라이언트에서 멀티파트 요청으로 데이터를 전송할 때 활용됩니다.
+
+아래는 `@RequestPart`의 주요 사용법과 설명입니다:
+
+1. **단일 파일 업로드:**
+    
+    ```java
+    @PostMapping("/upload") 
+    public ResponseEntity<String> handleFileUpload(@RequestPart("file") MultipartFile file) {     
+	    // MultipartFile 객체를 사용하여 파일 업로드 처리     
+	    return ResponseEntity.ok("File uploaded successfully"); 
+	 }
+    ```
+    
+    - `@RequestPart` 어노테이션을 사용하여 멀티파트 요청에서 "file" 파트를 가져와서 `MultipartFile` 객체로 처리합니다.
+2. **멀티파트 요청에서 여러 파일 업로드:**
+    
+    ```java
+    @PostMapping("/uploadMultiple") 
+    public ResponseEntity<String> handleMultipleFileUpload(@RequestPart("files") List<MultipartFile> files) {     
+	    // 여러 MultipartFile 객체를 사용하여 여러 파일 업로드 처리     
+	    return ResponseEntity.ok("Multiple files uploaded successfully"); 
+	 }
+	```
+    
+    - `List<MultipartFile>`과 같은 컬렉션을 사용하여 여러 파일을 업로드할 수 있습니다.
+3. **파일과 다른 파라미터 함께 전송:**
+    
+    ```java
+    @PostMapping("/uploadWithParams") 
+    public ResponseEntity<String> handleFileWithParams(         @RequestPart("file") MultipartFile file,         
+    @RequestPart("metadata") MyMetadataObject metadata) {     
+	    // MultipartFile과 다른 파라미터를 함께 처리     
+	    return ResponseEntity.ok("File and metadata uploaded successfully"); 
+	 }
+	```
+    
+    - 여러 `@RequestPart` 어노테이션을 사용하여 여러 파트를 다룰 수 있습니다.
+4. **다양한 파트 형식 처리:**
+    
+    ```java
+    @PostMapping("/uploadWithCustomType") 
+    public ResponseEntity<String> handleCustomType(@RequestPart("data") MyCustomType customType) {     
+	    // 사용자 정의 객체를 사용하여 파트 처리     
+	    return ResponseEntity.ok("Custom type uploaded successfully"); 
+	 }
+	```
+    
+    - 사용자가 정의한 객체(`MyCustomType`)를 사용하여 멀티파트 요청의 특정 파트를 처리할 수 있습니다.
+5. **`consumes` 속성 사용:**
+    
+    ```java
+    @PostMapping(path = "/uploadJson", consumes = MediaType.APPLICATION_JSON_VALUE) 
+    public ResponseEntity<String> handleJsonData(@RequestPart("data") MyJsonData jsonData) {     
+	    // JSON 데이터를 처리     
+		 return ResponseEntity.ok("JSON data uploaded successfully"); 
+	 }
+	```
+    
+    - `consumes` 속성을 사용하여 특정 컨텐츠 타입을 지정할 수 있습니다.
+
+`@RequestPart` 어노테이션은 멀티파트 요청에서 파트를 처리할 때 유용하게 사용됩니다. 파일 업로드와 함께 다양한 데이터 형식을 처리할 수 있어, 클라이언트에서 다양한 종류의 데이터를 서버로 전송할 때 활용됩니다.
 
 ## <span style="color:darkorange">@RequireArgsConstructor</span>
 
@@ -670,7 +733,62 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	```
 - - -
 
-## <span style="color:darkorange">@Scheduled</span> TODO
+## <span style="color:darkorange">@Scheduled</span> 
+
+`@Scheduled`는 스프링 프레임워크에서 제공하는 어노테이션 중 하나로, 주기적으로 메서드를 실행하도록 스케줄링할 때 사용됩니다. 이 어노테이션은 백그라운드 작업, 일정 주기로 실행되어야 하는 작업 등을 구현할 때 편리하게 사용할 수 있습니다.
+
+주요 특징과 사용법은 다음과 같습니다:
+
+1. **메서드에 적용:**
+    
+    ```java
+    import org.springframework.scheduling.annotation.Scheduled;  
+    
+    public class MyScheduledService {      
+	    @Scheduled(fixedRate = 5000) // 5초마다 실행     
+	    public void myScheduledMethod() {         
+		    // 주기적으로 실행될 로직     
+		 } 
+	 }
+	```
+    
+    - `@Scheduled` 어노테이션을 메서드에 적용하여 해당 메서드가 주기적으로 실행되도록 지정합니다.
+2. **속성 설정:**
+    
+    - `fixedRate`, `fixedDelay`, 또는 `cron` 속성을 사용하여 주기를 설정할 수 있습니다.
+    
+    ```java
+	@Scheduled(fixedRate = 5000) // 5초마다 실행 
+	public void myScheduledMethod() {     
+	 // 주기적으로 실행될 로직 
+	}  
+	
+	@Scheduled(fixedDelay = 10000) // 이전 실행이 완료된 후 10초 후에 실행 
+	public void anotherScheduledMethod() {     
+	 // 다른 주기로 실행될 로직 
+	}  
+	
+	@Scheduled(cron = "0 0 0 * * *") // 매일 자정에 실행 
+	public void dailyScheduledMethod() {     
+	 // 매일 자정에 실행될 로직 
+	}
+	```
+    
+3. **ThreadPool 설정:**
+    
+    - `ThreadPoolTaskScheduler`를 사용하여 스레드 풀을 설정할 수 있습니다.
+    
+    `import org.springframework.context.annotation.Bean; import org.springframework.context.annotation.Configuration; import org.springframework.scheduling.annotation.EnableScheduling; import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;  @Configuration @EnableScheduling public class SchedulingConfig {      @Bean     public ThreadPoolTaskScheduler taskScheduler() {         ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();         taskScheduler.setPoolSize(10);         return taskScheduler;     } }`
+    
+    - `@EnableScheduling`을 사용하여 스케줄링을 활성화하고, `ThreadPoolTaskScheduler` 빈을 설정하여 스레드 풀의 크기를 조정할 수 있습니다.
+4. **Exception 처리:**
+    
+    - 스케줄링된 메서드에서 발생하는 예외를 처리하려면 해당 메서드 내에서 예외를 처리해야 합니다. 스케줄링 메서드에서 예외가 발생하면 해당 작업은 중단되고 다음 주기에서 다시 시도됩니다.
+    
+    `@Scheduled(fixedRate = 5000) public void myScheduledMethod() {     try {         // 예외가 발생할 수 있는 로직     } catch (Exception e) {         // 예외 처리 로직     } }`
+    
+
+`@Scheduled` 어노테이션을 사용하면 주기적으로 메서드를 실행할 수 있으며, 다양한 스케줄링 속성을 통해 실행 주기를 세밀하게 조정할 수 있습니다.
 ## <span style="color:darkorange">@Transient</span>
 
 `@Transient`는 JPA(Java Persistence API)에서 사용되는 어노테이션 중 하나입니다. 이 어노테이션은 엔티티 클래스의 특정 필드나 메소드를 영속성 컨텍스트에 저장하지 않도록 지정하는 데 사용됩니다. 즉, 데이터베이스에 해당 필드를 매핑하지 않도록 합니다.
