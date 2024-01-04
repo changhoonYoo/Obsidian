@@ -815,6 +815,23 @@ public interface UserRepository extends JpaRepository<User, Long> {
     
 
 `@Scheduled` 어노테이션을 사용하면 주기적으로 메서드를 실행할 수 있으며, 다양한 스케줄링 속성을 통해 실행 주기를 세밀하게 조정할 수 있습니다.
+
+- SpringApplication 설정
+```java
+@SpringBootApplication  
+@EnableScheduling  
+public class ArreoApiServer {  
+  
+   public static void main(String[] args) {  
+      SpringApplication.run(ArreoApiServer.class, args);  
+   }  
+}
+```
+
+@Scheduled 규칙 
+   - Method는 void 타입으로
+   - Method는 매개변수 사용 불가
+---
 ## <span style="color:darkorange">@Transient</span>
 
 `@Transient`는 JPA(Java Persistence API)에서 사용되는 어노테이션 중 하나입니다. 이 어노테이션은 엔티티 클래스의 특정 필드나 메소드를 영속성 컨텍스트에 저장하지 않도록 지정하는 데 사용됩니다. 즉, 데이터베이스에 해당 필드를 매핑하지 않도록 합니다.
