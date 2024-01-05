@@ -819,7 +819,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - SpringApplication 설정
 ```java
 @SpringBootApplication  
-@EnableScheduling  
+@EnableScheduling
 public class ArreoApiServer {  
   
    public static void main(String[] args) {  

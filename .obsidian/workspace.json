@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f0d375ddf28a5f86",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "60bc08959dfec891",
@@ -103,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Annotation.md"
+                "file": "Linux.md"
               }
             }
           }
@@ -175,10 +188,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "85fa94e90fb28ab2",
+  "active": "f0d375ddf28a5f86",
   "lastOpenFiles": [
-    "Git/깃허브 Commit Message.md",
     "Java/Annotation.md",
+    "Linux.md",
+    "Git/깃허브 Commit Message.md",
     "Java/Exception.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/스프링 마스터.md",
@@ -206,7 +220,6 @@
     "Error-Log/Spring Boot Error.md",
     "Error-Log",
     "Spring Boot/깃허브 등록체크.md",
-    "Intellij/인텔리제이 기본 설정.md",
     "kuilcake",
     "Excalidraw",
     "RabbitMq",
