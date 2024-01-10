@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux.md",
-                "mode": "source",
+                "file": "Intellij/인텔리제이 기본 설정.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux.md"
+                "file": "Intellij/인텔리제이 기본 설정.md"
               }
             }
           }
@@ -177,8 +177,8 @@
   },
   "active": "f0d375ddf28a5f86",
   "lastOpenFiles": [
-    "Java/Annotation.md",
     "Linux.md",
+    "Java/Annotation.md",
     "Git/깃허브 Commit Message.md",
     "Java/Exception.md",
     "Git/Git 명령어 정리.md",
