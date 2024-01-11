@@ -6,7 +6,7 @@ Reactive Programming을 하는 과정에서 Database 사용이 필요한 경우�
 
 질문에 대한 대답은 **"사용할 수 있다. 하지만 사용하는 것이 좋진 않다."**
 
-JPA는 기본적으로 비동기를 제공하지 않는다. 즉, Webflux 기반에서 JPA를 사용하면 Database 부분에서 block되고, 그동안 thread가 기다리게 된다.
+JPA는 기본적으로 비동기를 제공하지 않는다. 즉, Webflux 기반에서 JPA를 사용하면 Database 부분에서 [block](블로킹&논블로킹)되고, 그동안 thread가 기다리게 된다.
 
 Webflux 같은 조금의 thread를 계속해서 사용하는 framework에서 이러한 작업은 비효율적이며 전체 시스템에 영향이 갈 수 있다. 결국 처음 말한 그대로 **Webflux 기반에서 JPA를 사용할 수는 있으나 사용하는 것이 좋지 않은 것**이다.
 
@@ -17,7 +17,7 @@ Webflux 같은 조금의 thread를 계속해서 사용하는 framework에서 이
 
 - R2DBC는 interface를 제공하는 `Specification` 일 뿐이다. 데이터베이스 벤더 측에서 해당 데이터베이스에 맞도록 구현해야만 한다.
 - R2DBC는 [Reactive streams specification](https://github.com/reactive-streams/reactive-streams-jvm/blob/v1.0.0/README.md#specification)을 기반으로 만들어졌다.
-- R2DBC의 목적은 이름에서 알 수 있듯 기존 관계형 데이터베이스 driver specification에 대한 [non-blocking]() alternative를 제공하는 것이다.
+- R2DBC의 목적은 이름에서 알 수 있듯 기존 관계형 데이터베이스 driver specification에 대한 non-blocking alternative를 제공하는 것이다.
 
 - - -
 ### 그럼, **R2DBC의 장점**은 무엇일까?

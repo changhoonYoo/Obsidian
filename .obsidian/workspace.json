@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "().md",
+                "file": "Spring-Boot/블로킹&논블로킹.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "().md",
+                "file": "Spring-Boot/블로킹&논블로킹.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "().md",
+                "file": "Spring-Boot/블로킹&논블로킹.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "().md"
+                "file": "Spring-Boot/블로킹&논블로킹.md"
               }
             }
           }
@@ -160,20 +160,21 @@
   "active": "f0d375ddf28a5f86",
   "lastOpenFiles": [
     "Database/R2DBC.md",
+    "Spring-Boot/블로킹&논블로킹.md",
+    "블로킹.md",
+    "Network/로드 밸런싱.md",
+    "Java/Annotation.md",
+    "Spring-Boot/의존성 주입.md",
     "().md",
-    "Spring-Boot/블로킹 & 논블로킹.md",
     "Intellij/인텔리제이 기본 설정.md",
     "Linux.md",
-    "Java/Annotation.md",
     "Git/깃허브 Commit Message.md",
     "Java/Exception.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/스프링 마스터.md",
-    "Spring-Boot/의존성 주입.md",
     "Spring-Boot/Upload & Download.md",
     "Spring-Boot/Spring Bean.md",
     "Network/Proxy.md",
-    "Network/로드 밸런싱.md",
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/properties.md",
     "Database/Redis.md",
@@ -184,7 +185,6 @@
     "의존성.md",
     "의존성_주입.md",
     "`의존성.md",
-    "[[Annotation.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
