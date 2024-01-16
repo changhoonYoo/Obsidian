@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/R2DBC.md",
-                "mode": "source",
+                "file": "Spring-Boot/Server Sent Event.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/R2DBC.md",
+                "file": "Spring-Boot/Server Sent Event.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database/R2DBC.md",
+                "file": "Spring-Boot/Server Sent Event.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/R2DBC.md"
+                "file": "Spring-Boot/Server Sent Event.md"
               }
             }
           }
@@ -159,8 +159,9 @@
   },
   "active": "f0d375ddf28a5f86",
   "lastOpenFiles": [
-    "Spring-Boot/블로킹&논블로킹.md",
     "Database/R2DBC.md",
+    "Spring-Boot/Server Sent Event.md",
+    "Spring-Boot/블로킹&논블로킹.md",
     "블로킹.md",
     "Network/로드 밸런싱.md",
     "Java/Annotation.md",
@@ -184,7 +185,6 @@
     "RabbitMq/RabbitMq 개념.md",
     "의존성.md",
     "의존성_주입.md",
-    "`의존성.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
