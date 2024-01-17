@@ -27,13 +27,19 @@ public List<ChattingRoomResponseDTO> getRoom(String userKey, String number) {
 	if(!isSubscribed(userKey, number)) {
 	  return null;  
 	} else {  
-        List<Object[]> result = chatMessageRepository.getChattingRoomData(number + "%");  
-  
-		return result.stream().map(objArray -> new ChattingRoomResponseDTO(  
-				 String.valueOf(objArray[0]), String.valueOf(objArray[1]), String.valueOf(objArray[2]), Integer.parseInt(String.valueOf(objArray[3]))  
-		)).collect(Collectors.toList());
-		}
+		return chatMessageRepository.getChattingRoomData(number015 + "%")  
+        .stream()  
+        .map(objArray -> new ChattingRoomResponseDTO(  
+                String.valueOf(objArray[0]),  
+                String.valueOf(objArray[1]),  
+                String.valueOf(objArray[2]),  
+                Integer.parseInt(String.valueOf(objArray[3]))  
+        ))  
+        .collect(Collectors.toList());
+	}
 }
 ```
 
 `List<Object[]>` 객체를 .stream().map() 을 통해 DTO 생성자에 Object 배열  값 주입
+
+- - -
