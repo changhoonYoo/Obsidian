@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md",
-                "mode": "preview",
+                "file": "Spring-Boot/JPA.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md",
+                "file": "Spring-Boot/JPA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md",
+                "file": "Spring-Boot/JPA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md"
+                "file": "Spring-Boot/JPA.md"
               }
             }
           }
@@ -159,8 +159,9 @@
   },
   "active": "f0d375ddf28a5f86",
   "lastOpenFiles": [
-    "Database/R2DBC.md",
     "Spring-Boot/Server Sent Event.md",
+    "Spring-Boot/JPA.md",
+    "Database/R2DBC.md",
     "Spring-Boot/블로킹&논블로킹.md",
     "블로킹.md",
     "Network/로드 밸런싱.md",
@@ -184,7 +185,6 @@
     "Java/HttpSession.md",
     "RabbitMq/RabbitMq 개념.md",
     "의존성.md",
-    "의존성_주입.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
