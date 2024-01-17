@@ -20,6 +20,24 @@
             }
           }
         ]
+      },
+      {
+        "id": "f10c718dbc9ba2c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b91a0daab9ad921b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring-Boot/JPA.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,10 +177,11 @@
   },
   "active": "f0d375ddf28a5f86",
   "lastOpenFiles": [
-    "Spring-Boot/Server Sent Event.md",
-    "Spring-Boot/JPA.md",
-    "Database/R2DBC.md",
+    "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/블로킹&논블로킹.md",
+    "Spring-Boot/JPA.md",
+    "Spring-Boot/Server Sent Event.md",
+    "Database/R2DBC.md",
     "블로킹.md",
     "Network/로드 밸런싱.md",
     "Java/Annotation.md",
@@ -173,7 +192,6 @@
     "Git/깃허브 Commit Message.md",
     "Java/Exception.md",
     "Git/Git 명령어 정리.md",
-    "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/Upload & Download.md",
     "Spring-Boot/Spring Bean.md",
     "Network/Proxy.md",
