@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/JWT.md",
+                "file": "Java/Exception.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/JWT.md",
+                "file": "Java/Exception.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/JWT.md",
+                "file": "Java/Exception.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/JWT.md"
+                "file": "Java/Exception.md"
               }
             }
           }
@@ -159,9 +159,11 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Java/HttpSession.md",
+    "Java/Java 문법.md",
     "Java/instanceof.md",
-    "Spring-Boot/JPA.md",
     "Spring-Boot/JWT.md",
+    "Spring-Boot/JPA.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/블로킹&논블로킹.md",
     "Spring-Boot/Server Sent Event.md",
@@ -182,8 +184,6 @@
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/properties.md",
     "Database/Redis.md",
-    "Java/Java 문법.md",
-    "Java/HttpSession.md",
     "RabbitMq/RabbitMq 개념.md",
     "Network",
     "Pasted image 20231214155842.png",
