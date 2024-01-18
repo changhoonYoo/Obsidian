@@ -23,8 +23,43 @@ class Dog extends Animal {
 }  
 
 public class Main {     
-	public static void main(String[] args) {         
-		Animal animal = new Dog();          if (animal instanceof Dog) {             System.out.println("이 객체는 Dog 클래스의 인스턴스입니다.");         } else {             System.out.println("이 객체는 Dog 클래스의 인스턴스가 아닙니다.");         }     } }
+	public static void main(String[] args) {   
+	      
+		Animal animal = new Dog();        
+		  
+		if (animal instanceof Dog) {             
+			System.out.println("이 객체는 Dog 클래스의 인스턴스입니다.");         
+		} else {             
+			System.out.println("이 객체는 Dog 클래스의 인스턴스가 아닙니다.");
+		}     
+	} 
+}
 ```
 
 위의 예제에서 `animal`은 `Animal` 클래스의 변수지만, 실제로는 `Dog` 클래스의 인스턴스를 참조하고 있습니다. 따라서 `instanceof`를 사용하여 확인하면 결과는 "이 객체는 Dog 클래스의 인스턴스입니다."가 됩니다. 이러한 방식으로 `instanceof`는 객체의 실제 타입을 확인하는 데에 활용됩니다.
+
+실전 사용 예제
+
+- SSE 에러 핸들링 부분
+
+```java
+private void handleError(String number, Throwable error) {  
+    SseEmitter emitter = emitterRepository.get(number);  
+    if (emitter != null) {  
+        try {  
+            // 에러 발생 시 클라이언트에 에러 메시지 전송  
+            emitter.send(SseEmitter.event().name("error").data(error.getMessage()));  
+        } catch (IOException e) {  
+            emitterRepository.deleteById(number015);  
+            log.error("IOException : " + number015 + " Connection terminated");  
+        } finally {  
+            if (error instanceof IOException) {  
+                emitter.completeWithError(error);  
+                emitterRepository.deleteById(number015);  
+            }  
+        }  
+    }  
+}
+```
+
+---

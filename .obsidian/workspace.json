@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "7b9ac8762c7448ac",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "f0d375ddf28a5f86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/instanceof.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "f10c718dbc9ba2c3",
         "type": "tabs",
         "children": [
@@ -103,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/instanceof.md",
+                "file": "Spring-Boot/JWT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/instanceof.md",
+                "file": "Spring-Boot/JWT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/instanceof.md"
+                "file": "Spring-Boot/JWT.md"
               }
             }
           }
@@ -175,10 +157,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "f0d375ddf28a5f86",
+  "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
-    "Spring-Boot/JPA.md",
     "Java/instanceof.md",
+    "Spring-Boot/JPA.md",
     "Spring-Boot/JWT.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/블로킹&논블로킹.md",
