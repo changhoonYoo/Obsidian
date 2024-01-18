@@ -47,6 +47,44 @@ public List<ChattingRoomResponseDTO> getRoom(String userKey, String number) {
 
 ### JPQL & QueryMethod
 
+PQL은 SQL과 비슷한 구문을 가지고 있지만, 테이블이나 컬럼 이름 대신에 엔터티 클래스와 엔터티 필드를 대상으로 쿼리를 작성합니다. 아래는 간단한 JPQL 쿼리의 예제입니다:
+
+1. **모든 엔터티 조회:**
+    
+    - 모든 엔터티를 조회하는 간단한 JPQL 쿼리입니다.
+    
+    `SELECT e FROM EntityName e`
+    
+2. **조건을 포함한 조회:**
+    
+    - 특정 조건을 가진 엔터티를 조회하는 예제입니다.
+    
+    `SELECT e FROM EntityName e WHERE e.fieldName = :paramValue`
+    
+3. **연관 관계 활용:**
+    
+    - 연관 관계를 활용하여 엔터티를 조회하는 예제입니다.
+    
+    `SELECT e FROM EntityA e JOIN e.relatedEntityB b WHERE b.fieldName = :paramValue`
+    
+4. **집계 함수 사용:**
+    
+    - COUNT와 같은 집계 함수를 사용하여 특정 조건을 만족하는 엔터티의 개수를 조회하는 예제입니다.
+    
+    `SELECT COUNT(e) FROM EntityName e WHERE e.fieldName = :paramValue`
+    
+5. **정렬 사용:**
+    
+    - ORDER BY를 사용하여 결과를 정렬하는 예제입니다.
+    
+    `SELECT e FROM EntityName e ORDER BY e.fieldName ASC`
+    
+
+이렇게 JPQL은 SQL과 유사하지만, 엔터티와 필드를 기반으로 한 객체 지향적인 쿼리 언어로, 객체와 관계형 데이터베이스 간의 매핑을 지원하며 JPA에서 사용됩니다. 실제 사용되는 JPQL은 프로젝트의 엔터티 구조와 요구사항에 따라 다양하게 작성될 수 있습니다.
+
+- - -
+
+
 JPQL(Java Persistence Query Language)과 Spring Data JPA에서 제공하는 쿼리 메서드는 서로 다른 것입니다.
 
 1. **JPQL (Java Persistence Query Language):**
@@ -61,9 +99,10 @@ JPQL(Java Persistence Query Language)과 Spring Data JPA에서 제공하는 쿼�
     - 예를 들어, `findByFieldName(String fieldName)`와 같은 메서드를 정의하면, Spring Data JPA는 해당 메서드에 대한 적절한 쿼리를 자동으로 생성합니다.
 
 
-```
+```java
 // Spring Data JPA 쿼리 메서드의 예제 
-public interface UserRepository extends JpaRepository<User, Long> {     List<User> findByUsername(String username); 
+public interface UserRepository extends JpaRepository<User, Long> {     
+	List<User> findByUsername(String username); 
 }
 ```
 

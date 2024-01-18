@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Java/instanceof.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/JPA.md",
-                "mode": "source",
+                "file": "Spring-Boot/JWT.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Java/instanceof.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Java/instanceof.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/JPA.md"
+                "file": "Java/instanceof.md"
               }
             }
           }
@@ -177,9 +177,11 @@
   },
   "active": "f0d375ddf28a5f86",
   "lastOpenFiles": [
+    "Spring-Boot/JPA.md",
+    "Java/instanceof.md",
+    "Spring-Boot/JWT.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/블로킹&논블로킹.md",
-    "Spring-Boot/JPA.md",
     "Spring-Boot/Server Sent Event.md",
     "Database/R2DBC.md",
     "블로킹.md",
@@ -198,11 +200,9 @@
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/properties.md",
     "Database/Redis.md",
-    "Spring-Boot/JWT.md",
     "Java/Java 문법.md",
     "Java/HttpSession.md",
     "RabbitMq/RabbitMq 개념.md",
-    "의존성.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
