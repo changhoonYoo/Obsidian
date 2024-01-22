@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Exception.md",
-                "mode": "preview",
+                "file": "Spring-Boot/Server Sent Event.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Spring-Boot/Server Sent Event.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Spring-Boot/Server Sent Event.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Exception.md"
+                "file": "Spring-Boot/Server Sent Event.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Java/Exception.md",
     "Java/HttpSession.md",
     "Java/Java 문법.md",
     "Java/instanceof.md",
@@ -176,7 +177,6 @@
     "Intellij/인텔리제이 기본 설정.md",
     "Linux.md",
     "Git/깃허브 Commit Message.md",
-    "Java/Exception.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/Upload & Download.md",
     "Spring-Boot/Spring Bean.md",

@@ -84,3 +84,41 @@ WebSockets
 웹 소켓의 가장 큰 장점은 속도입니다. 클라이언트와 서버는 메시지를 전송할 때마다 서로의 연결을 찾아서 다시 설정할 필요가 없습니다. 웹 소켓 연결이 설정되면 데이터는 어느 방향으로든 즉시 안전하게 전송될 수 있습니다.(TCP이기에 메시지가 항상 순서대로 도착하도록 보장됨)  
 하지만 단점은 초기 구현에 상당히 많은 비용이 들어간다는 점입니다. 웹소켓은 멀티 온라인 게임과 같은 실시간 상태 업데이트와 긴밀한 동기화를 통해 분산된 사용자에게 전송해야 하는 경우 유용합니다.  
 따라서 **전반적으로 웹 소켓은 빠른 고품질의 양방향 연결이 필요하다면 좋은 선택이지만, 시스템에 상당한 복잡성을 추가하고 구현하는 데 많은 투자가 필요하므로 폴링이나 SSE가 적합하지 않은 경우에만 사용하는 것을 권장합니다.**
+
+- - -
+
+`Map<String, SseEmitter>`과 `CopyOnWriteArrayList<SseEmitter>`은 두 가지 다른 자료 구조로, 각각의 사용 사례에 맞게 선택되어야 합니다.
+
+
+###  ConcurrentHashMap<>() & CopyOnWriteArrayList<>()
+
+```java
+private final Map<String, SseEmitter> emitters = new ConcurrentHashMap<>(); private final CopyOnWriteArrayList<SseEmitter> emitters = 
+new CopyOnWriteArrayList<>();
+```
+1. **Map<String, SseEmitter>:**
+    
+    - `Map`을 사용하면 각 `SseEmitter`에 고유한 식별자(예: 사용자 ID)를 매핑할 수 있습니다.
+    - 특정 사용자에게 직접 이벤트를 전송할 때 유용합니다.
+    - 매핑된 식별자를 사용하여 특정 사용자의 `SseEmitter`를 찾아 알림을 전송할 수 있습니다.
+    
+    javaCopy code
+    
+    `private final Map<String, SseEmitter> emitters = new ConcurrentHashMap<>();  public void addUserEmitter(String userId, SseEmitter emitter) {     emitters.put(userId, emitter); }  public void sendToUser(String userId, String message) {     SseEmitter emitter = emitters.get(userId);     if (emitter != null) {         try {             emitter.send(SseEmitter.event().data(message));         } catch (IOException e) {             // 에러 처리         }     } }`
+    
+2. **CopyOnWriteArrayList<SseEmitter>:**
+    
+    - `CopyOnWriteArrayList`은 리스트를 수정할 때 복사를 수행하므로, 동시성 문제에서 안전합니다.
+    - 모든 연결된 클라이언트에게 이벤트를 브로드캐스트하는 데 적합합니다.
+    - 간단하게 모든 클라이언트에게 일괄적으로 메시지를 보낼 때 사용할 수 있습니다.
+    
+    javaCopy code
+    
+    `private final CopyOnWriteArrayList<SseEmitter> emitters = new CopyOnWriteArrayList<>();  public void addEmitter(SseEmitter emitter) {     emitters.add(emitter); }  public void broadcast(String message) {     for (SseEmitter emitter : emitters) {         try {             emitter.send(SseEmitter.event().data(message));         } catch (IOException e) {             // 에러 처리         }     } }`
+    
+
+**차이점 요약:**
+
+- `Map`은 특정 키(사용자 ID 등)에 연결된 `SseEmitter`를 관리하는 데 유용합니다.
+- `CopyOnWriteArrayList`은 여러 클라이언트에게 브로드캐스트할 때 유용합니다.
+- 사용 사례에 따라 적절한 자료 구조를 선택하세요.
