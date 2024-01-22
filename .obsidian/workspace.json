@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md",
-                "mode": "source",
+                "file": "Git/깃허브 Commit Message.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/Server Sent Event.md"
+                "file": "Git/깃허브 Commit Message.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Spring-Boot/Server Sent Event.md",
     "Java/Exception.md",
     "Java/HttpSession.md",
     "Java/Java 문법.md",
@@ -167,7 +168,6 @@
     "Spring-Boot/JPA.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/블로킹&논블로킹.md",
-    "Spring-Boot/Server Sent Event.md",
     "Database/R2DBC.md",
     "블로킹.md",
     "Network/로드 밸런싱.md",
