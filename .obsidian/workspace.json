@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Git/Git 명령어 정리.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Git/Git 명령어 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Git/Git 명령어 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/깃허브 Commit Message.md"
+                "file": "Git/Git 명령어 정리.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Git/깃허브 Commit Message.md",
     "Spring-Boot/Server Sent Event.md",
     "Java/Exception.md",
     "Java/HttpSession.md",
@@ -176,7 +177,6 @@
     "().md",
     "Intellij/인텔리제이 기본 설정.md",
     "Linux.md",
-    "Git/깃허브 Commit Message.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/Upload & Download.md",
     "Spring-Boot/Spring Bean.md",
