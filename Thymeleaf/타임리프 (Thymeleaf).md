@@ -93,8 +93,8 @@ HTML 문서는 < , > 같은 특수 문자를 기반으로 정의되기 때문에
 ```java
 @GetMapping("text-unescaped")    
 public String textUnescaped(Model model) {        
-model.addAttribute("data", "<b>Hello Spring</b>");        
-return "basic/text-unescaped";    
+	model.addAttribute("data", "<b>Hello Spring</b>");        
+	return "basic/text-unescaped";    
 }
 ```
 
