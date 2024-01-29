@@ -87,3 +87,31 @@ private void handleError(String number, Throwable error) {
 ```
 
 ---
+
+### assert
+
+Java에서 `assert`는 프로그램의 상태나 불변 조건을 확인하고 해당 조건이 참이 아닌 경우 프로그램을 종료하도록 하는 문장입니다. `assert`문은 디버깅 목적으로 사용되며, 코드가 어떤 상태에 있을 때 특정 조건이 참인지 확인하는 데 도움을 줍니다.
+
+`assert`문은 보통 다음과 같은 형식을 갖습니다:
+```java
+assert expression;
+```
+
+여기서 `expression`은 참이나 거짓으로 평가될 수 있는 불리언 표현식입니다. 만약 `expression`이 거짓이라면 `AssertionError`가 발생하고 프로그램이 종료됩니다.
+
+기본적으로 Java에서 `assert`문은 비활성화되어 있습니다. 따라서 `assert`문이 실행되려면 JVM을 `-ea` 또는 `enableassertions` 옵션으로 실행해야 합니다.
+
+예를 들어:
+
+```java
+public class Example {     
+	public static void main(String[] args) {         
+		int x = 10;         
+		assert x == 20 : "x should be 20"; 
+		// 이 조건이 거짓이므로 AssertionError 발생         
+		System.out.println("This line won't be reached.");     
+	} 
+}
+```
+
+이 코드는 실행 중에 `AssertionError`를 발생시키고 프로그램이 종료됩니다. `assert`문은 개발자가 가정한 조건이 프로그램이 실행되는 동안 계속 참인지 확인하기 위해 사용됩니다.

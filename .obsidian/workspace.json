@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
-                "mode": "preview",
+                "file": "Java/Java 문법.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
+                "file": "Java/Java 문법.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
+                "file": "Java/Java 문법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md"
+                "file": "Java/Java 문법.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Thymeleaf/타임리프 (Thymeleaf).md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Spring-Boot/Server Sent Event.md",
@@ -184,7 +185,6 @@
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/properties.md",
     "Database/Redis.md",
-    "RabbitMq/RabbitMq 개념.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
