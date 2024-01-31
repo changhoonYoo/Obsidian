@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md",
+                "file": "Spring-Boot/FeignClient.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md",
+                "file": "Spring-Boot/FeignClient.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md",
+                "file": "Spring-Boot/FeignClient.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md"
+                "file": "Spring-Boot/FeignClient.md"
               }
             }
           }
@@ -159,6 +159,8 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Error-Log/Spring Boot Error.md",
+    "Spring-Boot/FeignClient.md",
     "Intellij/인텔리제이 기본 설정.md",
     "Java/Java 문법.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
@@ -183,8 +185,6 @@
     "Spring-Boot/Spring Bean.md",
     "Network/Proxy.md",
     "Spring-Boot/WebSocket.md",
-    "Spring-Boot/properties.md",
-    "Database/Redis.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",

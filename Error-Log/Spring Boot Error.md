@@ -38,3 +38,15 @@ feign.RetryableException: Connect timed out executing POST http://ip:8080/json
 ```
 
 요청 결과 Connect timed out 발생 ->
+
+```java
+@FeignClient(value = "file-server", url = "${kr.co.test.file.url}", configuration = {FileCoKrHeaderConfig.class})
+```
+
+`url` 에 매핑되는 properties 변수를 IP 에서 도메인명으로 변경 후 진행하여 해결
+
+```properties
+kr.co.test.file.url=http:111.111.111.11:8080
+## -> 변경 ##
+kr.co.test.file.url=https://file.test.co.kr
+```
