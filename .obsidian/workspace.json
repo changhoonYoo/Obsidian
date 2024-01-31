@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Error-Log/Spring Boot Error.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Error-Log/Spring Boot Error.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Error-Log/Spring Boot Error.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md"
+                "file": "Error-Log/Spring Boot Error.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Intellij/인텔리제이 기본 설정.md",
     "Java/Java 문법.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Git/Git 명령어 정리.md",
@@ -177,7 +178,6 @@
     "Java/Annotation.md",
     "Spring-Boot/의존성 주입.md",
     "().md",
-    "Intellij/인텔리제이 기본 설정.md",
     "Linux.md",
     "Spring-Boot/Upload & Download.md",
     "Spring-Boot/Spring Bean.md",
