@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Java 문법.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Java 문법.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Java 문법.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Java 문법.md"
+                "file": "Intellij/인텔리제이 기본 설정.md"
               }
             }
           }
@@ -159,13 +159,13 @@
   },
   "active": "b91a0daab9ad921b",
   "lastOpenFiles": [
+    "Java/Java 문법.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Spring-Boot/Server Sent Event.md",
     "Java/Exception.md",
     "Java/HttpSession.md",
-    "Java/Java 문법.md",
     "Java/instanceof.md",
     "Spring-Boot/JWT.md",
     "Spring-Boot/JPA.md",
