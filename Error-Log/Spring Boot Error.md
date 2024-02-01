@@ -5,6 +5,8 @@ Spring boot 버전과 Spring cloud 버전의 불일치로 빌드에 계속 실�
 해결 :
 - https://spring.io/projects/spring-cloud 중간 테이블에서 현재 스프링부트 버전에 맞는 cloud 버전을 찾아 pom.xml 에 디펜던시 추가
 
+![[Pasted image 20240201130055.png]]
+
 ```xml
 	<properties>  
 	   <java.version>17</java.version>  
