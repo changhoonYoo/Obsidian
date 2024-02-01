@@ -138,6 +138,35 @@ public class AppConfig {
 - - -
 
 
+## <span style="color:darkorange">@DynamicInsert</span>
+
+`@DynamicInsert` 어노테이션은 Hibernate를 사용하는 Java 엔터티 클래스에서 사용될 수 있는 어노테이션 중 하나입니다. 이 어노테이션은 엔터티가 INSERT 쿼리를 실행할 때, 모든 컬럼에 대한 값을 포함하지 않고, 값이 null 또는 기본값인 컬럼은 쿼리에서 제외하도록 하는 기능을 제공합니다.
+
+일반적으로 Hibernate에서는 엔터티를 저장할 때 모든 컬럼에 대한 값을 지정해야 합니다. 그러나 `@DynamicInsert`를 사용하면, INSERT 쿼리를 실행할 때에만 해당되는 컬럼들만 지정하여 사용할 수 있습니다. 이를 통해 불필요한 데이터를 전송하는 것을 줄이고 성능을 향상시킬 수 있습니다.
+
+예를 들어, 다음은 `@DynamicInsert`를 사용한 엔터티 클래스의 예입니다:
+
+```java
+import javax.persistence.Entity; 
+import javax.persistence.GeneratedValue; 
+import javax.persistence.GenerationType; 
+import javax.persistence.Id; 
+import org.hibernate.annotations.DynamicInsert;  
+
+@Entity 
+@DynamicInsert 
+public class YourEntity {
+	@Id     
+	@GeneratedValue(strategy = GenerationType.IDENTITY)     
+	private Long id;      
+	private String name;    
+	private String description;   
+	   
+	// getters, setters, 등 필요한 메서드들... 
+}
+```
+
+위의 코드에서 `@DynamicInsert` 어노테이션이 `YourEntity` 클래스에 적용되어 있습니다. 이제 이 엔터티를 저장할 때 `description`이나 다른 기본값이나 null인 컬럼은 INSERT 쿼리에서 제외될 수 있습니다.
 ## <span style="color:darkorange">@FeignClient</span>
 
 `@FeignClient`는 Spring Cloud에서 제공하는 어노테이션 중 하나로, 서버 간 통신을 쉽게 구현할 수 있도록 도와주는 기능을 제공합니다. 주로 마이크로서비스 아키텍처에서 서비스 간 통신을 위해 사용됩니다.
