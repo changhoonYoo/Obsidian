@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md",
+                "file": "Git/Git 명령어 정리.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md",
+                "file": "Git/Git 명령어 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md",
+                "file": "Git/Git 명령어 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Error-Log/Spring Boot Error.md"
+                "file": "Git/Git 명령어 정리.md"
               }
             }
           }
@@ -159,16 +159,16 @@
   },
   "active": "e75b5910c3d58a8f",
   "lastOpenFiles": [
+    "Git/깃허브 Commit Message.md",
+    "Error-Log/Spring Boot Error.md",
     "Pasted image 20240201130055.png",
     "Java/Annotation.md",
     "Spring-Boot/블로킹&논블로킹.md",
     "Spring-Boot/FeignClient.md",
-    "Error-Log/Spring Boot Error.md",
     "Intellij/인텔리제이 기본 설정.md",
     "Java/Java 문법.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Git/Git 명령어 정리.md",
-    "Git/깃허브 Commit Message.md",
     "Spring-Boot/Server Sent Event.md",
     "Java/Exception.md",
     "Java/HttpSession.md",
