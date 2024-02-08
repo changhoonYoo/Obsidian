@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Error-Log/Entity + Builder Error.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Error-Log/Entity + Builder Error.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Error-Log/Entity + Builder Error.md",
+                "file": "Git/깃허브 Commit Message.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Error-Log/Entity + Builder Error.md"
+                "file": "Git/깃허브 Commit Message.md"
               }
             }
           }
@@ -159,8 +159,8 @@
   },
   "active": "e75b5910c3d58a8f",
   "lastOpenFiles": [
-    "Error-Log/Spring Boot Error.md",
     "Error-Log/Entity + Builder Error.md",
+    "Error-Log/Spring Boot Error.md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Pasted image 20240201130055.png",
