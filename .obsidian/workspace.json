@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Spring-Boot/Tomcat & Apache.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Spring-Boot/Tomcat & Apache.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/깃허브 Commit Message.md",
+                "file": "Spring-Boot/Tomcat & Apache.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/깃허브 Commit Message.md"
+                "file": "Spring-Boot/Tomcat & Apache.md"
               }
             }
           }
@@ -159,10 +159,13 @@
   },
   "active": "e75b5910c3d58a8f",
   "lastOpenFiles": [
+    "Linux/Linux 명령어.md",
+    "Spring-Boot/Tomcat & Apache.md",
+    "Linux",
+    "Git/깃허브 Commit Message.md",
     "Error-Log/Entity + Builder Error.md",
     "Error-Log/Spring Boot Error.md",
     "Git/Git 명령어 정리.md",
-    "Git/깃허브 Commit Message.md",
     "Pasted image 20240201130055.png",
     "Java/Annotation.md",
     "Spring-Boot/블로킹&논블로킹.md",
@@ -182,10 +185,8 @@
     "Network/로드 밸런싱.md",
     "Spring-Boot/의존성 주입.md",
     "().md",
-    "Linux.md",
     "Spring-Boot/Upload & Download.md",
     "Spring-Boot/Spring Bean.md",
-    "Network/Proxy.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
@@ -196,7 +197,6 @@
     "Pasted image 20231207090811.png",
     "Thymeleaf",
     "Intellij",
-    "Restful API",
-    "Database"
+    "Restful API"
   ]
 }
