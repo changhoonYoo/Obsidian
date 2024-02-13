@@ -58,6 +58,83 @@ $ mv afile /opt/
 ```
 
 - - -
+###<span style="color:#87CEEB">rm</span>
+
+remove의 약자, 파일 또는 디렉터리 삭제
+
+```bash
+# afile 삭제
+$ rm afile
+
+# 디렉터리 adir을 삭제, 삭제 시 확인
+$ rm -r adir
+
+# 디렉터리 adir을 삭제, 삭제 시 확인 안함
+$ rm -rf adir
+
+# txt로 끝나는 모든 파일을 삭제할지 물어보면서 삭제
+$ rm -i *.txt
+```
+
+- - -
+
+### <span style="color:#87CEEB">cat</span>
+
+catenate (잇다, 연결하다)의 약자, 파일의 내용을 확인할 때 사용
+
+```bash
+# test.txt 파일의 내용을 확인
+$ cat test.txt
+```
+
+---
+
+### <span style="color:#87CEEB">touch</span>
+
+touch는 빈 파일을 생성, 혹은 파일의 날짜와 시간을 수정할 때 사용
+
+```bash
+# afile 생성
+$ touch afile
+
+# afile의 시간을 현재 시간으로 갱신
+$ touch -c afile
+
+# bfile의 날짜 정보를 afile의 정보와 동일하게 변경
+$ touch -r afile bfile
+```
+
+---
+
+
+<span style="color:#87CEEB">echo</span>
+
+echo는  어떤 문자열을 화면에 보여줄 때 사용, echo와 리다이렉션을 사용해 파일을 생성, 추가하는 작업을 많이 함
+
+```bash
+# hellowworld 출력
+$ echo `hellowworld`
+
+# 패스로 지정한 문자열을 출력
+$ echo $PATH
+
+# 이스케이프 문자열을 해석
+$ echo -e 문자열
+
+# 개행을 표시할 수 있음
+$ echo -e "안녕하세요\n이렇게 하면 \n새 줄이 생겨요"
+
+# ls와 유사하게 현재 디렉터리의 파일과 폴더를 출력
+$ echo *
+
+# 리다이렉션 '>'을 사용해 hello.txt 파일 생성. 파일 내용에는 echo로 표시되는 내용이 들어감
+$ echo hellow redirection > hello.txt
+
+# 추가 연산자 >> 를 사용해 기존 파일에 문자열 추가
+$ echo hello2 >> hello.txt
+```
+
+---
 
 ### <span style="color:#87CEEB">tail</span>
 
