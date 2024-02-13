@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Linux/Linux 명령어.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Linux/Linux 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Annotation.md",
+                "file": "Linux/Linux 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Annotation.md"
+                "file": "Linux/Linux 명령어.md"
               }
             }
           }
@@ -159,6 +159,8 @@
   },
   "active": "e75b5910c3d58a8f",
   "lastOpenFiles": [
+    "Pasted image 20240213094227.png",
+    "Java/Annotation.md",
     "Spring-Boot/FeignClient.md",
     "Spring-Boot/Tomcat & Apache.md",
     "Linux/Linux 명령어.md",
@@ -168,7 +170,6 @@
     "Error-Log/Spring Boot Error.md",
     "Git/Git 명령어 정리.md",
     "Pasted image 20240201130055.png",
-    "Java/Annotation.md",
     "Spring-Boot/블로킹&논블로킹.md",
     "Intellij/인텔리제이 기본 설정.md",
     "Java/Java 문법.md",
@@ -186,7 +187,6 @@
     "Spring-Boot/의존성 주입.md",
     "().md",
     "Spring-Boot/Upload & Download.md",
-    "Spring-Boot/Spring Bean.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
