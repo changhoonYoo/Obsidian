@@ -259,7 +259,46 @@ $ find {디렉터리} -name '*.py' -not -path '*/site-packates/*'
 $ find {디렉터리} -name '*.ext' -exec wc -l {} \;
 
 # 최근 7일간 수정된 파일을 찾고 삭제하기
-$ find {디렉터리} -daystart -mtime -7 -dle
+$ find {디렉터리} -daystart -mtime -7 -delete
+
+# 0바이트인 파일을 찾고 삭제하기
+$ find {디렉터리} -type f -empty -delete
 ```
 
+---
+
+### <span style="color:#87CEEB">ps</span>
+
+process status
+현재 실행 중인 프로세스 목록과 상태
+
+```bash
+# 실행 중인 모든 프로세스 보여주기
+$ ps aux
+
+# 실행 중인 모든 프로세스를 전체 커맨드를 포함해 보여주기
+$ ps auxww
+
+# 특정 문자열과 매칭되는 프로세스 찾기
+$ ps aux | grep {패턴}
+
+# 메모리 사용량에 따라 정렬하기
+$ ps --sort size
+```
+
+---
+
+### <span style="color:#87CEEB">grep</span>
+
+grep은 입력에서 패턴에 매칭되는 내용을 찾는 명령어.
+grep이라는 이름은 ed의 명령어인 g/re/p(내용 전체를 정규식으로 찾은 다음 프린트하라) 
+보통 find, ps 등과 조합해 사용
+
+```bash
+# 파일에서 특정 패턴을 만족하는 부분 찾기
+$ grep "패턴" 파일경로
+
+# 파일명과 라인을 함께 표시하기
+
+```
 ### <span style="color:#87CEEB">df</span>
