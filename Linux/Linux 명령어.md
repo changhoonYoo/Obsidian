@@ -1,6 +1,6 @@
 ![[Pasted image 20240213094227.png]]
 
-### ls
+### <span style="color:#87CEEB">ls</span>
 
 list segments의 약자로 현재 디렉터리의 파일과 디렉터리를 보여준다.
 
@@ -21,19 +21,45 @@ charge directory의 약자로 디렉터리 이동 명령어
 - cd /dir : 절대 경로를 지정해 이동
 - cd - : 바로 전의 디렉터리로 이동
 - - -
-### mkdir
+### <span style="color:#87CEEB">mkdir</span>
 
 make directory의 약자로 디렉터리를 만들 때 사용
 - - -
-### cp
+### <span style="color:#87CEEB">cp</span>
 
 copy의 약자로 파일 또는 디렉터리 복사할 때 사용
 
 ```bash
 # source를 target으로 복사
-$ cp
+$ cp source target
+
+# target 파일이 이미 있는 경우 덮어쓰기
+$ cp -f source target
+
+# 디렉터리를 복사할 때 사용, 하위 디렉터리도 모두 복사
+$ cp -R sourceDir targetDir
 ```
-### tail
+
+- - -
+
+### <span style="color:#87CEEB">mv</span>
+
+move의 약자, 파일 또는 디렉터리의 위치를 옮기거나 이름 변경에 사용
+
+```bash
+# afile 이름을 bfile로 변경
+$ mv afile bfile
+
+# afile 을 상위 디렉터리로 옮김
+$ mv afile ../
+
+# afile 을 /opt 이하 디렉터리로 옮김
+$ mv afile /opt/
+```
+
+- - -
+
+### <span style="color:#87CEEB">tail</span>
 
 기본적으로 `tail` 명령어는 지정된 파일의 마지막 10줄을 출력합니다. 그러나 옵션을 사용하여 출력하는 줄 수나 다른 동작을 변경할 수 있습니다.
 
@@ -56,4 +82,4 @@ $ cp
 
 - - - 
 
-### df
+### <span style="color:#87CEEB">df</span>
