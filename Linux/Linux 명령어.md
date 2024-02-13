@@ -136,6 +136,38 @@ $ echo hello2 >> hello.txt
 
 ---
 
+### <span style="color:#87CEEB">ip addr/ ifconfig</span>
+
+접속한 리눅스의 IP 정보를 알아낼 때 사용
+
+ip addr이 설치되어 있지 않은 경우에는 ifconfig를 사용
+
+---
+
+### <span style="color:#87CEEB">ss</span>
+
+socket statistics의 약자, 네트워크 상태를 확인하는 데 사용. 원래는 netstat을 사용했는데, 최근에는 ss를 주로 사용
+
+- ss -a : 모든 포트 확인
+- ss -t : TCP 포트 확인
+- ss -u : UDP 포트 확인
+- ss -l : LISTEN 상태 포트 확인
+- ss -p : 프로세스 표시
+- ss -n : 호스트, 포트, 사용자명을 숫자로 표시
+
+TCP 포트 중 LISTEN 상태인 포트의 번호를 알고 싶을 때
+```bash
+$ ss -tln
+LISTEN 0 511 *:433 *:*
+LISTEN 0 1 127.0.0.1:8006 *:*
+LISTEN 0 511 *:80 *:*
+```
+
+---
+
+### nc
+
+netcat의 약자, 
 ### <span style="color:#87CEEB">tail</span>
 
 기본적으로 `tail` 명령어는 지정된 파일의 마지막 10줄을 출력합니다. 그러나 옵션을 사용하여 출력하는 줄 수나 다른 동작을 변경할 수 있습니다.
