@@ -272,7 +272,16 @@ $ find {디렉터리} -type f -empty -delete
 process status
 현재 실행 중인 프로세스 목록과 상태
 
+- `-e`: 시스템에서 실행 중인 모든 프로세스를 출력합니다.
+- `-f`: 상세한 정보를 출력합니다. 이 옵션을 사용하면 프로세스의 전체 명령줄을 포함하여 자세한 정보가 표시됩니다.
+- `-u`: 현재 사용자와 관련된 프로세스만 출력합니다.
+- `-x`: 시스템 프로세스 외에도 유휴 프로세스도 출력합니다.
+- `-a`: 터미널과 관계없이 모든 프로세스를 출력합니다.
+
 ```bash
+# 현재 실행중인 프로세스 상세 출력
+$ ps -ef
+
 # 실행 중인 모든 프로세스 보여주기
 $ ps aux
 
@@ -299,6 +308,51 @@ grep이라는 이름은 ed의 명령어인 g/re/p(내용 전체를 정규식으�
 $ grep "패턴" 파일경로
 
 # 파일명과 라인을 함께 표시하기
+$ grep --with-filename --line-number "패턴" 파일경로
+
+# 매칭하지 않는 부분 표시하기
+$ grep --invert-match "패턴"
+
+# cat과 함께 사용하기
+$ cat 파일경로 | grep "패턴"
+```
+
+---
+
+### <span style="color:#87CEEB">kill</span>
+
+프로세스를 죽이는 명령어. SIGKILL, SIGSTOP 은 강제종료 나머지는 정상종료
+
+```bash
+# kill에서 사용할 수 있는 시그널 표시
+$ kill -l
+
+# 프로세스 죽이기 
+$ kill 프로세스ID
+
+# 백드라운드 잡 종료시키기
+$ kill {잡ID}
+
+# 프로세스 강제 종료
+$ kill -9 | KILL 프로세스 ID
+```
+
+---
+
+### <span style="color:#87CEEB">alias</span>
+
+자주 사용하는 명령어를 alias를 사용해 줄일 수 있음
+
+```bash
+# 모든 alias 표시
+$ alias
+
+# alias 만들기
+# 예) alias ll="ls =al"
+$ alias 단어="명령"
+
+# alias 삭제
+$ unalias 단어
 
 ```
 ### <span style="color:#87CEEB">df</span>
