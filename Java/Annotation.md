@@ -1,3 +1,47 @@
+## <span style="color:darkorange">@Aspect</span>
+
+`@Aspect` 어노테이션은 스프링 프레임워크에서 AOP(Aspect-Oriented Programming)를 지원하기 위한 어노테이션입니다. AOP는 프로그램의 관심사를 모듈화하는 기법으로, 핵심 비즈니스 로직과 관련 없는 부가적인 기능(로깅, 트랜잭션 관리, 보안 등)을 분리하여 모듈화할 수 있습니다.
+
+`@Aspect` 어노테이션을 사용하여 클래스를 Aspect로 지정할 수 있습니다. 
+Aspect는 어떤 지점(Pointcut)에서 어떤 행위(Advice)를 취할지 정의합니다.
+
+간단한 예제를 살펴보겠습니다. 
+아래의 코드는 메서드 실행 시간을 측정하는 Aspect를 정의하는 예제입니다.
+
+```java
+import org.aspectj.lang.annotation.Aspect; 
+import org.aspectj.lang.annotation.Before; 
+import org.aspectj.lang.annotation.After; 
+import org.aspectj.lang.annotation.Around; 
+import org.aspectj.lang.ProceedingJoinPoint; 
+import org.springframework.stereotype.Component; 
+
+@Aspect 
+@Component 
+public class PerformanceAspect {      
+	@Around("execution(* com.example.service.*.*(..))")     
+	public Object measureExecutionTime(ProceedingJoinPoint joinPoint) 
+	throws Throwable {         
+		long startTime = System.nanoTime();         
+		Object result = joinPoint.proceed();         
+		long endTime = System.nanoTime();         
+		long executionTime = endTime - startTime;
+		System.out.println(joinPoint.getSignature() + " executed in " + 
+		executionTime + "ns");
+		return result;
+	} 
+}
+```
+
+위의 예제에서:
+
+- `@Aspect` 어노테이션은 이 클래스가 Aspect임을 선언합니다.
+- `measureExecutionTime` 메서드는 `@Around` 어노테이션을 가지고 있습니다. 이 어노테이션은 지정된 포인트컷(Pointcut)에서 실행되는 Advice를 정의합니다. 이 경우 `execution(* com.example.service.*.*(..))` 포인트컷은 `com.example.service` 패키지 내의 모든 메서드 호출 지점입니다.
+- `Around` 어드바이스는 메서드 실행 전과 후에 실행됩니다. 이 경우 메서드 실행 시간을 측정하여 출력합니다.
+
+이렇게 `@Aspect` 어노테이션을 사용하면 AOP를 쉽게 구현할 수 있습니다. Aspect를 사용하여 로깅, 트랜잭션 관리, 보안 등 다양한 부가적인 기능을 쉽게 추가할 수 있습니다.
+
+- - - 
 ## <span style="color:darkorange">@Bean</span>
 
 `@Bean` 어노테이션은 스프링에서 빈(Bean)을 정의할 때 사용되는 어노테이션으로, 주로 `@Configuration` 어노테이션이 적용된 클래스에서 메서드에 사용됩니다. `@Bean` 어노테이션이 적용된 메서드는 해당 메서드가 반환하는 객체를 스프링 컨테이너가 빈으로 관리하도록 지정합니다. ^7f2fcd
