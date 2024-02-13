@@ -167,7 +167,35 @@ LISTEN 0 511 *:80 *:*
 
 ### nc
 
-netcat의 약자, 
+netcat의 약자, 예전에는 포트가 열렸는지 확인하는 데 telnet 명령어를 사용했지만 요즘은 주로 nc를 사용
+
+```bash
+
+# 포트가 오픈됐는지 확인
+$ nc IP주소 포트
+
+# 더 자세한 정보가 남음
+$ nc -v IP주소 포트
+
+# 현재 서버의 포트를 오픈(방화벽에 해당 포트 번호가 설정 함)
+$ nc -l 포트
+```
+
+---
+
+### <span style="color:#87CEEB">which, whereis, locate</span>
+
+which는 특정 명령어의 위치를 찾아줌
+
+```bash
+
+$ which git
+/usr/local/bin/git
+
+# which -a : 검색 가능한 모든 경로에서 명령어를 찾아줌
+$ which -a git
+/usr/
+```
 ### <span style="color:#87CEEB">tail</span>
 
 기본적으로 `tail` 명령어는 지정된 파일의 마지막 10줄을 출력합니다. 그러나 옵션을 사용하여 출력하는 줄 수나 다른 동작을 변경할 수 있습니다.
