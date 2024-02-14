@@ -108,3 +108,9 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 
 따라서 JPQL은 명시적인 쿼리 언어로서 엔터티와 관련된 복잡한 쿼리를 작성하는 데 사용되고, 쿼리 메서드는 간단한 쿼리를 자동으로 생성하기 위한 Spring Data JPA의 편리한 기능입니다. 개발자는 프로젝트의 요구사항에 따라 적절한 방법을 선택하여 사용할 수 있습니다.
+
+### QueryDsl
+
+
+---
+### 
