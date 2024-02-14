@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/JPA.md",
-                "mode": "preview",
+                "file": "Linux/Linux 명령어.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Linux/Linux 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Linux/Linux 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/JPA.md"
+                "file": "Linux/Linux 명령어.md"
               }
             }
           }
@@ -159,13 +159,13 @@
   },
   "active": "e75b5910c3d58a8f",
   "lastOpenFiles": [
+    "Spring-Boot/JPA.md",
     "Intellij/인텔리제이 기본 설정.md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Error-Log/Spring Boot Error.md",
     "Error-Log/Entity + Builder Error.md",
     "Spring-Boot/properties.md",
-    "Spring-Boot/JPA.md",
     "Java/Annotation.md",
     "Spring-Boot/restAPI.md",
     "Linux/Linux 명령어.md",
