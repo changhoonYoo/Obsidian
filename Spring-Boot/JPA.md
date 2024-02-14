@@ -114,3 +114,53 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 ---
 ### Pagination
+
+- Pageable 객체 설정
+```java
+
+```
+- 두개의 Page<>  객체를 합치는 예제
+
+```java
+public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, String number, Pageable pageable) throws IOException {  
+	// Page 객체 2개 생성
+    Page<aSend> aSends = aSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100, pageable);  
+    Page<bSend> bSends = aSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100, pageable);  
+
+	// List로 변환 후 합침
+    List<ResultByNumberResponseDTO> resultList = new ArrayList<>();  
+    resultList.addAll(convertASendsToResultByNumberResponseDTOs(aSends));  
+    resultList.addAll(convertBSendsToResultByNumberResponseDTOs(bSends));  
+    
+    // 리스트 정렬 
+	 resultList.sort(
+	 Comparator.comparing(ResultByNumberResponseDTO::getSndDttm).reversed());
+	 // 두개 Page의 totalElements()를 더해 totalElements 설정  
+    int totalElements = (int) (xmsSends.getTotalElements() + 
+    smtSends.getTotalElements());  
+    return new PageImpl<>(resultList, pageable, totalElements);  
+}  
+  
+private List<ResultByNumberResponseDTO> convertXmsSendsToResultByNumberResponseDTOs(Page<aSend> aSends) throws IOException {  
+    List<ResultByNumberResponseDTO> resultList = new ArrayList<>();  
+    for (ASend aSend : aSends) {  
+        ResultByNumberResponseDTO dto = ResultByNumberResponseDTO.builder()  
+                .prepayPayNo(xmsSend.getPayNo())  
+                .subject(aSend.getSubject())  
+                .sndMsg(aSend.getSndMsg())  
+                .callback(aSend.getCallback())  
+                .sndDttm(aSend.getSndDttm())  
+                .imageData("")  
+                .build();  
+        if (aSend.getCmpId().equals("MMS")) {  
+            String imageData = getImageByContentGroupId(aSend.getContentGroupId());  
+            dto.setImageData(imageData);  
+        }  
+        resultList.add(dto);  
+    }  
+    return resultList;  
+}
+// ...생략
+```
+
+---

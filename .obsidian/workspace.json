@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Spring-Boot/JPA.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Spring-Boot/JPA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Spring-Boot/JPA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md"
+                "file": "Spring-Boot/JPA.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "e75b5910c3d58a8f",
   "lastOpenFiles": [
+    "Intellij/인텔리제이 기본 설정.md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Error-Log/Spring Boot Error.md",
@@ -174,7 +175,6 @@
     "Linux",
     "Pasted image 20240201130055.png",
     "Spring-Boot/블로킹&논블로킹.md",
-    "Intellij/인텔리제이 기본 설정.md",
     "Java/Java 문법.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Spring-Boot/Server Sent Event.md",
