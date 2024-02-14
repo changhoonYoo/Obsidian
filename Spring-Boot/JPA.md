@@ -121,48 +121,32 @@ public interface UserRepository extends JpaRepository<User, Long> {
 Pageable pageable = PageRequest.of(request.getPageNumber(), request.getPageSize(), Sort.by(Sort.Direction.DESC,"sndDttm"));
 ```
 
-- 두개의 Page<>  객체를 합치는 예제
+- List<> 2개의 객체를 하나의 Page<>로
 
 ```java
-public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, String number, Pageable pageable) throws IOException {  
-	// Page 객체 2개 생성
-    Page<aSend> aSends = aSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100, pageable);  
-    Page<bSend> bSends = aSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100, pageable);  
 
-	// List로 변환 후 합침
-    List<ResultByNumberResponseDTO> resultList = new ArrayList<>();  
-    resultList.addAll(convertASendsToResultByNumberResponseDTOs(aSends));  
-    resultList.addAll(convertBSendsToResultByNumberResponseDTOs(bSends));  
-    
-    // 리스트 정렬 
-	 resultList.sort(
-	 Comparator.comparing(ResultByNumberResponseDTO::getSndDttm).reversed());
-	 // 두개 Page의 totalElements()를 더해 totalElements 설정  
-    int totalElements = (int) (xmsSends.getTotalElements() + 
-    smtSends.getTotalElements());  
-    return new PageImpl<>(resultList, pageable, totalElements);  
-}  
-  
-private List<ResultByNumberResponseDTO> convertXmsSendsToResultByNumberResponseDTOs(Page<aSend> aSends) throws IOException {  
-    List<ResultByNumberResponseDTO> resultList = new ArrayList<>();  
-    for (ASend aSend : aSends) {  
-        ResultByNumberResponseDTO dto = ResultByNumberResponseDTO.builder()  
-                .prepayPayNo(xmsSend.getPayNo())  
-                .subject(aSend.getSubject())  
-                .sndMsg(aSend.getSndMsg())  
-                .callback(aSend.getCallback())  
-                .sndDttm(aSend.getSndDttm())  
-                .imageData("")  
-                .build();  
-        if (aSend.getCmpId().equals("MMS")) {  
-            String imageData = getImageByContentGroupId(aSend.getContentGroupId());  
-            dto.setImageData(imageData);  
-        }  
-        resultList.add(dto);  
-    }  
-    return resultList;  
+public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, String number, Pageable pageable) throws IOException { 
+	// 각각의 쿼리 결과를 페이지네이션 없이 전체 데이터로 가져옴 
+	List<XmsSend> xmsSends = xmsSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100);
+	List<SmtSend> smtSends = smtSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100); 
+	// 각각의 쿼리 결과를 DTO로 변환 
+	List<ResultByNumberResponseDTO> resultList = new ArrayList<>(); 
+	resultList.addAll(convertXmsSendsToResultByNumberResponseDTOs(xmsSends)); 
+	resultList.addAll(convertSmtSendsToResultByNumberResponseDTOs(smtSends)); 
+	// 전체 결과를 정렬 
+	resultList.sort(Comparator.comparing(ResultByNumberResponseDTO::getSndDttm)
+	.reversed()); 
+	// 전체 결과에 대해 페이지네이션 수행 
+	int start = (int) pageable.getOffset(); 
+	int end = Math.min((start + pageable.getPageSize()), resultList.size()); 
+	List<ResultByNumberResponseDTO> pageContent = resultList.subList(start, end); 
+	// 전체 요소의 수 
+	int totalElements = resultList.size(); 
+	// 페이지네이션된 결과를 생성하여 반환 
+	return new PageImpl<>(pageContent, pageable, totalElements); 
 }
-// ...생략
+
 ```
+
 
 ---
