@@ -359,6 +359,42 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 이러한 속성들을 통해 `@JsonProperty` 어노테이션을 사용하여 JSON 데이터의 특정 키와 Java 객체의 필드 간의 매핑을 세밀하게 조정할 수 있습니다.
 - - -
+
+## <span style="color:darkorange">@JsonInclude</span>
+
+REST API에서 DTO(Data Transfer Object)를 반환할 때 특정 필드의 값이 null인 경우 해당 필드를 제외하고 리턴하는 것은 가능합니다. 이를 위해 일반적으로 다음과 같은 방법을 사용할 수 있습니다:
+
+1. **직렬화 옵션 설정**: 대부분의 프레임워크는 객체를 JSON 또는 XML로 직렬화할 때 특정 필드의 값을 무시하도록 설정할 수 있는 옵션을 제공합니다.
+    
+2. **커스텀 직렬화 로직**: 필요한 경우 특정 필드의 값을 확인하고 해당 필드를 제외하도록 커스텀 직렬화 로직을 작성할 수 있습니다.
+    
+
+예를 들어, Java와 Spring Framework를 사용한다고 가정하면, 다음과 같이 작업할 수 있습니다:
+
+```java
+import com.fasterxml.jackson.annotation.JsonInclude; 
+import lombok.Data; 
+@Data 
+public class YourDTO { 
+	private String field1; 
+	
+	@JsonInclude(JsonInclude.Include.NON_NULL) 
+	// 이 옵션을 사용하여 null값인 경우 해당 필드를 무시합니다. 
+	private String field2; 
+	
+	private String field3; 
+	
+	// 나머지 필드들 
+}
+```
+
+위 코드에서 `@JsonInclude(JsonInclude.Include.NON_NULL)` 어노테이션은 Jackson 라이브러리를 사용하여 JSON 직렬화 시에 null 값을 무시하도록 지시합니다.
+
+Spring Boot에서 해당 DTO를 컨트롤러에서 반환할 때 자동으로 JSON으로 직렬화되어 클라이언트에 반환될 것입니다. 필드 값이 null인 경우 해당 필드는 출력에서 생략됩니다.
+
+이와 유사한 방법은 다른 언어와 프레임워크에서도 사용할 수 있으며, 해당 언어 및 프레임워크의 문서를 참조하여 구체적인 방법을 확인할 수 있습니다.
+
+---
 ## <span style="color:darkorange">@Log4j2</span>
 
 `@Log4j2`는 Lombok에서 제공하는 어노테이션 중 하나로, Log4j 2를 사용하여 로깅 코드를 자동으로 생성해주는 데 사용됩니다. 이를 통해 코드를 간결하게 작성하고 로깅 구현을 쉽게 할 수 있습니다. 아래는 `@Log4j2` 어노테이션의 주요 속성과 기능에 대한 설명입니다.
