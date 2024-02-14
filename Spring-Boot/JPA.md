@@ -116,9 +116,11 @@ public interface UserRepository extends JpaRepository<User, Long> {
 ### Pagination
 
 - Pageable 객체 설정
-```java
 
+```java
+Pageable pageable = PageRequest.of(request.getPageNumber(), request.getPageSize(), Sort.by(Sort.Direction.DESC,"sndDttm"));
 ```
+
 - 두개의 Page<>  객체를 합치는 예제
 
 ```java
