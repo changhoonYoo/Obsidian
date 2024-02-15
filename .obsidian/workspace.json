@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Spring-Boot/FeignClient.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Spring-Boot/FeignClient.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Spring-Boot/FeignClient.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/JPA.md"
+                "file": "Spring-Boot/FeignClient.md"
               }
             }
           }
@@ -159,11 +159,11 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
+    "Spring-Boot/JPA.md",
     "Docker/docker 명령어.md",
     "Linux/Linux 명령어.md",
     "Spring-Boot/restAPI.md",
     "Docker",
-    "Spring-Boot/JPA.md",
     "Intellij/인텔리제이 기본 설정.md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
