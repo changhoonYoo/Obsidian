@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/ByteArray To MultipartFile.md",
+                "file": "Java/매개변수와 전달인자.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/ByteArray To MultipartFile.md",
+                "file": "Java/매개변수와 전달인자.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/ByteArray To MultipartFile.md",
+                "file": "Java/매개변수와 전달인자.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/ByteArray To MultipartFile.md"
+                "file": "Java/매개변수와 전달인자.md"
               }
             }
           }
@@ -159,8 +159,9 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
-    "Spring-Boot/FeignClient.md",
     "Spring-Boot/ByteArray To MultipartFile.md",
+    "Java/매개변수와 전달인자.md",
+    "Spring-Boot/FeignClient.md",
     "Spring-Boot/JPA.md",
     "Docker/docker 명령어.md",
     "Linux/Linux 명령어.md",
@@ -188,7 +189,6 @@
     "Spring-Boot/스프링 마스터.md",
     "Database/R2DBC.md",
     "블로킹.md",
-    "Network/로드 밸런싱.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
