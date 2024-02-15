@@ -4,5 +4,6 @@
   "defaultViewMode": "preview",
   "readableLineLength": true,
   "showLineNumber": false,
-  "tabSize": 3
+  "tabSize": 3,
+  "alwaysUpdateLinks": true
 }

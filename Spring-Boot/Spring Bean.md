@@ -18,7 +18,7 @@ Spring을 비롯해 많은 Spring Container는 자신이 관리하는 `Bean`의
 ## @Bean 어노테이션의 어트리뷰트 사용
 
 
-[@Bean](Annotation#^7f2fcd)`(initMethod = "init", destroyMethod = "close")`와 같이 설정 정보에 메서드를 지정가능하다.
+[@Bean](Annotation.md#^7f2fcd)`(initMethod = "init", destroyMethod = "close")`와 같이 설정 정보에 메서드를 지정가능하다.
 
 ```java
 @Configuration
