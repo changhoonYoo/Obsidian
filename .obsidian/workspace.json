@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
-                "mode": "preview",
+                "file": "Spring-Boot/배포.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Spring-Boot/배포.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md",
+                "file": "Spring-Boot/배포.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Intellij/인텔리제이 기본 설정.md"
+                "file": "Spring-Boot/배포.md"
               }
             }
           }
@@ -159,6 +159,8 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
+    "Intellij/인텔리제이 기본 설정.md",
+    "Spring-Boot/배포.md",
     "Spring-Boot/ByteArray To MultipartFile.md",
     "Spring-Boot/properties.md",
     "Spring-Boot/스프링 마스터.md",
@@ -170,7 +172,6 @@
     "Linux/Linux 명령어.md",
     "Spring-Boot/restAPI.md",
     "Docker",
-    "Intellij/인텔리제이 기본 설정.md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Error-Log/Spring Boot Error.md",
@@ -188,7 +189,6 @@
     "Java/instanceof.md",
     "Spring-Boot/JWT.md",
     "Database/R2DBC.md",
-    "블로킹.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
