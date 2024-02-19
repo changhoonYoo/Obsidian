@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/Annotation.md",
-                "mode": "source",
+                "file": "Linux/Linux 명령어.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/Annotation.md",
+                "file": "Linux/Linux 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/Annotation.md",
+                "file": "Linux/Linux 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/Annotation.md"
+                "file": "Linux/Linux 명령어.md"
               }
             }
           }
@@ -157,10 +157,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fa44a04103e5f95c",
+  "active": "42893717e3a5ad63",
   "lastOpenFiles": [
-    "Linux/Linux 명령어.md",
+    "Linux/배포.md",
     "Spring-Boot/Annotation.md",
+    "Linux/Linux 명령어.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/properties.md",
     "Spring-Boot/배포.md",
@@ -188,7 +189,6 @@
     "Java/HttpSession.md",
     "Java/instanceof.md",
     "Spring-Boot/JWT.md",
-    "Database/R2DBC.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
