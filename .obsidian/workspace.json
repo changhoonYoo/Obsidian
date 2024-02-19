@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Git/Git 명령어 정리.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Git/Git 명령어 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Git/Git 명령어 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Linux 명령어.md"
+                "file": "Git/Git 명령어 정리.md"
               }
             }
           }
@@ -159,9 +159,10 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
+    "Git/깃허브 Commit Message.md",
+    "Linux/Linux 명령어.md",
     "Linux/배포.md",
     "Spring-Boot/Annotation.md",
-    "Linux/Linux 명령어.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/properties.md",
     "Spring-Boot/배포.md",
@@ -174,7 +175,6 @@
     "Docker/docker 명령어.md",
     "Spring-Boot/restAPI.md",
     "Docker",
-    "Git/깃허브 Commit Message.md",
     "Error-Log/Spring Boot Error.md",
     "Error-Log/Entity + Builder Error.md",
     "Pasted image 20240213094227.png",
