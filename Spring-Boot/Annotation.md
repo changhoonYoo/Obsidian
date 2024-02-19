@@ -971,6 +971,45 @@ public class User {
 위의 코드에서 `temporaryData` 필드에 `@Transient` 어노테이션이 적용되어 있습니다. 이 필드는 데이터베이스에 매핑되지 않으며, 따라서 해당 필드의 값은 영속성 컨텍스트에 저장되지 않습니다.
 
 `@Transient`를 사용하는 이유로는 데이터베이스에 저장할 필요가 없는 특정 정보나 계산된 값을 표현할 때, 또는 특정 필드를 무시하고 싶을 때 사용될 수 있습니다.
+## <span style="color:darkorange">@Validated</span>
+
+`@Validated` 어노테이션은 Spring MVC에서 사용되는 것으로, 메소드 파라미터나 리턴 타입에 대한 검증을 수행할 때 사용됩니다. 
+주로 `@PathVariable`, `@RequestParam`, `@RequestHeader` 등의 어노테이션과 함께 사용됩니다.
+
+`@Validated` 어노테이션을 사용하면, 해당 메소드의 파라미터나 리턴 타입에 대한 검증이 수행됩니다. 이때 검증은 `javax.validation` 패키지에 있는 어노테이션들을 사용하여 정의됩니다. 이 어노테이션들은 예를 들어 `@NotNull`, `@Size`, `@Pattern` 등이 있습니다.
+
+예를 들어, 다음과 같이 `@Validated` 어노테이션을 사용하여 메소드 파라미터에 대한 검증을 수행할 수 있습니다.
+
+```java
+import org.springframework.validation.annotation.Validated; 
+import org.springframework.web.bind.annotation.PathVariable; 
+import org.springframework.web.bind.annotation.RestController; 
+
+import javax.validation.constraints.NotBlank;
+
+@RestController 
+@Validated 
+public class MyController { 
+
+	@GetMapping("/010-number/{headNumber}-{tailNumber}") 
+	public ResponseEntity<?> recommend( 
+	@PathVariable("headNumber") @NotBlank String headNumber, 
+	@PathVariable("tailNumber") @NotBlank String tailNumber) { 
+	
+	// 경로 변수가 숫자인 경우에만 실행되는 로직 
+	int head = Integer.parseInt(headNumber); 
+	int tail = Integer.parseInt(tailNumber); 
+	return ResponseEntity.ok("Head Number: " + head + ", Tail Number: " + tail); 
+	} 
+}
+```
+
+이 코드에서 `@NotBlank` 어노테이션은 파라미터 값이 비어있지 않은지 검증합니다. 만약 비어있다면, `MethodArgumentNotValidException` 예외가 발생하고 클라이언트에게 `400 Bad Request` 응답이 반환됩니다.
+
+`@Validated` 어노테이션은 `@Controller`, `@RestController`, `@Service`, `@Component` 등의 빈에 사용할 수 있습니다. 이 어노테이션은 메소드 파라미터나 리턴 타입에 대한 검증을 수행하기 때문에, 메소드에 `@Validated` 어노테이션을 사용하면 해당 메소드의 파라미터나 리턴 타입에 대한 검증이 수행됩니다.
+
+---
+
 ## <span style="color:darkorange">@Value</span>
 `@Value`는 스프링 프레임워크에서 제공하는 어노테이션 중 하나로, 주로 프로퍼티 값을 주입받아 필드에 할당하고자 할 때 사용됩니다. 이 어노테이션은 `@ConfigurationProperties`와 유사하지만, 좀 더 간편한 형태로 사용할 수 있습니다.
 
