@@ -157,10 +157,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "42893717e3a5ad63",
+  "active": "fa44a04103e5f95c",
   "lastOpenFiles": [
-    "Git/Git 명령어 정리.md",
+    "Linux/Linux 명령어.md",
     "Spring-Boot/Annotation.md",
+    "Git/Git 명령어 정리.md",
     "Spring-Boot/properties.md",
     "Spring-Boot/배포.md",
     "Intellij/인텔리제이 기본 설정.md",
@@ -170,7 +171,6 @@
     "Spring-Boot/FeignClient.md",
     "Spring-Boot/JPA.md",
     "Docker/docker 명령어.md",
-    "Linux/Linux 명령어.md",
     "Spring-Boot/restAPI.md",
     "Docker",
     "Git/깃허브 Commit Message.md",
