@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
-                "mode": "preview",
+                "file": "Linux/배포.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Linux/배포.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Linux/배포.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git 명령어 정리.md"
+                "file": "Linux/배포.md"
               }
             }
           }
@@ -159,11 +159,11 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
-    "Git/깃허브 Commit Message.md",
     "Linux/Linux 명령어.md",
     "Linux/배포.md",
-    "Spring-Boot/Annotation.md",
     "Git/Git 명령어 정리.md",
+    "Git/깃허브 Commit Message.md",
+    "Spring-Boot/Annotation.md",
     "Spring-Boot/properties.md",
     "Spring-Boot/배포.md",
     "Intellij/인텔리제이 기본 설정.md",
