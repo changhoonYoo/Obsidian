@@ -394,6 +394,13 @@ Spring Boot에서 해당 DTO를 컨트롤러에서 반환할 때 자동으로 JS
 
 이와 유사한 방법은 다른 언어와 프레임워크에서도 사용할 수 있으며, 해당 언어 및 프레임워크의 문서를 참조하여 구체적인 방법을 확인할 수 있습니다.
 
+- 속성
+	1. `JsonInclude.Include.ALWAYS`: 항상 포함됩니다.
+	2. `JsonInclude.Include.NON_NULL`: `null` 값이 아닌 경우에만 포함됩니다.
+	3. `JsonInclude.Include.NON_ABSENT`: `Optional`과 같은 경우에만 포함됩니다.
+	4. `JsonInclude.Include.NON_EMPTY`: 값이 비어있지 않은 경우에만 포함됩니다.
+	5. `JsonInclude.Include.CUSTOM`: 사용자 지정 필터를 사용하여 포함 여부를 결정할 수 있습니다.
+
 ---
 ## <span style="color:darkorange">@Log4j2</span>
 
