@@ -1,4 +1,4 @@
-### - 자주 사용하는 명령어
+### 자주 사용하는 명령어
 
 Git은 버전 관리 시스템으로, 프로젝트를 효과적으로 관리할 수 있도록 도와주는 도구입니다. 아래는 Git에서 자주 사용되는 명령어 몇 가지입니다:
 
@@ -34,7 +34,7 @@ Git은 버전 관리 시스템으로, 프로젝트를 효과적으로 관리할 
     
     - `gitignore`: Git이 무시해야 할 파일 및 디렉토리를 지정하는 파일입니다.
 
-### - 프로젝트 깃허브에 올리기
+### 프로젝트 깃허브에 올리기
 
 프로젝트를 GitHub 레포지토리에 올리려면 다음 단계를 따르세요:
 
@@ -87,4 +87,33 @@ Git은 버전 관리 시스템으로, 프로젝트를 효과적으로 관리할 
 `git reset HEAD^`
 
 이 명령어는 가장 최근의 커밋을 취소하고 해당 커밋으로 인한 변경 사항을 스테이징 영역으로 되돌립니다. 이후에 변경 사항을 워킹 디렉토리에서 수정할 수 있습니다.
+
+
+---
+
+### git stash
+
+`git stash` 명령어는 현재 작업 중인 변경사항을 임시로 저장하는 데 사용됩니다. 이를 통해 변경사항을 임시로 저장하고 나중에 다시 적용할 수 있습니다.
+
+1. `git stash save "message"`: 변경사항을 스택에 저장합니다. `"message"`는 stash에 대한 설명을 의미합니다.
+    
+2. `git stash list`: 저장된 stash 목록을 표시합니다.
+    
+3. `git stash show`: 현재 stash에 대한 변경사항을 표시합니다.
+    
+4. `git stash show -p`: 현재 stash에 대한 변경사항을 패치 형식으로 표시합니다.
+    
+5. `git stash apply`: 최신 stash를 적용합니다. 이 명령어는 stash를 스택에서 제거하지 않습니다.
+    
+6. `git stash apply stash@{n}`: 특정 stash를 적용합니다. `stash@{n}`은 stash 목록에서 해당 stash의 인덱스를 나타냅니다.
+    
+7. `git stash pop`: 최신 stash를 적용하고 스택에서 제거합니다.
+    
+8. `git stash drop`: 최신 stash를 제거합니다.
+    
+9. `git stash drop stash@{n}`: 특정 stash를 제거합니다.
+    
+10. `git stash clear`: 모든 stash를 제거합니다.
+    
+11. `git stash branch <branchname> [<stash>]`: 새로운 브랜치를 만들고 stash를 적용합니다.
 
