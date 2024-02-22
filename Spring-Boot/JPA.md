@@ -111,6 +111,34 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 ### QueryDsl
 
+```java
+public Page<NoticeListResponseDTO> getNoticeList(NoticeListRequestDTO request, Pageable pageable) {  
+  
+    QNotice qNotice = QNotice.notice;  
+    BooleanBuilder builder = new BooleanBuilder();  
+  
+    if(StringUtils.hasText(request.getKeywordValue())) {  
+        switch (request.getKeywordValue()) {  
+            case "title" -> builder.and(qNotice.title.like("%" + request.getKeyword() + "%"));  
+            case "content" -> builder.and(qNotice.bodyTxt.like("%" + request.getKeyword() + "%"));  
+        }  
+    }  
+    builder.and(qNotice.id.brdId.eq("notice"));  
+  
+    QueryResults<Notice> queryResults = queryFactory.selectFrom(qNotice)  
+            .where(builder)  
+            .offset(pageable.getOffset())  
+            .limit(pageable.getPageSize())  
+            .fetchResults();  
+  
+    List<NoticeListResponseDTO> response = queryResults.getResults()  
+            .stream()  
+            .map(NoticeListResponseDTO::new)  
+            .toList();  
+      
+    return new PageImpl<>(response, pageable, queryResults.getTotal());  
+}
+```
 
 ---
 ### Pagination
