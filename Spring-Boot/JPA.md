@@ -111,6 +111,25 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 ### QueryDsl
 
+- controller
+```java
+@GetMapping("/notice")  
+public ResponseEntity<?> getNoticeList(@ModelAttribute NoticeListRequestDTO request) {  
+    try {  
+        Pageable pageable =  
+                PageRequest.of(  
+                        request.getPageNumber(),  
+                        request.getPageSize(),  
+                        Sort.by(Sort.Order.asc("mainYn"), Sort.Order.desc("regDttm")));  
+        Page<NoticeListResponseDTO> response = customerService.getNoticeList(request, pageable);  
+        return ResponseEntity.ok(response);  
+    } catch (Exception e) {  
+        log.error("공지사항 리스트 조회 중 오류 발생", e);  
+        return ResponseEntity.internalServerError().body("공지사항 리스트 조회 중 오류 발생");  
+    }  
+}
+```
+- service
 ```java
 public Page<NoticeListResponseDTO> getNoticeList(NoticeListRequestDTO request, Pageable pageable) {  
   
@@ -127,6 +146,7 @@ public Page<NoticeListResponseDTO> getNoticeList(NoticeListRequestDTO request, P
   
     QueryResults<Notice> queryResults = queryFactory.selectFrom(qNotice)  
             .where(builder)  
+            .orderBy(qNotice.mainYn.asc(), qNotice.regDttm.desc())  
             .offset(pageable.getOffset())  
             .limit(pageable.getPageSize())  
             .fetchResults();  
@@ -135,7 +155,7 @@ public Page<NoticeListResponseDTO> getNoticeList(NoticeListRequestDTO request, P
             .stream()  
             .map(NoticeListResponseDTO::new)  
             .toList();  
-      
+    log.info(response.toString());  
     return new PageImpl<>(response, pageable, queryResults.getTotal());  
 }
 ```
