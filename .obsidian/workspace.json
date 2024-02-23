@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "958e3767f23cba46",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,7 +168,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "42893717e3a5ad63",
+  "active": "958e3767f23cba46",
   "lastOpenFiles": [
     "Linux/Linux 명령어.md",
     "chmod2.png",
