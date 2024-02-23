@@ -444,3 +444,8 @@ vi 혹은 vim은 대부분의 리눅스에 기본적으로 설치되어 있는 �
 
 ---
 
+
+
+### <span style="color:#87CEEB">chmod</span>
+
+파일 소유자와 시스템 관리자는 chmod를 통해 
