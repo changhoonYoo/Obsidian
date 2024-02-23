@@ -58,7 +58,7 @@ $ mv afile /opt/
 ```
 
 - - -
-###<span style="color:#87CEEB">rm</span>
+### <span style="color:#87CEEB">rm</span>
 
 remove의 약자, 파일 또는 디렉터리 삭제
 
@@ -106,8 +106,7 @@ $ touch -r afile bfile
 
 ---
 
-
-<span style="color:#87CEEB">echo</span>
+### <span style="color:#87CEEB">echo</span>
 
 echo는  어떤 문자열을 화면에 보여줄 때 사용, echo와 리다이렉션을 사용해 파일을 생성, 추가하는 작업을 많이 함
 

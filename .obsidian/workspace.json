@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md",
+                "file": "Linux/쉘 스크립트.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md",
+                "file": "Linux/쉘 스크립트.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md",
+                "file": "Linux/쉘 스크립트.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md"
+                "file": "Linux/쉘 스크립트.md"
               }
             }
           }
@@ -159,12 +159,13 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
+    "Linux/Linux 명령어.md",
+    "Linux/쉘 스크립트.md",
+    "Linux/배포.md",
+    "RabbitMq/RabbitMq 개념.md",
     "Git/Git 명령어 정리.md",
     "Spring-Boot/JPA.md",
     "Java/Java 문법.md",
-    "Linux/쉘 스크립트.md",
-    "Linux/배포.md",
-    "Linux/Linux 명령어.md",
     "Spring-Boot/Annotation.md",
     "Java/매개변수와 전달인자.md",
     "Git/깃허브 Commit Message.md",
@@ -188,7 +189,6 @@
     "Spring-Boot/Server Sent Event.md",
     "Java/Exception.md",
     "Java/HttpSession.md",
-    "Java/instanceof.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
