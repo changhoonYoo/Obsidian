@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/배포.md",
+                "file": "Docker/docker 명령어.md",
                 "mode": "preview",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/배포.md",
+                "file": "Docker/docker 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/배포.md",
+                "file": "Docker/docker 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/배포.md"
+                "file": "Docker/docker 명령어.md"
               }
             }
           }
@@ -172,9 +172,9 @@
   },
   "active": "958e3767f23cba46",
   "lastOpenFiles": [
+    "Linux/배포.md",
     "Linux/Linux 명령어.md",
     "chmod2.png",
-    "Linux/배포.md",
     "Linux/쉘 스크립트.md",
     "chmod.png",
     "RabbitMq/RabbitMq 개념.md",
