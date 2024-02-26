@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/docker 명령어.md",
+                "file": "Linux/Linux 명령어.md",
                 "mode": "preview",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker/docker 명령어.md",
+                "file": "Linux/Linux 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker/docker 명령어.md",
+                "file": "Linux/Linux 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker/docker 명령어.md"
+                "file": "Linux/Linux 명령어.md"
               }
             }
           }
@@ -172,6 +172,7 @@
   },
   "active": "958e3767f23cba46",
   "lastOpenFiles": [
+    "Docker/docker 명령어.md",
     "Linux/배포.md",
     "Linux/Linux 명령어.md",
     "chmod2.png",
@@ -190,7 +191,6 @@
     "Spring-Boot/ByteArray To MultipartFile.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/FeignClient.md",
-    "Docker/docker 명령어.md",
     "Spring-Boot/restAPI.md",
     "Docker",
     "Error-Log/Spring Boot Error.md",
