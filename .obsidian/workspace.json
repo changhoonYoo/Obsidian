@@ -23,9 +23,11 @@
             "id": "958e3767f23cba46",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.8"
+                "file": "Linux/배포.md",
+                "mode": "preview",
+                "source": false
               }
             }
           }
