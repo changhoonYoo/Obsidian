@@ -256,41 +256,35 @@ public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, Str
 
 ```java
 public List<FrequentlySentDTO> getFrequentlySent(String userKey) {  
-    List<FrequentlySentDTO> testSends = testSendRepository.findRcvPhnIdOrderByCountDesc(userKey)  
+    String oneMonthBeforeDate = CurrentTime.getMonthBeforeDate(1, "yyyyMMdd");  
+    List<FrequentlySentDTO> aSends = ASendRepository.findRcvPhnIdOrderByCountDesc(userKey, oneMonthBeforeDate)  
             .stream()  
-            .map(row -> {  
-                String rcvPhnId = (String) row[0];  
-                int count = ((Number) row[1]).intValue();  
-                List<Buddy> buddies = buddyRepository.findByKeyCommNoAndUsrKey(rcvPhnId, userKey);  
-                if (!buddies.isEmpty()) {  
-                    Buddy buddy = buddies.get(0);  
-                    return new FrequentlySentDTO(buddy.getBuddyNm(), buddy.getBuddySeqNo(), buddy.getPhnId(), count);  
-                }  
-                return null;  
-            })  
+            .map(row -> convertFrequentlySentDTO(row, userKey))  
             .filter(Objects::nonNull)  
             .toList();  
-    List<FrequentlySentDTO> test2Sends = test2SendRepository.findRcvPhnIdOrderByCountDesc(userKey)  
+    List<FrequentlySentDTO> bSends = BSendRepository.findRcvPhnIdOrderByCountDesc(userKey, oneMonthBeforeDate)  
             .stream()  
-            .map(row -> {  
-                String rcvPhnId = (String) row[0];  
-                int count = ((Number) row[1]).intValue();  
-                List<Buddy> buddies = buddyRepository.findByKeyCommNoAndUsrKey(rcvPhnId, userKey);  
-                if (!buddies.isEmpty()) {  
-                    Buddy buddy = buddies.get(0);  
-                    return new FrequentlySentDTO(buddy.getBuddyNm(), buddy.getBuddySeqNo(), buddy.getPhnId(), count);  
-                }  
-                return null;  
-            })  
+            .map(row -> convertFrequentlySentDTO(row, userKey))  
             .filter(Objects::nonNull)  
-            .toList(); 
-    List<FrequentlySentDTO> combinedList = Stream.concat(testSends.stream(), test2Sends.stream())  
+            .toList();  
+    List<FrequentlySentDTO> combinedList = Stream.concat(aSends.stream(), bSends.stream())  
             .toList();  
   
     return combinedList.stream()  
             .sorted(Comparator.comparing(FrequentlySentDTO::getCount).reversed())  
             .limit(4)  
             .toList();  
+}  
+  
+private FrequentlySentDTO convertFrequentlySentDTO(Object[] row, String userKey) {  
+    String rcvPhnId = (String) row[0];  
+    int count = ((Number) row[1]).intValue();  
+    List<Buddy> buddies = buddyRepository.findByKeyCommNoAndUsrKey(rcvPhnId, userKey);  
+    if (!buddies.isEmpty()) {  
+        Buddy buddy = buddies.get(0);  
+        return new FrequentlySentDTO(buddy.getBuddyNm(), buddy.getBuddySeqNo(), buddy.getKeyCommNo(), count);
+    }  
+    return null;
 }
 ```
 
