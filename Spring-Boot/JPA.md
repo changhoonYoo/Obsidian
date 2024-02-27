@@ -250,3 +250,47 @@ public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, Str
 
 
 ---
+
+
+### 두 테이블의 count 데이터 합치기
+
+```java
+public List<FrequentlySentDTO> getFrequentlySent(String userKey) {  
+    List<FrequentlySentDTO> testSends = testSendRepository.findRcvPhnIdOrderByCountDesc(userKey)  
+            .stream()  
+            .map(row -> {  
+                String rcvPhnId = (String) row[0];  
+                int count = ((Number) row[1]).intValue();  
+                List<Buddy> buddies = buddyRepository.findByKeyCommNoAndUsrKey(rcvPhnId, userKey);  
+                if (!buddies.isEmpty()) {  
+                    Buddy buddy = buddies.get(0);  
+                    return new FrequentlySentDTO(buddy.getBuddyNm(), buddy.getBuddySeqNo(), buddy.getPhnId(), count);  
+                }  
+                return null;  
+            })  
+            .filter(Objects::nonNull)  
+            .toList();  
+    List<FrequentlySentDTO> test2Sends = test2SendRepository.findRcvPhnIdOrderByCountDesc(userKey)  
+            .stream()  
+            .map(row -> {  
+                String rcvPhnId = (String) row[0];  
+                int count = ((Number) row[1]).intValue();  
+                List<Buddy> buddies = buddyRepository.findByKeyCommNoAndUsrKey(rcvPhnId, userKey);  
+                if (!buddies.isEmpty()) {  
+                    Buddy buddy = buddies.get(0);  
+                    return new FrequentlySentDTO(buddy.getBuddyNm(), buddy.getBuddySeqNo(), buddy.getPhnId(), count);  
+                }  
+                return null;  
+            })  
+            .filter(Objects::nonNull)  
+            .toList(); 
+    List<FrequentlySentDTO> combinedList = Stream.concat(testSends.stream(), test2Sends.stream())  
+            .toList();  
+  
+    return combinedList.stream()  
+            .sorted(Comparator.comparing(FrequentlySentDTO::getCount).reversed())  
+            .limit(4)  
+            .toList();  
+}
+```
+
