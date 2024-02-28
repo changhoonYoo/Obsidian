@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Git/Git 명령어 정리.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Git/Git 명령어 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Git/Git 명령어 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Linux 명령어.md"
+                "file": "Git/Git 명령어 정리.md"
               }
             }
           }
@@ -170,15 +170,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fa44a04103e5f95c",
+  "active": "958e3767f23cba46",
   "lastOpenFiles": [
+    "Linux/Linux 명령어.md",
     "SVN",
     "Java/Java 문법.md",
     "Spring-Boot/배포.md",
     "Java/매개변수와 전달인자.md",
     "Java/Exception.md",
     "Java/HttpSession.md",
-    "Linux/Linux 명령어.md",
     "Spring-Boot/JPA.md",
     "Linux/배포.md",
     "Docker/docker 명령어.md",
@@ -212,7 +212,6 @@
     "Excalidraw",
     "RabbitMq",
     "Pasted image 20231207090811.png",
-    "Thymeleaf",
-    "Intellij"
+    "Thymeleaf"
   ]
 }
