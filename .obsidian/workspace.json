@@ -170,8 +170,9 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "958e3767f23cba46",
+  "active": "fa44a04103e5f95c",
   "lastOpenFiles": [
+    "SVN",
     "Java/Java 문법.md",
     "Spring-Boot/배포.md",
     "Java/매개변수와 전달인자.md",
@@ -203,7 +204,6 @@
     "Pasted image 20240201130055.png",
     "Spring-Boot/블로킹&논블로킹.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
-    "Spring-Boot/Server Sent Event.md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
