@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md",
+                "file": "Linux/배포.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md",
+                "file": "Linux/배포.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md",
+                "file": "Linux/배포.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RabbitMq/RabbitMq 개념.md"
+                "file": "Linux/배포.md"
               }
             }
           }
@@ -172,6 +172,7 @@
   },
   "active": "958e3767f23cba46",
   "lastOpenFiles": [
+    "RabbitMq/RabbitMq 개념.md",
     "Git/Git 명령어 정리.md",
     "Linux/Linux 명령어.md",
     "SVN",
@@ -186,7 +187,6 @@
     "chmod2.png",
     "Linux/쉘 스크립트.md",
     "chmod.png",
-    "RabbitMq/RabbitMq 개념.md",
     "Spring-Boot/Annotation.md",
     "Git/깃허브 Commit Message.md",
     "Spring-Boot/properties.md",
