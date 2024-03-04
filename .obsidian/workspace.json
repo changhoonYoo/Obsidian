@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "419662cea0e2af4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "arreo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RabbitMq/자바코드.md",
+                "file": "arreo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RabbitMq/자바코드.md",
+                "file": "arreo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RabbitMq/자바코드.md"
+                "file": "arreo.md"
               }
             }
           }
@@ -170,10 +182,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "958e3767f23cba46",
+  "active": "419662cea0e2af4a",
   "lastOpenFiles": [
-    "RabbitMq/RabbitMq 개념.md",
     "RabbitMq/자바코드.md",
+    "arreo.md",
+    "RabbitMq/RabbitMq 개념.md",
     "Linux/배포.md",
     "Git/Git 명령어 정리.md",
     "Linux/Linux 명령어.md",
@@ -204,7 +217,6 @@
     "Linux",
     "Pasted image 20240201130055.png",
     "Spring-Boot/블로킹&논블로킹.md",
-    "Thymeleaf/타임리프 (Thymeleaf).md",
     "Network",
     "Pasted image 20231214155842.png",
     "Database",
