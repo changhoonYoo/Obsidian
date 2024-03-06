@@ -38,7 +38,7 @@
               "type": "markdown",
               "state": {
                 "file": "Linux/배포.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -184,12 +184,12 @@
   },
   "active": "419662cea0e2af4a",
   "lastOpenFiles": [
+    "Linux/Linux 명령어.md",
+    "Linux/배포.md",
     "Spring-Boot/Tomcat & Apache.md",
     "Spring-Boot/Spring Bean.md",
     "Spring-Boot/Annotation.md",
-    "Linux/배포.md",
     "Linux/쉘 스크립트.md",
-    "Linux/Linux 명령어.md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "arreo.md",
