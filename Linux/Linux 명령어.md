@@ -490,3 +490,33 @@ chmod [옵션] 권한 파일이름
 예를 들어, `df -h` 명령어는 파일 시스템의 디스크 여유 공간을 사람이 읽기 쉬운 형식으로 출력합니다.
 
 ---
+
+### <span style="color:#87CEEB">curl</span>
+
+`curl`은 "Client URL"의 약자입니다.
+`curl` 명령어는 URL을 사용하여 데이터를 전송하거나 받는 명령줄 도구입니다. 주로 HTTP, HTTPS, FTP 등의 프로토콜을 통해 데이터를 송수신할 때 사용됩니다. 주요 기능과 옵션은 다음과 같습니다:
+
+- 데이터 전송: `curl`을 사용하여 웹 서버로 요청을 보내고, 서버의 응답을 받을 수 있습니다.
+- 파일 다운로드: `curl`을 사용하여 웹에서 파일을 다운로드할 수 있습니다.
+- API 호출: RESTful API 등의 HTTP 요청을 보내고 응답을 받을 수 있습니다.
+- 다양한 프로토콜 지원: HTTP, HTTPS, FTP, SCP, SFTP 등 다양한 프로토콜을 지원합니다.
+
+`curl` 명령어는 다양한 옵션을 제공하여 요청의 세부사항을 지정할 수 있습니다. 예를 들어, `-X` 옵션은 요청 메서드를 지정하고, `-d` 옵션은 POST 요청의 데이터를 지정합니다.
+
+일반적인 사용 예시는 다음과 같습니다:
+
+```bash
+# URL에 GET 요청 보내기 
+curl https://example.com  
+# URL에서 파일 다운로드 
+curl -O https://example.com/file.zip  
+# POST 요청 보내기 
+curl -X POST https://example.com/api -d "param1=value1&param2=value2"  
+# HTTP 요청 헤더 지정 
+curl -H "Content-Type: application/json" https://example.com/api  
+# 인증 정보 포함하여 요청 보내기 
+curl -u username:password https://example.com/api
+```
+
+---
+
