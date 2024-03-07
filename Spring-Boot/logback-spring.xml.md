@@ -6,6 +6,7 @@
 <!-- 60초마다 설정 파일의 변경을 확인 하여 변경시 갱신 -->  
 <configuration scan="true" scanPeriod="60 seconds">  
   
+  
     <!--Environment 내의 프로퍼티들을 개별적으로 설정할 수도 있다.-->  
     <springProperty scope="context" name="LOG_LEVEL" source="logging.level.root"/>  
     <!-- log file path -->  
@@ -68,17 +69,20 @@
     </appender>  
   
     <!-- root레벨 설정 -->  
-    <root level="${LOG_LEVEL}">  
-        <appender-ref ref="CONSOLE"/>  
-        <appender-ref ref="FILE"/>  
-        <appender-ref ref="Error"/>  
-    </root>  
+    <springProfile name="prod">  
+        <root level="${LOG_LEVEL}">  
+            <appender-ref ref="CONSOLE"/>  
+            <appender-ref ref="FILE"/>  
+            <appender-ref ref="Error"/>  
+        </root>  
+    </springProfile>  
   
-    <logger name="org.apache.ibatis" level="DEBUG" additivity="false">  
-        <appender-ref ref="CONSOLE"/>  
-        <appender-ref ref="FILE"/>  
-        <appender-ref ref="Error"/>  
-    </logger>  
+    <!-- prod 이외의 경우 로그파일을 생성하지 않음 -->  
+    <springProfile name="local">  
+        <root level="OFF">  
+            <appender-ref ref="CONSOLE"/>  
+        </root>  
+    </springProfile>  
   
     <!-- log4jdbc 옵션 설정 -->  
     <logger name="jdbc" level="OFF"/>  
