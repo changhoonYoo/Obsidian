@@ -218,20 +218,20 @@ ${PID:-} : 프로세스 아이디
 %C : 로깅이 발생한 클래스 명  
 %m : 로그 메시지  
 %n : 줄바꿈(new line)  
-%% : %를 출력  
+%% : %를 출력 
 %r : 애플리케이션 시작 이후부터 로깅이 발생한 시점까지의 시간(ms)
 
 아래 처럼 콘솔에 로그를 출력할 수도 있고
 
 
 ```xml
-    <!-- 콘솔에 로그를 남기는 것 -->
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <!-- 위에 PROPERTY로 정의한 LOG_PATTERN 가져다 사용하기 -->
-            <pattern>${LOG_PATTERN}</pattern>
-        </encoder>
-    </appender>
+<!-- 콘솔에 로그를 남기는 것 -->
+<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+  <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+		<!-- 위에 PROPERTY로 정의한 LOG_PATTERN 가져다 사용하기 -->
+		<pattern>${LOG_PATTERN}</pattern>
+  </encoder>
+</appender>
 ```
 
 아래 처럼 파일로 로그를 출력할 수도 있다.
@@ -362,4 +362,8 @@ CONSOLE,FILE,ERROR등을 출력한다고 볼 수 있다.
 
 3) **logback-spring.xml 파일**과 **.yml(.properties)**파일**** **둘다** 있으면
 
-=>**.yml(.properties) **파일****을 먼저 적용 후 **logback-spring.xml 파일 적용**.
+=>**.yml(.properties) **파일**을 먼저 적용 후 **logback-spring.xml 파일 적용**.
+
+---
+
+출처=https://samori.tistory.com/69
