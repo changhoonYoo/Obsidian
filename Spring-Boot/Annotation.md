@@ -1137,8 +1137,26 @@ public class AppRunner implements CommandLineRunner {
 위 코드에서 `MyComponent`는 `application.properties` 파일에서 정의한 값을 주입받아서 출력하는 간단한 예제입니다. `AppRunner`는 스프링 부트 애플리케이션이 실행될 때 `MyComponent`의 `printValues` 메서드를 호출하여 값을 출력합니다. 이때 `@Value` 어노테이션을 사용하여 프로퍼티 값을 주입받습니다.
 
 - - -
+## <span style="color:darkorange">@Qualifier</span>
+`@Qualifier`는 Spring 프레임워크에서 사용되는 애노테이션으로, 주입할 빈을 명시적으로 지정할 때 사용됩니다.
 
+Spring에서 같은 타입의 빈이 여러 개일 때, 어떤 빈을 주입해야 하는지를 구분하기 위해 `@Qualifier`를 사용합니다. 주로 의존성 주입(Dependency Injection) 시에 같은 타입의 빈이 여러 개일 때 발생하는 모호성을 해결하기 위해 활용됩니다.
 
+예를 들어, 다음과 같이 사용될 수 있습니다:
 
+javaCopy code
+```java
+@Component 
+public class MyService {          
+	private final MyRepository myRepository;      
+	@Autowired    
+	public MyService(@Qualifier("myRepositoryImpl") MyRepository myRepository) {
+	     this.myRepository = myRepository;     
+	} 
+}
+```
 
+위의 예제에서 `MyService` 클래스는 `MyRepository` 타입의 빈을 주입받습니다. 하지만 `MyRepository` 타입의 빈이 여러 개인 경우, `@Qualifier`를 사용하여 명시적으로 어떤 빈을 주입받을지 지정할 수 있습니다. 위의 코드에서는 `"myRepositoryImpl"`이라는 이름을 가진 빈을 주입받도록 지정하고 있습니다.
+
+---
 
