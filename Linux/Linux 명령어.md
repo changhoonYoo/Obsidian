@@ -520,3 +520,49 @@ curl -u username:password https://example.com/api
 
 ---
 
+### <span style="color:#87CEEB">systemctl</span>
+
+`systemctl`은 시스템 관리 및 서비스 제어를 위한 명령줄 도구입니다. 주로 리눅스 시스템에서 사용되며, 서비스의 시작, 중지, 다시 시작 및 상태 확인과 같은 작업을 수행할 수 있습니다. 몇 가지 일반적인 `systemctl` 명령어는 다음과 같습니다:
+
+1. **시스템 상태 확인**: 시스템의 현재 상태를 확인합니다.
+    
+    `systemctl status`
+    
+2. **서비스 시작**: 지정된 서비스를 시작합니다.
+    
+    `systemctl start servicename`
+    
+3. **서비스 중지**: 지정된 서비스를 중지합니다.
+    
+    `systemctl stop servicename`
+    
+4. **서비스 다시 시작**: 지정된 서비스를 중지하고 다시 시작합니다.
+    
+    `systemctl restart servicename`
+    
+5. **부팅 시 자동 시작 설정**: 서비스가 부팅 시 자동으로 시작되도록 설정합니다.
+    
+    `systemctl enable servicename`
+    
+6. **부팅 시 자동 시작 해제**: 서비스가 부팅 시 자동으로 시작되지 않도록 설정합니다.
+    
+    `systemctl disable servicename`
+    
+7. **부팅 시 서비스 상태 확인**: 서비스가 부팅 시 자동으로 시작되는지 여부를 확인합니다.
+    
+    `systemctl is-enabled servicename`
+    
+8. **부팅 시 서비스 실행 순서 설정**: 서비스가 부팅 시 자동으로 시작되는 순서를 설정합니다.
+    
+    `systemctl edit servicename`
+    
+9. **시스템 재부팅**: 시스템을 재부팅합니다.
+    
+    `systemctl reboot`
+    
+10. **시스템 종료**: 시스템을 종료합니다.
+    
+    `systemctl poweroff`
+    
+
+위 명령어는 일반적으로 사용되는 `systemctl` 명령어의 몇 가지 예시입니다. 이 외에도 시스템 상태 및 서비스 관리에 관련된 다양한 옵션이 있으며, `systemctl` 매뉴얼 페이지를 참조하여 자세한 정보를 확인할 수 있습니다. 예를 들어, `man systemctl` 명령어를 사용하여 매뉴얼 페이지를 열 수 있습니다.
