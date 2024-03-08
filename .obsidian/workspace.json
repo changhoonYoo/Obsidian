@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/배포.md",
+                "file": "Rest-Api/상태코드.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/배포.md",
+                "file": "Rest-Api/상태코드.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/배포.md",
+                "file": "Rest-Api/상태코드.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/배포.md"
+                "file": "Rest-Api/상태코드.md"
               }
             }
           }
@@ -184,11 +184,14 @@
   },
   "active": "958e3767f23cba46",
   "lastOpenFiles": [
+    "Linux/배포.md",
+    "Rest-Api/상태코드.md",
+    "Rest-Api",
+    "Spring-Boot/restAPI.md",
     "Spring-Boot/logback-spring.xml.md",
     "RabbitMq/자바코드.md",
     "Spring-Boot/Annotation.md",
     "Linux/Linux 명령어.md",
-    "Linux/배포.md",
     "Spring-Boot/Tomcat & Apache.md",
     "Spring-Boot/Spring Bean.md",
     "Linux/쉘 스크립트.md",
@@ -211,9 +214,7 @@
     "Spring-Boot/ByteArray To MultipartFile.md",
     "Spring-Boot/스프링 마스터.md",
     "Spring-Boot/FeignClient.md",
-    "Spring-Boot/restAPI.md",
     "Docker",
-    "Error-Log/Spring Boot Error.md",
     "Pasted image 20240213094227.png",
     "Linux",
     "Pasted image 20240201130055.png",
@@ -224,7 +225,6 @@
     "kuilcake",
     "Excalidraw",
     "RabbitMq",
-    "Pasted image 20231207090811.png",
-    "Thymeleaf"
+    "Pasted image 20231207090811.png"
   ]
 }
