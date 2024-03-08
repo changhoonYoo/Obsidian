@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/DBMS.md",
+                "file": "Linux/scp.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/DBMS.md",
+                "file": "Linux/scp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database/DBMS.md",
+                "file": "Linux/scp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/DBMS.md"
+                "file": "Linux/scp.md"
               }
             }
           }
@@ -183,8 +183,9 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
-    "Network/SSL.md",
     "Database/DBMS.md",
+    "Linux/scp.md",
+    "Network/SSL.md",
     "Linux/배포.md",
     "Docker/Docker 개념 정의.md",
     "Pasted image 20240308134508.png",
@@ -218,7 +219,6 @@
     "SVN",
     "Spring-Boot/배포.md",
     "Java/매개변수와 전달인자.md",
-    "Java/Exception.md",
     "chmod2.png",
     "chmod.png",
     "Docker",
