@@ -225,30 +225,53 @@ Pageable pageable = PageRequest.of(request.getPageNumber(), request.getPageSize(
 
 ```java
 
-public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, String number, Pageable pageable) throws IOException { 
-	// 각각의 쿼리 결과를 페이지네이션 없이 전체 데이터로 가져옴 
-	List<XmsSend> xmsSends = xmsSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100);
-	List<SmtSend> smtSends = smtSendRepository.findByUserKeyAndRcvPhnIdAndRsltVal(userKey, number, -100); 
-	// 각각의 쿼리 결과를 DTO로 변환 
-	List<ResultByNumberResponseDTO> resultList = new ArrayList<>(); 
-	resultList.addAll(convertXmsSendsToResultByNumberResponseDTOs(xmsSends)); 
-	resultList.addAll(convertSmtSendsToResultByNumberResponseDTOs(smtSends)); 
-	// 전체 결과를 정렬 
-	resultList.sort(Comparator.comparing(ResultByNumberResponseDTO::getSndDttm)
-	.reversed()); 
-	// 전체 결과에 대해 페이지네이션 수행 
-	int start = (int) pageable.getOffset(); 
-	int end = Math.min((start + pageable.getPageSize()), resultList.size()); 
-	List<ResultByNumberResponseDTO> pageContent = resultList.subList(start, end); 
-	// 전체 요소의 수 
-	int totalElements = resultList.size(); 
-	// 페이지네이션된 결과를 생성하여 반환 
-	return new PageImpl<>(pageContent, pageable, totalElements); 
+public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, String number, Pageable pageable) throws IOException {  
+    List<ASend> aSends;  
+    List<BSend> bSends;  
+    if (number.equals("all")) {  
+        String oneMonthBeforeDate = CurrentTime.getMonthBeforeDate(1,"yyyyMMdd");  
+        // 최근 한달 데이터만 가져오기  
+        aSends = aSendRepository.findByUserKeyAndRsltValAndDelYnAndSndDttmAfter(userKey, -100, "N", oneMonthBeforeDate);  
+        smtSends = smtSendRepository.findByUserKeyAndRsltValAndDelYnAndSndDttmAfter(userKey, -100, "N", oneMonthBeforeDate);  
+    } else {  
+        xmsSends = xmsSendRepository.findByUserKeyAndRcvPhnIdAndRsltValAndDelYn(userKey, number, -100, "N");  
+        smtSends = smtSendRepository.findByUserKeyAndRcvPhnIdAndRsltValAndDelYn(userKey, number, -100, "N");  
+    }  
+    List<ResultByNumberResponseDTO> resultList = new ArrayList<>();  
+    resultList.addAll(convertXmsSendsToResultByNumberResponseDTOs(xmsSends));  
+    resultList.addAll(convertSmtSendsToResultByNumberResponseDTOs(smtSends));  
+  
+    resultList.sort(Comparator.comparing(ResultByNumberResponseDTO::getSndDttm).reversed());  
+    int totalElements = resultList.size();  
+  
+    int start = (int) pageable.getOffset();  
+    int end = Math.min((start + pageable.getPageSize()), resultList.size());  
+    return new PageImpl<>(resultList.subList(start, end), pageable, totalElements);  
 }
 
 ```
 
+- 
 
+-  `return new PageImpl<>(pageContent, pageable, totalElements);`
+
+
+`public PageImpl(List<T> content, Pageable pageable, long total)`
+
+여기서:
+
+- `content`: 현재 페이지의 항목 리스트입니다.
+- `pageable`: 페이지 정보를 나타내는 `Pageable` 객체입니다.
+- `total`: 전체 항목 수입니다.
+
+`resultList.subList(start, end)`는 `resultList`에서 `start`부터 `end-1`까지의 부분 리스트를 반환합니다. 이것은 현재 페이지에 표시할 항목들을 의미합니다.
+
+따라서 `return new PageImpl<>(resultList.subList(start, end), pageable, totalElements);`는 다음과 같은 내용을 포함하는 새로운 `PageImpl` 객체를 생성하여 반환합니다:
+
+- 현재 페이지의 항목 리스트: `resultList`에서 `start`부터 `end-1`까지의 부분 리스트
+- 페이지 정보: `pageable`
+- 전체 항목 수: `totalElements`
+- 
 ---
 
 

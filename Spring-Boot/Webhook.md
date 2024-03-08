@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.concurrent.Executors; 
 import java.util.concurrent.ScheduledExecutorService; 
 import java.util.concurrent.TimeUnit; 
+
 public class WebhookNotifier { 
 
 	private final RestTemplate restTemplate; 
@@ -39,8 +40,7 @@ public class WebhookNotifier {
 	// 데이터베이스 변경을 감지하고 웹훅을 호출하는 메서드 
 	public void pollDatabaseAndNotify(JdbcTemplate jdbcTemplate) { 
 		// 주기적으로 데이터베이스를 폴링 변경 사항을 감지, 변경이 있을 때 웹훅을 호출 
-		ScheduledExecutorService scheduler = 
-			Executors.newScheduledThreadPool(1); 
+		ScheduledExecutorService scheduler= Executors.newScheduledThreadPool(1); 
 		scheduler.scheduleAtFixedRate(() -> { 
 			// 데이터베이스 쿼리를 통해 변경 사항 확인 
 			List<String> changes = jdbcTemplate.queryForList("SELECT change FROM changes_table", String.class); 
@@ -49,5 +49,19 @@ public class WebhookNotifier {
 				notifyWebhook(changes); 
 			} 
 		}, 0, 1, TimeUnit.MINUTES); // 1분마다 데이터베이스를 폴링 
-		Q} // 웹훅을 호출하여 변경 사항을 알림 private void notifyWebhook(List<String> changes) { // 웹훅 엔드포인트 URL String webhookUrl = "http://example.com/webhook"; // 웹훅 호출을 위한 요청 헤더 설정 HttpHeaders headers = new HttpHeaders(); headers.setContentType(MediaType.APPLICATION_JSON); // 웹훅 호출을 위한 요청 바디 설정 HttpEntity<List<String>> request = new HttpEntity<>(changes, headers); // 웹훅 호출 restTemplate.exchange(webhookUrl, HttpMethod.POST, request, Void.class); } }
+	} 
+	
+	// 웹훅을 호출하여 변경 사항을 알림 
+	private void notifyWebhook(List<String> changes) { 
+		// 웹훅 엔드포인트 URL 
+		String webhookUrl = "http://example.com/webhook"; 
+		// 웹훅 호출을 위한 요청 헤더 설정 
+		HttpHeaders headers = new HttpHeaders(); 
+		headers.setContentType(MediaType.APPLICATION_JSON); 
+		// 웹훅 호출을 위한 요청 바디 설정 
+		HttpEntity<List<String>> request = new HttpEntity<>(changes, headers); 
+		// 웹훅 호출 
+		restTemplate.exchange(webhookUrl, HttpMethod.POST, request, Void.class);
+	} 
+}
 ```
