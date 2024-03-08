@@ -232,14 +232,14 @@ public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, Str
         String oneMonthBeforeDate = CurrentTime.getMonthBeforeDate(1,"yyyyMMdd");  
         // 최근 한달 데이터만 가져오기  
         aSends = aSendRepository.findByUserKeyAndRsltValAndDelYnAndSndDttmAfter(userKey, -100, "N", oneMonthBeforeDate);  
-        smtSends = smtSendRepository.findByUserKeyAndRsltValAndDelYnAndSndDttmAfter(userKey, -100, "N", oneMonthBeforeDate);  
+        bSends = bSendRepository.findByUserKeyAndRsltValAndDelYnAndSndDttmAfter(userKey, -100, "N", oneMonthBeforeDate);  
     } else {  
-        xmsSends = xmsSendRepository.findByUserKeyAndRcvPhnIdAndRsltValAndDelYn(userKey, number, -100, "N");  
-        smtSends = smtSendRepository.findByUserKeyAndRcvPhnIdAndRsltValAndDelYn(userKey, number, -100, "N");  
+        aSends = aSendRepository.findByUserKeyAndRcvPhnIdAndRsltValAndDelYn(userKey, number, -100, "N");  
+        bSends = bSendRepository.findByUserKeyAndRcvPhnIdAndRsltValAndDelYn(userKey, number, -100, "N");  
     }  
     List<ResultByNumberResponseDTO> resultList = new ArrayList<>();  
-    resultList.addAll(convertXmsSendsToResultByNumberResponseDTOs(xmsSends));  
-    resultList.addAll(convertSmtSendsToResultByNumberResponseDTOs(smtSends));  
+    resultList.addAll(convertXmsSendsToResultByNumberResponseDTOs(aSends));  
+    resultList.addAll(convertSmtSendsToResultByNumberResponseDTOs(bSends));  
   
     resultList.sort(Comparator.comparing(ResultByNumberResponseDTO::getSndDttm).reversed());  
     int totalElements = resultList.size();  
@@ -251,14 +251,22 @@ public Page<ResultByNumberResponseDTO> getSendResultByNumber(String userKey, Str
 
 ```
 
-- 
+- `int end = Math.min((start + pageable.getPageSize()), resultList.size());`
+
+`resultList`라는 리스트가 있고, 페이지 번호(`start`)와 페이지 크기`pageable.getPageSize()`가 주어진 상황에서 현재 페이지의 마지막 항목 인덱스(`end`)를 계산하는 것입니다.
+
+여기서 `start`는 현재 페이지의 첫 번째 항목의 인덱스이고, `pageable.getPageSize()`는 한 페이지에 표시할 항목의 수입니다. 따라서 현재 페이지의 첫 번째 항목부터 시작하여 페이지 크기만큼의 항목을 포함하는 부분 리스트를 가져옵니다.
+
+그러나 만약 `resultList`의 크기가 현재 페이지의 마지막 인덱스(`start + pageable.getPageSize()`)보다 작다면, 전체 리스트 크기가 현재 페이지의 범위를 벗어나므로 `resultList`의 크기가 현재 페이지의 마지막 인덱스로 설정됩니다.
+
+이렇게 하면 페이지네이션을 구현할 때 현재 페이지의 범위를 벗어나지 않도록 보장할 수 있습니다. 예를 들어, 10개의 항목이 있는 리스트가 있고 현재 페이지가 2이며 한 페이지당 5개의 항목을 표시한다면, `start`는 5이고 `end`는 10이 될 것입니다.
+
 
 -  `return new PageImpl<>(pageContent, pageable, totalElements);`
 
+여기서:
 
 `public PageImpl(List<T> content, Pageable pageable, long total)`
-
-여기서:
 
 - `content`: 현재 페이지의 항목 리스트입니다.
 - `pageable`: 페이지 정보를 나타내는 `Pageable` 객체입니다.

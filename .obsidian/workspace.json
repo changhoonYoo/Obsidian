@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Rest-Api/용어.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Rest-Api/용어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/JPA.md",
+                "file": "Rest-Api/용어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/JPA.md"
+                "file": "Rest-Api/용어.md"
               }
             }
           }
@@ -184,6 +184,8 @@
   },
   "active": "958e3767f23cba46",
   "lastOpenFiles": [
+    "Spring-Boot/JPA.md",
+    "Rest-Api/용어.md",
     "Java/Java 문법.md",
     "Spring-Boot/Webhook.md",
     "Rest-Api/상태코드.md",
@@ -207,14 +209,12 @@
     "Java/매개변수와 전달인자.md",
     "Java/Exception.md",
     "Java/HttpSession.md",
-    "Spring-Boot/JPA.md",
     "Docker/docker 명령어.md",
     "chmod2.png",
     "chmod.png",
     "Spring-Boot/properties.md",
     "Intellij/인텔리제이 기본 설정.md",
     "Spring-Boot/ByteArray To MultipartFile.md",
-    "Spring-Boot/스프링 마스터.md",
     "Docker",
     "Pasted image 20240213094227.png",
     "Linux",
