@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Linux 명령어.md",
-                "mode": "source",
+                "file": "Rest-Api/상태코드.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Rest-Api/상태코드.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Rest-Api/상태코드.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Linux 명령어.md"
+                "file": "Rest-Api/상태코드.md"
               }
             }
           }
@@ -184,6 +184,7 @@
   },
   "active": "958e3767f23cba46",
   "lastOpenFiles": [
+    "Linux/Linux 명령어.md",
     "Spring-Boot/Webhook.md",
     "Pasted image 20240308103107.png",
     "Rest-Api/용어.md",
@@ -197,7 +198,6 @@
     "Spring-Boot/logback-spring.xml.md",
     "RabbitMq/자바코드.md",
     "Spring-Boot/Annotation.md",
-    "Linux/Linux 명령어.md",
     "Spring-Boot/Tomcat & Apache.md",
     "Spring-Boot/Spring Bean.md",
     "Linux/쉘 스크립트.md",
