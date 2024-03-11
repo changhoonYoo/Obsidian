@@ -38,6 +38,6 @@
 - 로그 보기
 	- `docker logs -f {CONTAINER ID}`
 		- `-f` 옵션은 로그 파일의 끝에 도달하면 계속해서 로그를 추적하는 것
-	- `docker logs -f -n 100 {CONTAINER ID}`
+	- `docker logs -f --tail 100 {CONTAINER ID}`
 		- 특정 도커 컨테이너의 로그를 실시간으로 추적하는 동시에 최근 100줄의 로그를 표시하는 데 사용됩니다.
 		-  `-n 100` 옵션은 최근에 기록된 로그 중 최대 100줄을 표시합니다.
