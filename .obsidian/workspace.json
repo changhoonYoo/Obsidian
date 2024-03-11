@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/Docker 개념 정의.md",
+                "file": "Linux/쉘 스크립트.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker/Docker 개념 정의.md",
+                "file": "Linux/쉘 스크립트.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker/Docker 개념 정의.md",
+                "file": "Linux/쉘 스크립트.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker/Docker 개념 정의.md"
+                "file": "Linux/쉘 스크립트.md"
               }
             }
           }
@@ -159,8 +159,8 @@
   },
   "active": "42893717e3a5ad63",
   "lastOpenFiles": [
-    "Docker/Docker 명령어.md",
     "Docker/Docker 개념 정의.md",
+    "Docker/Docker 명령어.md",
     "Docker/Docker 실습.md",
     "Docker/용어 정리.md",
     "Linux/Linux 명령어.md",
