@@ -39,6 +39,7 @@ ubuntu이미지는 ubuntu를 실행하기 위한 모든 파일을 가지고 있�
 
 도커 이미지는 [Docker hub](https://hub.docker.com/)에 등록하거나 [Docker Registry](https://docs.docker.com/registry/) 저장소를 직접 만들어 관리할 수 있습니다. 현재 공개된 도커 이미지는 50만개가 넘고 Docker hub의 이미지 다운로드 수는 80억회에 이릅니다. 누구나 쉽게 이미지를 만들고 배포할 수 있습니다.
 
-명령어가 궁금하신 분은 [여기](https://docs.docker.com/engine/reference/commandline/)를 참고해주세요.
-
 출처 - https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
+
+실습 - https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+
