@@ -44,3 +44,10 @@
 	- `docker logs -f --tail 100 {CONTAINER ID}`
 		- 특정 도커 컨테이너의 로그를 실시간으로 추적하는 동시에 최근 100줄의 로그를 표시하는 데 사용됩니다.
 		-  `-n 100` 옵션은 최근에 기록된 로그 중 최대 100줄을 표시합니다.
+
+
+DB 컨테이너 접속
+
+docker exec -it <container_id> /bin/bash
+
+mysql -u \<username\> -p
