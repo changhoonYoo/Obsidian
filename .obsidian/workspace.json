@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Linux/배포.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Linux/배포.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Linux/배포.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git 명령어 정리.md"
+                "file": "Linux/배포.md"
               }
             }
           }
@@ -159,8 +159,9 @@
   },
   "active": "e0d8ea1dab6dbc32",
   "lastOpenFiles": [
-    "Git/깃허브 Commit Message.md",
+    "Linux/쉘 스크립트.md",
     "Git/Git 명령어 정리.md",
+    "Git/깃허브 Commit Message.md",
     "Java/replace()와 replaceAll() 차이점.md",
     "Java/HttpSession.md",
     "Java/Exception.md",
@@ -171,7 +172,6 @@
     "Spring-Boot/Annotation.md",
     "Spring-Boot/ByteArray To MultipartFile.md",
     "Linux/배포.md",
-    "Linux/쉘 스크립트.md",
     "Docker/Docker 실습.md",
     "Docker/용어 정리.md",
     "Rest-Api/용어.md",
