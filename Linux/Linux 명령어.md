@@ -589,19 +589,16 @@ curl -u username:password https://example.com/api
         date -d "2024-03-14 15:30:00"
 		```
 
-**rdate설치  
 
- 먼저 yum으로 rdate를 설치해줍니다.
-
-`yum -y install rdate`
-
-설치가 완료되었으면, 타임서버를 이용하여 동기화를 해봅니다.
-
-`rdate -s time.bora.net`
-
-위 URL로 동기화가 안될경우 다른 도메인으로 진행해봅니다.  
- time2.kriss.re.kr  
- zero.bora.net  
- ntp.kornet.net  
- ntp.postech.ac.kr
-
+rdate 설치 
+1. yum으로 rdate를 설치
+	
+	`yum -y install rdate`
+2. 설치가 완료되었으면, 타임서버를 이용하여 동기화
+	`rdate -s time.bora.net`
+	위 URL로 동기화가 안될경우 다른 도메인으로 진행
+	 time2.kriss.re.kr  
+	 zero.bora.net  
+	 ntp.kornet.net  
+	 ntp.postech.ac.kr
+3. crontab으로 설정 시 자동으로 동기화도 할 수 있다.
