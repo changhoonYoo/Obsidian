@@ -296,7 +296,7 @@ $ ps --sort size
 
 ---
 
-### <span style="color:#87CEEB">grep</span>
+### <span style="color:#87CEEB">grep & egrep</span>
 
 grep은 입력에서 패턴에 매칭되는 내용을 찾는 명령어.
 grep이라는 이름은 ed의 명령어인 g/re/p(내용 전체를 정규식으로 찾은 다음 프린트하라) 
@@ -315,6 +315,23 @@ $ grep --invert-match "패턴"
 # cat과 함께 사용하기
 $ cat 파일경로 | grep "패턴"
 ```
+
+`grep`과 `egrep` 모두 리눅스/유닉스 환경에서 사용되는 명령어로, 텍스트를 검색하고 패턴을 일치하는 라인을 출력하는 데 사용됩니다. 그러나 두 명령어 간에는 몇 가지 차이가 있습니다.
+
+1. **grep**:
+    
+    - `grep`은 "Global Regular Expression Print"의 약자입니다.
+    - 기본적으로 `grep`은 표준 정규식(Extended Regular Expressions)을 사용하여 검색합니다.
+    - 따라서 `grep`을 사용할 때는 정규식 메타 문자를 사용할 때 역슬래시(`\`)로 이스케이핑해야 합니다.
+    - 예를 들어, `.`는 어떤 문자 하나와 일치하는 메타 문자입니다.
+2. **egrep**:
+    
+    - `egrep`은 `grep -E`와 동일한 역할을 합니다. 즉, "Extended grep"의 약자입니다.
+    - `egrep`은 표준 정규식이 아닌 확장된 정규식(Extended Regular Expressions)을 사용하여 검색합니다.
+    - 따라서 `egrep`을 사용할 때는 보다 편리한 정규식 문법을 사용할 수 있습니다. 예를 들어, `.`는 단순히 점(`.`)으로 인식됩니다.
+    - 또한 `egrep`은 기본적으로 메타 문자를 이스케이프할 필요가 없습니다.
+
+즉, `egrep`은 보다 편리한 확장된 정규식을 사용할 수 있으며, `grep`보다 더 많은 기능을 제공합니다. 그러나 현대의 시스템에서는 `egrep` 대신 `grep -E`를 사용하는 것이 일반적입니다. 따라서 대부분의 경우 `grep -E`를 사용하여 확장된 정규식을 사용할 수 있습니다.
 
 ---
 
