@@ -566,3 +566,42 @@ curl -u username:password https://example.com/api
     
 
 위 명령어는 일반적으로 사용되는 `systemctl` 명령어의 몇 가지 예시입니다. 이 외에도 시스템 상태 및 서비스 관리에 관련된 다양한 옵션이 있으며, `systemctl` 매뉴얼 페이지를 참조하여 자세한 정보를 확인할 수 있습니다. 예를 들어, `man systemctl` 명령어를 사용하여 매뉴얼 페이지를 열 수 있습니다.
+
+
+### <span style="color:#87CEEB">date & rdate</span>
+
+`date` 명령어와 `rdate` 명령어는 리눅스 시스템에서 시간 관련 정보를 확인하거나 설정하는 데 사용됩니다. 각각의 명령어에 대해 간단히 설명하겠습니다.
+
+1. **date 명령어**:
+    
+    - `date` 명령어는 현재 시간 및 날짜를 출력하는 데 사용됩니다.
+    - 주요 옵션은 다음과 같습니다:
+        - `-u` 또는 `--utc`: UTC(Universal Time Coordinated) 시간을 출력합니다.
+        - `-R` 또는 `--rfc-2822`: RFC 2822 형식으로 날짜와 시간을 출력합니다.
+        - `-d`, `--date`: 특정 날짜나 시간을 출력합니다.
+    - 예시:
+        
+        
+        ```bash
+        date 
+        date -u 
+        date -R 
+        date -d "2024-03-14 15:30:00"
+		```
+
+**rdate설치  
+
+ 먼저 yum으로 rdate를 설치해줍니다.
+
+`yum -y install rdate`
+
+설치가 완료되었으면, 타임서버를 이용하여 동기화를 해봅니다.
+
+`rdate -s time.bora.net`
+
+위 URL로 동기화가 안될경우 다른 도메인으로 진행해봅니다.  
+ time2.kriss.re.kr  
+ zero.bora.net  
+ ntp.kornet.net  
+ ntp.postech.ac.kr
+
