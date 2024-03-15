@@ -619,3 +619,9 @@ rdate 설치
 	 ntp.kornet.net  
 	 ntp.postech.ac.kr
 3. crontab으로 설정 시 자동으로 동기화도 할 수 있다.
+
+crontab으로 설정
+
+1. `crontab -e` : `crontab` 파일 편집
+2. `0 * * * * rdate -s time.bora.net` 입력 (매 시간 정각)
+3. crontab -l : 저장 후 확인
