@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "0d89ac1b4b8dfd12",
+        "id": "a51cf1e4cb1bb512",
         "type": "tabs",
         "children": [
           {
-            "id": "e0d8ea1dab6dbc32",
+            "id": "afec4503b7878bf2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/Linux 명령어.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Linux 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/Linux 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Linux/Linux 명령어.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -157,10 +149,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e0d8ea1dab6dbc32",
+  "active": "afec4503b7878bf2",
   "lastOpenFiles": [
-    "Linux/scp.md",
+    "Linux/asterisk.md",
     "Linux/Linux 명령어.md",
+    "Linux/scp.md",
     "Linux/쉘 스크립트.md",
     "Linux/배포.md",
     "Git/Git 명령어 정리.md",
@@ -194,7 +187,6 @@
     "Webhook",
     "Rest-Api",
     "Spring-Boot/restAPI.md",
-    "RabbitMq/자바코드.md",
     "SVN",
     "chmod2.png",
     "chmod.png",
