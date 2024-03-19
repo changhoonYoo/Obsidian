@@ -625,3 +625,9 @@ crontab으로 설정
 1. `crontab -e` : `crontab` 파일 편집
 2. `0 * * * * rdate -s time.bora.net` 입력 (매 시간 정각)
 3. crontab -l : 저장 후 확인
+
+---
+
+### <span style="color:#87CEEB">top</span>
+
+top 명령어는 현재 OS 의 상태를 나타내주는 CLI 어플리케이션

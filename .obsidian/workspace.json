@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
-                "mode": "preview",
+                "file": "Linux/Linux 명령어.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
+                "file": "Linux/Linux 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
+                "file": "Linux/Linux 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Thymeleaf/타임리프 (Thymeleaf).md"
+                "file": "Linux/Linux 명령어.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "afec4503b7878bf2",
   "lastOpenFiles": [
+    "Thymeleaf/타임리프 (Thymeleaf).md",
     "Linux/Linux 명령어.md",
     "Linux/asterisk.md",
     "Linux/scp.md",
@@ -194,7 +195,6 @@
     "Java/Java 문법.md",
     "Webhook",
     "Rest-Api",
-    "Spring-Boot/restAPI.md",
     "SVN",
     "chmod2.png",
     "chmod.png",
