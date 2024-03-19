@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/Linux 명령어.md",
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Linux 명령어.md"
+                "file": "Thymeleaf/타임리프 (Thymeleaf).md"
               }
             }
           }
@@ -159,8 +159,8 @@
   },
   "active": "afec4503b7878bf2",
   "lastOpenFiles": [
-    "Linux/asterisk.md",
     "Linux/Linux 명령어.md",
+    "Linux/asterisk.md",
     "Linux/scp.md",
     "Linux/쉘 스크립트.md",
     "Linux/배포.md",
