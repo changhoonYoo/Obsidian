@@ -34,6 +34,5 @@ OAuth2 프로토콜에서는 다양한 클라이언트 환경에 적합하도록
 	Authorization Code는 권한 서버에서 제공하는 API를 통해 Access Token으로 교환
 	
 1. Implicit Grant | 암묵적 승인 방식
-	
 1. Resource Owner password Credentials Grant | 자원 소유자 자격증명 승인 방식
 2. Client Credentials Grant | 클라이언트 자격증명 승인 방식

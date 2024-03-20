@@ -7,7 +7,8 @@
 **예시:**
 
 ```java
-InputStream inputStream = new FileInputStream("file.txt"); int data = inputStream.read(); // 데이터가 도착할 때까지 대기
+InputStream inputStream = new FileInputStream("file.txt"); 
+int data = inputStream.read(); // 데이터가 도착할 때까지 대기
 ```
 
 위의 코드에서 `inputStream.read()`는 데이터가 도착할 때까지 대기하며, 이 동작이 완료되기 전에 다른 작업을 수행할 수 없습니다. 블로킹은 대기 시간이 길 경우 효율성이 떨어질 수 있습니다.

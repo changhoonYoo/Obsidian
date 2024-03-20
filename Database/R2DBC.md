@@ -6,7 +6,7 @@ Reactive Programming을 하는 과정에서 Database 사용이 필요한 경우�
 
 질문에 대한 대답은 **"사용할 수 있다. 하지만 사용하는 것이 좋진 않다."**
 
-JPA는 기본적으로 비동기를 제공하지 않는다. 즉, Webflux 기반에서 JPA를 사용하면 Database 부분에서 [block](블로킹&논블로킹)되고, 그동안 thread가 기다리게 된다.
+JPA는 기본적으로 비동기를 제공하지 않는다. 즉, Webflux 기반에서 JPA를 사용하면 Database 부분에서 [block](blocking&non-blocking.md)되고, 그동안 thread가 기다리게 된다.
 
 Webflux 같은 조금의 thread를 계속해서 사용하는 framework에서 이러한 작업은 비효율적이며 전체 시스템에 영향이 갈 수 있다. 결국 처음 말한 그대로 **Webflux 기반에서 JPA를 사용할 수는 있으나 사용하는 것이 좋지 않은 것**이다.
 
