@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/blocking&non-blocking.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/blocking&non-blocking.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/blocking&non-blocking.md",
+                "file": "Intellij/인텔리제이 기본 설정.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/blocking&non-blocking.md"
+                "file": "Intellij/인텔리제이 기본 설정.md"
               }
             }
           }
@@ -159,6 +159,8 @@
   },
   "active": "afec4503b7878bf2",
   "lastOpenFiles": [
+    "Spring-Boot/WebSocket.md",
+    "Spring-Boot/blocking&non-blocking.md",
     "Spring-Boot/OAuth2.md",
     "1.jpg",
     "Git/Git 명령어 정리.md",
@@ -191,7 +193,6 @@
     "Pasted image 20240308133742.png",
     "Pasted image 20240308133731.png",
     "Rest-Api/상태코드.md",
-    "Spring-Boot/Webhook.md",
     "Pasted image 20240308103107.png",
     "Webhook",
     "Rest-Api",
