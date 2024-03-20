@@ -26,7 +26,14 @@ OAuth 2.0(Open Authorization 2.0)은 인증을 위한 개방형 표준 프로토
 OAuth2 프로토콜에서는 다양한 클라이언트 환경에 적합하도록 권한 부여 방식에 따른 프로토콜을 4가지 종류로 구분하여 제공하고 있다.
 
 1. Authorization Code Grant | 권한 부여 승인 코드 방식
-	권한 부여 승
+	권한 부여 승인을 위해 자체 생성한 Authorization Code를 전달하는 방식으로 많이 쓰이고 기본이 되는 방식.
+	간편 로그인 기능에서 사용되는 방식으로 클라이언트가 사용자를 대신하여 특정 자원에 접근을 요청할 때 사용되는 방식
+	보통 타사의 클라이언트에게 보호된 자원을 제공하기 위한 인증에 사용
+	![[1.jpg]]
+	권한 부여 승인 요청 시 response_type을 code로 지정하여 요청한다. 이후 클라이언트는 권한 서버에서 제공하는 로그인 페이지를 브라우저를 띄워 출력한다. 이 페이지를 통해 사용자가 로그인을 하면 권한 서버는 권한 부여 승인 코드 요청 시 전달받은 redirect_url로 Authorization Code를 전달한다.
+	Authorization Code는 권한 서버에서 제공하는 API를 통해 Access Token으로 교환
+	
 1. Implicit Grant | 암묵적 승인 방식
-2. Resource Owner password Credentials Grant | 자원 소유자 자격증명 승인 방식
-3. Client Credentials Grant | 클라이언트 자격증명 승인 방식
+	
+1. Resource Owner password Credentials Grant | 자원 소유자 자격증명 승인 방식
+2. Client Credentials Grant | 클라이언트 자격증명 승인 방식
