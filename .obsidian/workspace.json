@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/매개변수와 전달인자.md",
+                "file": "Spring-Boot/OAuth2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/매개변수와 전달인자.md",
+                "file": "Spring-Boot/OAuth2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/매개변수와 전달인자.md",
+                "file": "Spring-Boot/OAuth2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/매개변수와 전달인자.md"
+                "file": "Spring-Boot/OAuth2.md"
               }
             }
           }
@@ -159,6 +159,8 @@
   },
   "active": "afec4503b7878bf2",
   "lastOpenFiles": [
+    "Java/매개변수와 전달인자.md",
+    "Spring-Boot/OAuth2.md",
     "Linux/Linux 명령어.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Linux/asterisk.md",
@@ -170,7 +172,6 @@
     "Java/replace()와 replaceAll() 차이점.md",
     "Java/HttpSession.md",
     "Java/Exception.md",
-    "Java/매개변수와 전달인자.md",
     "Docker/Docker 명령어.md",
     "Docker/Docker 개념 정의.md",
     "Spring-Boot/Annotation.md",
@@ -192,7 +193,6 @@
     "Spring-Boot/Webhook.md",
     "Pasted image 20240308103107.png",
     "Spring-Boot/JPA.md",
-    "Java/Java 문법.md",
     "Webhook",
     "Rest-Api",
     "SVN",
