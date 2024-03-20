@@ -21,4 +21,12 @@ OAuth 2.0(Open Authorization 2.0)은 인증을 위한 개방형 표준 프로토
 | 권한 서버<br>(Authorization Server) | 권한 서버는 클라이언트가 리소스 소유자의 권한을 얻을 수 있도록 도와주는 서버<br>권한 서버는 사용자 인증, 권한 부여 및 토큰 발급을 관리                                                                                                          |
 | 리소스 서버 <br>(Resource Server)    | 사용자의 보호된 자원을 호스팅하는 서버로 엑세스를 허용하거나 거부한다.<br>이 서버는 OAuth 2.0 토큰을 사용하여 클라이언트에게 리소스에 엑세스할 권한을 부여하고 실제 데이터를 제공한다.                                                                             |
 
-> ㅒ
+> Obtaining Authorization
+
+OAuth2 프로토콜에서는 다양한 클라이언트 환경에 적합하도록 권한 부여 방식에 따른 프로토콜을 4가지 종류로 구분하여 제공하고 있다.
+
+1. Authorization Code Grant | 권한 부여 승인 코드 방식
+	권한 부여 승
+1. Implicit Grant | 암묵적 승인 방식
+2. Resource Owner password Credentials Grant | 자원 소유자 자격증명 승인 방식
+3. Client Credentials Grant | 클라이언트 자격증명 승인 방식
