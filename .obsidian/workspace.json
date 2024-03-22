@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4722e1f54bc61840",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,7 +168,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "afec4503b7878bf2",
+  "active": "4722e1f54bc61840",
   "lastOpenFiles": [
     "Spring-Boot/WebSocket.md",
     "Spring-Boot/blocking&non-blocking.md",
