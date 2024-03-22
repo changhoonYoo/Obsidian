@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/Spring Security.md",
+                "file": "Domain/배포.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/Spring Security.md",
+                "file": "Domain/배포.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/Spring Security.md",
+                "file": "Domain/배포.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/Spring Security.md"
+                "file": "Domain/배포.md"
               }
             }
           }
@@ -159,6 +159,9 @@
   },
   "active": "fe6899d3d48bfae2",
   "lastOpenFiles": [
+    "Linux/배포.md",
+    "Domain/배포.md",
+    "Domain",
     "Spring-Boot/Spring Security.md",
     "http",
     "Intellij/인텔리제이 기본 설정.md",
@@ -173,7 +176,6 @@
     "Linux/asterisk.md",
     "Linux/scp.md",
     "Linux/쉘 스크립트.md",
-    "Linux/배포.md",
     "Git/깃허브 Commit Message.md",
     "Java/replace()와 replaceAll() 차이점.md",
     "Java/HttpSession.md",
@@ -187,7 +189,6 @@
     "Rest-Api/용어.md",
     "Spring-Boot/logback-spring.xml.md",
     "Pasted image 20240311101101.png",
-    "Database/DBMS.md",
     "Pasted image 20240308134508.png",
     "Pasted image 20240308134346.png",
     "Pasted image 20240308134257.png",
@@ -203,7 +204,6 @@
     "Linux",
     "Network",
     "Database",
-    "Error-Log",
-    "kuilcake"
+    "Error-Log"
   ]
 }
