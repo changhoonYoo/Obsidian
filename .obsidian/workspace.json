@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring-Boot/Spring Security.md",
+                "file": "Linux/Linux 명령어.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tail",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring-Boot/Spring Security.md",
+                "file": "Linux/Linux 명령어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring-Boot/Spring Security.md",
+                "file": "Linux/Linux 명령어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring-Boot/Spring Security.md"
+                "file": "Linux/Linux 명령어.md"
               }
             }
           }
@@ -159,10 +160,10 @@
   },
   "active": "fe6899d3d48bfae2",
   "lastOpenFiles": [
+    "Spring-Boot/Spring Security.md",
     "Domain/배포.md",
     "Linux/배포.md",
     "Domain",
-    "Spring-Boot/Spring Security.md",
     "http",
     "Intellij/인텔리제이 기본 설정.md",
     "Spring-Boot/WebSocket.md",
