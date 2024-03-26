@@ -606,10 +606,20 @@ JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 �
 	`@NotEmpty` 에서 `" "` validation 이 추가된 것입니다.
 	즉, 세개 중 가장 validation 강도가 높은 것으로,`@NotBlank` 는 `null` 과 `""` 과 `" "` 모두 허용하지 않습니다.
 
+
+- pom.xml 설정 
+```xml
+<dependency>  
+   <groupId>org.springframework.boot</groupId>  
+   <artifactId>spring-boot-starter-validation</artifactId>  
+</dependency>
+```
+
+
 - Controller 설정
 ```java
 @PostMapping("/login")
-public ResponseEntity login(@Valid @RequestBody UserLoginRequestDto loginUser) {    
+public ResponseEntity login(@RequestBody @Valid UserLoginRequestDto loginUser) {    
     UserLoginResponseDto login = userService.login(loginUser);
     return new ResponseEntity<>(new BaseResult.Normal(login), HttpStatus.OK);
 }
