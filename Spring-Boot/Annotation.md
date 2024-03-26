@@ -587,6 +587,36 @@ JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 �
 
 - - -
 
+<span style="color:darkorange">@NotNull</span> / <span style="color:darkorange">@NotEmpty</span> / <span style="color:darkorange">@NotBlank</span>
+
+- @NotNull
+	
+	우선 `@NotNull` 은 위에 살펴본 것 처럼 이름 그대로 `Null만` 허용하지 않습니다.
+	따라서, `""` 이나 `" "` 은 허용하게 됩니다.
+
+- @NotEmpty
+	
+	`@NotEmpty` 는 `null` 과 `""` 둘 다 허용하지 않게 합니다.
+	`@NotNull` 에서 `""` validation 이 추가된 것입니다.
+	즉, `@NotEmpty` 는 `null` 과 `""` 은 막히되, `" "` 은 허용이 됩니다.
+
+- @NotBlank
+	
+	`@NotBlank` 는 `null` 과 `""` 과 `" "` 모두 허용하지 않습니다.
+	`@NotEmpty` 에서 `" "` validation 이 추가된 것입니다.
+	즉, 세개 중 가장 validation 강도가 높은 것으로,`@NotBlank` 는 `null` 과 `""` 과 `" "` 모두 허용하지 않습니다.
+
+- Controller 설정
+```java
+@PostMapping("/login")
+public ResponseEntity login(@Valid @RequestBody UserLoginRequestDto loginUser) {    
+    UserLoginResponseDto login = userService.login(loginUser);
+    return new ResponseEntity<>(new BaseResult.Normal(login), HttpStatus.OK);
+}
+```
+DTO 에서 @NotNull 등을 설정 후 사용하고자 하는 Controller 내 API 에서 `RequestBody` 에 `@Valid` 들 추가해주면 설정된 Bean Validation 을 사용할 수 있습니다.
+
+
 ## <span style="color:darkorange">@RestControllerAdvice</span>
 
 `@RestControllerAdvice`는 Spring MVC 애플리케이션에서 전역적으로 예외를 처리하고, 예외에 대한 응답을 일관되게 생성하는 데 사용되는 어노테이션입니다. 이 클래스는 `@ControllerAdvice`와 `@ResponseBody`를 함께 사용하는 것과 동일한 역할을 하며, JSON 또는 XML 형식의 응답을 생성합니다.
