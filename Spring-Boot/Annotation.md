@@ -587,7 +587,7 @@ JPA에서 엔터티 클래스를 정의할 때, 매개변수가 없는 기본 �
 
 - - -
 
-<span style="color:darkorange">@NotNull</span> / <span style="color:darkorange">@NotEmpty</span> / <span style="color:darkorange">@NotBlank</span>
+## <span style="color:darkorange">@NotNull</span> / <span style="color:darkorange">@NotEmpty</span> / <span style="color:darkorange">@NotBlank</span>
 
 - @NotNull
 	
@@ -626,6 +626,42 @@ public ResponseEntity login(@RequestBody @Valid UserLoginRequestDto loginUser) {
 ```
 DTO 에서 @NotNull 등을 설정 후 사용하고자 하는 Controller 내 API 에서 `RequestBody` 에 `@Valid` 들 추가해주면 설정된 Bean Validation 을 사용할 수 있습니다.
 
+- Dto 설정
+```java
+@Getter
+public class SubmitRequestDto {  
+  
+    @NotBlank(message = "이름이 입력되지 않았습니다.")  
+    private String name;
+```
+어노테이션 추가 및 DefaultMessage 설정
+
+- ExceptionHadler 설정
+```java
+import org.springframework.http.HttpStatus;  
+import org.springframework.http.ResponseEntity;  
+import org.springframework.web.bind.MethodArgumentNotValidException;  
+import org.springframework.web.bind.annotation.ExceptionHandler;  
+import org.springframework.web.bind.annotation.RestControllerAdvice;  
+  
+import java.util.Objects;  
+  
+@RestControllerAdvice  
+public class GlobalExceptionHandler {  
+  
+    @ExceptionHandler(MethodArgumentNotValidException.class)  
+    public ResponseEntity<String> handleValidationExceptions(MethodArgumentNotValidException ex) {  
+        String errorMessage = Objects.requireNonNull(ex.getBindingResult().getFieldError()).getDefaultMessage();  
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);  
+    }  
+}
+```
+
+결과: 
+
+![[Pasted image 20240326143025.png]]
+
+---
 
 ## <span style="color:darkorange">@RestControllerAdvice</span>
 
