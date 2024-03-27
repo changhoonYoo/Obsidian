@@ -1,4 +1,5 @@
 ### 설명 및 예제
+
 Querydsl은 Java 언어를 사용하여 SQL과 유사한 쿼리를 작성할 수 있는 오픈 소스 프레임워크입니다. SQL을 작성할 때 자바 코드로 작성할 수 있도록 도와주는 것이 주요 목적입니다. 이를 통해 컴파일러가 쿼리를 검증하고, 코드 자동 완성 기능을 제공하여 개발자가 쿼리 작성 시 발생할 수 있는 오타나 문법 오류를 방지할 수 있습니다.
 
 Querydsl은 다양한 데이터베이스와 호환되며, JPA, Hibernate, JDO, JDBC 등 다양한 ORM 프레임워크와 함께 사용할 수 있습니다. 또한, Querydsl은 동적 쿼리를 작성하는 데 유용한 기능을 제공하며, 쿼리의 재사용성을 높이고, 코드의 가독성을 높이는 데 도움을 줍니다.
@@ -108,6 +109,45 @@ QueryDsl 특정버전 이상에서는 fetchResults(), fetchCount() 가 deprecate
 
 그러면 앞으로 QueryDsl 로 페이징을 처리할 때는.
 
+```java
 
+public Page<MemberTeamDto> searchWithPaging(MemberSearchCond cond, Pageable pageable) {
 
+	// 데이터 조회 쿼리 (페이징 적용) 
+	List<MemberTeamDto> content = queryFactory 
+		.select( new QMemberTeamDto( 
+			member.id.as("memberId"), 
+			member.username, 
+			member.age, 
+			team.id.as("teamId"), 
+			team.name.as("teamName") 
+			) 
+		) 
+		.from(member) 
+		.leftJoin(member.team, team) 
+		.where( 
+			usernameEq(cond.getUsername()), 
+			teamNameEq(cond.getTeamName()), 
+			ageGoe(cond.getAgeGoe()), 
+			ageLoe(cond.getAgeLoe()) 
+		) 
+		.offset(pageable.getOffset()) 
+		.limit(pageable.getPageSize()) 
+		.fetch();
 
+	// count 쿼리 (조건에 부합하는 로우의 총 개수를 얻는 것이기 때문에 페이징 미적용) 
+	Long total = queryFactory .select(member.count()) 
+		// SQL 상으로는 count(member.id)와 동일 
+		.from(member) 
+		.leftJoin(member.team, team) 
+		.where( 
+			usernameEq(cond.getUsername()), 
+			teamNameEq(cond.getTeamName()), 
+			ageGoe(cond.getAgeGoe()), 
+			ageLoe(cond.getAgeLoe()) 
+		) 
+		.fetchOne();
+
+	return new PageImpl<>(content, pageable, total);
+}
+```
