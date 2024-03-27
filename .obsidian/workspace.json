@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/gitignore.md",
+                "file": "Git/Git 명령어 정리.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/gitignore.md",
+                "file": "Git/Git 명령어 정리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/gitignore.md",
+                "file": "Git/Git 명령어 정리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/gitignore.md"
+                "file": "Git/Git 명령어 정리.md"
               }
             }
           }
@@ -159,8 +159,9 @@
   },
   "active": "fe6899d3d48bfae2",
   "lastOpenFiles": [
-    "Spring-Boot/Annotation.md",
+    "Git/깃허브 Commit Message.md",
     "Git/gitignore.md",
+    "Spring-Boot/Annotation.md",
     "Pasted image 20240326143025.png",
     "Spring-Boot/Spring Security.md",
     "Error-Log/Bean Validation Error.md",
@@ -180,7 +181,6 @@
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Linux/asterisk.md",
     "Linux/scp.md",
-    "Git/깃허브 Commit Message.md",
     "Java/replace()와 replaceAll() 차이점.md",
     "Java/HttpSession.md",
     "Java/Exception.md",
