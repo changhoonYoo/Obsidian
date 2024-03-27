@@ -329,7 +329,10 @@ private FrequentlySentDTO convertFrequentlySentDTO(Object[] row, String userKey)
 
 - Mapping Interface
 ```java
-public interface 
+public interface UserInfoMapping {
+	String getName();
+	int getAge();
+}
 ```
 
 - repository
