@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Java/Exception.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Java/Exception.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Git 명령어 정리.md",
+                "file": "Java/Exception.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git 명령어 정리.md"
+                "file": "Java/Exception.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "fe6899d3d48bfae2",
   "lastOpenFiles": [
+    "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Git/gitignore.md",
     "Spring-Boot/Annotation.md",
@@ -176,7 +177,6 @@
     "Spring-Boot/blocking&non-blocking.md",
     "Spring-Boot/OAuth2.md",
     "1.jpg",
-    "Git/Git 명령어 정리.md",
     "Java/매개변수와 전달인자.md",
     "Thymeleaf/타임리프 (Thymeleaf).md",
     "Linux/asterisk.md",
