@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Spring-Boot/JPA.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Spring-Boot/JPA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/Exception.md",
+                "file": "Spring-Boot/JPA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/Exception.md"
+                "file": "Spring-Boot/JPA.md"
               }
             }
           }
@@ -159,6 +159,7 @@
   },
   "active": "fe6899d3d48bfae2",
   "lastOpenFiles": [
+    "Java/Exception.md",
     "Git/Git 명령어 정리.md",
     "Git/깃허브 Commit Message.md",
     "Git/gitignore.md",
@@ -183,7 +184,6 @@
     "Linux/scp.md",
     "Java/replace()와 replaceAll() 차이점.md",
     "Java/HttpSession.md",
-    "Java/Exception.md",
     "Docker/Docker 명령어.md",
     "Docker/Docker 개념 정의.md",
     "Spring-Boot/ByteArray To MultipartFile.md",

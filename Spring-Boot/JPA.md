@@ -319,3 +319,22 @@ private FrequentlySentDTO convertFrequentlySentDTO(Object[] row, String userKey)
 }
 ```
 
+---
+
+### 특정 컬럼 데이터 추출
+
+가져오고자 하는 컬럼만으로 이루어진 Mapping 인터페이스를 만들어서 사용
+
+예제
+
+- Mapping Interface
+```java
+public interface 
+```
+
+- repository
+```java
+public interface UserRepositroy extends JpaRepository<User, Long> {
+	List<UserInfoMapping> findAllById(Long id);
+}
+```
